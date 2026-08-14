@@ -38,7 +38,8 @@ Welcome to the **10-Day ESL Speaking Intensive Course**, engineered specifically
 ### 📖 Master Resource Files
 - **Master Question Bank (B2–C2)**: [`MASTER_QUESTIONS_150.md`](./MASTER_QUESTIONS_150.md) (All 150 advanced questions organized by Day and Tier)
 - **Master Vocabulary Lexicon (B2–C2)**: [`MASTER_VOCABULARY_500.md`](./MASTER_VOCABULARY_500.md) (Complete 500-word lexicon with IPA, definitions, collocations)
-- **Interactive Master Web App**: [`index.html`](./index.html) (Warm brown centered browser portal with live search & audio TTS)
+- **Interactive Master Web App**: [`index.html`](./index.html) (Warm brown centered browser portal with Live Audio Recording, IndexedDB Storage, Speech-to-Text Transcription & Audio TTS)
+- **Unified Audio Recorder & Storage Manager**: [`recorder_manager.js`](./recorder_manager.js) (IndexedDB persistent voice response capture, live transcription, and audio file export)
 
 ---
 

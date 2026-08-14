@@ -464,6 +464,192 @@
       border-color: var(--brown-primary);
     }
 
+    /* Audio Recorder Styles */
+    .recorder-panel {
+      border-top: 1px solid var(--brown-border);
+      padding-top: 0.85rem;
+      margin-top: 0.65rem;
+    }
+
+    .rec-ctrl-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-rec {
+      background: var(--bg-subtle);
+      border: 1px solid var(--brown-border);
+      color: var(--brown-primary);
+      padding: 0.42rem 0.95rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-rec:hover {
+      background: #eee5d8;
+      border-color: var(--brown-primary);
+    }
+
+    .btn-rec.recording-active {
+      background: #fee2e2;
+      border-color: #ef4444;
+      color: #b91c1c;
+      animation: pulseGlow 1.5s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    .rec-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #b91c1c;
+      font-family: monospace;
+      background: #fee2e2;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid #fca5a5;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+      display: inline-block;
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.2; }
+    }
+
+    .audio-playback-container {
+      background: var(--bg-subtle);
+      border: 1px solid var(--brown-border);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem;
+      margin-top: 0.65rem;
+    }
+
+    .custom-audio-player {
+      width: 100%;
+      height: 36px;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      accent-color: var(--brown-primary);
+    }
+
+    .audio-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-audio-action {
+      background: #ffffff;
+      border: 1px solid var(--brown-border);
+      color: var(--text-main);
+      padding: 0.32rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-audio-action:hover {
+      background: var(--brown-primary);
+      color: #fff;
+      border-color: var(--brown-primary);
+    }
+
+    .btn-delete-audio:hover {
+      background: #ef4444 !important;
+      color: #fff !important;
+      border-color: #ef4444 !important;
+    }
+
+    .save-status-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #166534;
+      margin-left: auto;
+    }
+
+    .transcript-box {
+      margin-top: 0.65rem;
+      background: #ffffff;
+      border: 1px solid var(--brown-border);
+      border-left: 3px solid var(--brown-primary);
+      padding: 0.6rem 0.75rem;
+      border-radius: 4px;
+    }
+
+    .transcript-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--brown-accent);
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.04em;
+    }
+
+    .transcript-text {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .transcript-stats {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-weight: 500;
+    }
+
+    .saved-rec-item {
+      background: #ffffff;
+      border: 1px solid var(--brown-border);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+    }
+
+    .btn-rec-danger {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+      color: #b91c1c;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-rec-danger:hover {
+      background: #ef4444;
+      color: #fff;
+    }
+
     /* Vocabulary Grid */
     .vocab-grid {
       display: grid;
@@ -784,18 +970,22 @@
 
   <div class="practice-bar">
     <div class="timer-container">
-      <span style="font-weight: 700; color: var(--brown-primary); font-size: 0.95rem;">⏱️ Speaking Practice Timer:</span>
+      <span style="font-weight: 700; color: var(--brown-primary); font-size: 0.95rem;">⏱️ Practice &amp; Record:</span>
       <div class="timer-readout" id="timerReadout">02:00</div>
       <button class="btn-timer" onclick="startTimer(60)">1 Min</button>
       <button class="btn-timer" onclick="startTimer(120)">2 Min</button>
       <button class="btn-timer-subtle" onclick="pauseTimer()">Pause</button>
       <button class="btn-timer-subtle" onclick="resetTimer()">Reset</button>
+      <button class="btn-timer" id="savedRecordingsBadge" onclick="recorderManager.openRecordingsModal()" style="background:var(--brown-dark); color:#fed7aa; border-color:#8d5b4c; margin-left:0.5rem;">
+        🎙️ Saved Responses (0/150)
+      </button>
     </div>
     <div style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
-      Click 🔊 on any term or question for native voice synthesis.
+      Record, playback, download, and auto-transcribe any speaking response.
     </div>
   </div>
 
+  <!-- Vocabulary Modal -->
   <div class="modal-overlay" id="vocabModal" onclick="closeModal(event)">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close-btn" onclick="closeModal()">&times;</button>
@@ -803,12 +993,29 @@
     </div>
   </div>
 
+  <!-- Saved Audio Recordings Modal -->
+  <div class="modal-overlay" id="recordingsManagerModal" onclick="recorderManager.closeRecordingsModal()">
+    <div class="modal-box" style="max-width: 680px;" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="recorderManager.closeRecordingsModal()">&times;</button>
+      <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--brown-accent); letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+        Persistent Audio Storage • IndexedDB
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.85rem; color: var(--brown-dark); margin-bottom: 1.25rem;">
+        🎙️ Your Spoken Audio Responses
+      </h2>
+      <div id="recordingsListContent"></div>
+    </div>
+  </div>
+
   <script src="curriculum_data.js"></script>
+  <script src="recorder_manager.js"></script>
   <script>
     let activeDay = 1;
     let activeView = 'full';
+    const recorderManager = new ESLRecorderManager('foundations_a2_b1');
 
-    function initPortal() {
+    async function initPortal() {
+      await recorderManager.init();
       renderNavRibbon();
       renderActiveDay();
     }
@@ -847,6 +1054,54 @@
       }
     }
 
+    function renderQuestionCard(q, day, idx) {
+      const isSaved = recorderManager.getRecording(q.num);
+      return `
+        <div class="q-card">
+          <div>
+            <span class="q-tier-tag ${idx < 5 ? 'tag-tier1' : (idx < 10 ? 'tag-tier2' : 'tag-tier3')}">
+              ${q.tier}
+            </span>
+            <div class="q-content">${q.text}</div>
+          </div>
+
+          <div class="recorder-panel" id="rec_panel_${q.num}">
+            <div class="rec-ctrl-row" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem;">
+              <button class="btn-rec" id="btn_rec_${q.num}" onclick="recorderManager.toggleRecording(${q.num}, ${day}, '${q.text.replace(/'/g, "\\'")}')">
+                <span class="rec-icon">🎙️</span> <span class="rec-label">Record Response</span>
+              </button>
+              <div class="rec-timer" id="rec_timer_${q.num}" style="display:none;">
+                <span class="pulse-dot"></span> <span id="rec_time_${q.num}">00:00</span>
+              </div>
+              <button class="btn-action" onclick="speakText('${q.text.replace(/'/g, "\\'")}')" title="Listen to question">
+                🔊 Prompt
+              </button>
+            </div>
+
+            <div class="audio-playback-container" id="playback_box_${q.num}" style="display: ${isSaved ? 'block' : 'none'};">
+              <audio controls class="custom-audio-player" id="audio_${q.num}" src="${isSaved ? recorderManager.getAudioUrl(q.num, isSaved.blob) : ''}"></audio>
+              <div class="audio-actions">
+                <button class="btn-audio-action" onclick="recorderManager.downloadRecording(${q.num}, ${day})">
+                  💾 Download
+                </button>
+                <button class="btn-audio-action btn-delete-audio" onclick="recorderManager.deleteRecording(${q.num})">
+                  🗑️ Discard
+                </button>
+                <span class="save-status-badge" id="save_status_${q.num}">
+                  ${isSaved ? `✅ Saved (${isSaved.duration}s)` : ''}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="q-footer">
+            <span class="q-index">Question #${q.num}</span>
+            <span style="font-size: 0.78rem; color: var(--text-light); font-weight: 600;">Part ${idx < 5 ? '1: Warm-up' : (idx < 10 ? '2: Scenarios' : '3: Discussion')}</span>
+          </div>
+        </div>
+      `;
+    }
+
     function renderActiveDay() {
       const container = document.getElementById('portalContent');
       const dayData = FOUNDATIONS_DATA.find(d => d.day === activeDay);
@@ -871,35 +1126,18 @@
         </div>
       `;
 
-      // Questions
       if (activeView === 'full' || activeView === 'questions') {
         html += `
           <div class="section-header">
             <h3 class="section-title">💬 Speaking Question Bank</h3>
-            <span class="section-count">15 Practice Questions</span>
+            <span class="section-count">15 Practice Questions with Audio Recorder</span>
           </div>
           <div class="question-grid">
-            ${dayData.questions.map((q, idx) => `
-              <div class="q-card">
-                <div>
-                  <span class="q-tier-tag ${idx < 5 ? 'tag-tier1' : (idx < 10 ? 'tag-tier2' : 'tag-tier3')}">
-                    ${q.tier}
-                  </span>
-                  <div class="q-content">${q.text}</div>
-                </div>
-                <div class="q-footer">
-                  <span class="q-index">Question #${q.num}</span>
-                  <button class="btn-action" onclick="speakText('${q.text.replace(/'/g, "\\'")}')">
-                    🔊 Read Aloud
-                  </button>
-                </div>
-              </div>
-            `).join('')}
+            ${dayData.questions.map((q, idx) => renderQuestionCard(q, dayData.day, idx)).join('')}
           </div>
         `;
       }
 
-      // Vocabulary
       if (activeView === 'full' || activeView === 'vocab') {
         html += `
           <div class="section-header">
@@ -929,7 +1167,6 @@
         `;
       }
 
-      // Extras
       if (activeView === 'full') {
         html += `
           <div class="section-header">
@@ -993,15 +1230,31 @@
       });
       const rand = allQ[Math.floor(Math.random() * allQ.length)];
       const holder = document.getElementById('randomResultHolder');
+      const isSaved = recorderManager.getRecording(rand.num);
+      
       holder.innerHTML = `
         <div style="background: var(--bg-subtle); border: 1px solid var(--brown-border); border-radius: var(--radius-md); padding: 2rem; text-align: center;">
           <span class="q-tier-tag tag-tier2">Day ${rand.day}: ${rand.title} • Question #${rand.num}</span>
           <p style="font-size: 1.35rem; font-weight: 700; color: var(--brown-dark); margin: 1.25rem 0 1.5rem; line-height: 1.4;">
             "${rand.text}"
           </p>
-          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <button class="btn-rec" id="btn_rec_${rand.num}" onclick="recorderManager.toggleRecording(${rand.num}, ${rand.day}, '${rand.text.replace(/'/g, "\\'")}')">
+              🎙️ Record Response
+            </button>
+            <div class="rec-timer" id="rec_timer_${rand.num}" style="display:none;">
+              <span class="pulse-dot"></span> <span id="rec_time_${rand.num}">00:00</span>
+            </div>
             <button class="btn-action" style="padding: 0.6rem 1.25rem;" onclick="speakText('${rand.text.replace(/'/g, "\\'")}')">🔊 Read Aloud</button>
             <button class="btn-timer" onclick="startTimer(120)">⏱️ Start 2-Minute Speech</button>
+          </div>
+          <div class="audio-playback-container" id="playback_box_${rand.num}" style="display: ${isSaved ? 'block' : 'none'}; max-width: 500px; margin: 0 auto; text-align: left;">
+            <audio controls class="custom-audio-player" id="audio_${rand.num}" src="${isSaved ? recorderManager.getAudioUrl(rand.num, isSaved.blob) : ''}"></audio>
+            <div class="audio-actions">
+              <button class="btn-audio-action" onclick="recorderManager.downloadRecording(${rand.num}, ${rand.day})">💾 Download</button>
+              <button class="btn-audio-action btn-delete-audio" onclick="recorderManager.deleteRecording(${rand.num})">🗑️ Discard</button>
+              <span class="save-status-badge" id="save_status_${rand.num}">${isSaved ? `✅ Saved (${isSaved.duration}s)` : '✅ Saved'}</span>
+            </div>
           </div>
         </div>
       `;
@@ -1104,18 +1357,7 @@
             <h3 class="section-title">💬 Matched Questions (${matchedQ.length})</h3>
           </div>
           <div class="question-grid">
-            ${matchedQ.map(q => `
-              <div class="q-card">
-                <div>
-                  <span class="q-tier-tag tag-tier2">Day ${q.day} • Question #${q.num}</span>
-                  <div class="q-content">${q.text}</div>
-                </div>
-                <div class="q-footer">
-                  <span class="q-index">${q.title}</span>
-                  <button class="btn-action" onclick="speakText('${q.text.replace(/'/g, "\\'")}')">🔊 Read</button>
-                </div>
-              </div>
-            `).join('')}
+            ${matchedQ.map((q, idx) => renderQuestionCard(q, q.day, idx)).join('')}
           </div>
         ` : ''}
 
