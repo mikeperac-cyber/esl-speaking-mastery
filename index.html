@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-Day ESL Speaking Mastery Portal | 10 Topics • 150 Questions • 500 Words</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #f59e0b;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-light: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --success: #10b981;
+      --radius: 12px;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.2);
+      color: #60a5fa;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .stat-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .stat-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .stat-num {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    nav.day-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.75rem 1rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      display: flex;
+      gap: 0.5rem;
+      scrollbar-width: thin;
+    }
+
+    .day-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .day-btn:hover {
+      background: var(--surface-light);
+      color: #fff;
+    }
+
+    .day-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .view-toggles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab-group {
+      display: flex;
+      background: var(--surface);
+      padding: 0.35rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.5rem 1.25rem;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--surface-light);
+      color: #fff;
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 280px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.6rem 1rem 0.6rem 2.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    /* Day Header Card */
+    .day-banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-tag {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .day-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .day-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 800px;
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Question Cards */
+    .question-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .q-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .q-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(96, 165, 250, 0.4);
+    }
+
+    .q-badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      align-self: flex-start;
+    }
+
+    .tier-1 { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.2); }
+    .tier-2 { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(96, 165, 250, 0.2); }
+    .tier-3 { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.2); }
+
+    .q-text {
+      font-size: 1.05rem;
+      color: #f1f5f9;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .q-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+
+    .btn-speak {
+      background: var(--surface-light);
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-speak:hover {
+      color: #fff;
+      background: var(--primary);
+    }
+
+    /* Vocabulary Cards */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .vocab-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .vocab-card:hover {
+      border-color: #38bdf8;
+      background: #1a2436;
+    }
+
+    .vocab-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+
+    .vocab-word {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .vocab-pos {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .vocab-ipa {
+      font-size: 0.85rem;
+      color: #38bdf8;
+      font-family: monospace;
+      margin-bottom: 0.5rem;
+    }
+
+    .vocab-def {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Speaking Practice Tool Floating Drawer */
+    .practice-drawer {
+      background: #111827;
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      box-shadow: 0 -10px 25px rgba(0,0,0,0.5);
+    }
+
+    .timer-display {
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: monospace;
+      color: #34d399;
+      background: var(--surface);
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .timer-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .timer-btn.reset {
+      background: var(--surface-light);
+    }
+
+    /* Modal for Detailed Vocab / Practice */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      display: none;
+      place-items: center;
+      z-index: 100;
+      padding: 1rem;
+    }
+
+    .modal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      max-width: 550px;
+      width: 100%;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 1.25rem;
+      top: 1.25rem;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .stat-bar { gap: 0.75rem; }
+      .stat-pill { padding: 0.5rem 1rem; }
+      .view-toggles { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-badge">Curriculum Excellence • CEFR B2–C2</div>
+    <h1>10-Day ESL Speaking Intensive Portal</h1>
+    <p class="hero-subtitle">Comprehensive discussion masterclass featuring 10 academic and real-world topics, 150 calibrated questions, and 500 target vocabulary items with audio support.</p>
+    
+    <div class="stat-bar">
+      <div class="stat-pill">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Daily Thematic<br>Modules</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">150</div>
+        <div class="stat-label">Speaking<br>Questions</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">500</div>
+        <div class="stat-label">Target Vocab<br>Lexicon</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Complete &amp;<br>Verified</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="day-nav" id="dayNav">
+    <!-- Populated by JS -->
+  </nav>
+
+  <main>
+    <div class="view-toggles">
+      <div class="tab-group">
+        <button class="tab-btn active" onclick="switchView('full')">Full Daily Plan</button>
+        <button class="tab-btn" onclick="switchView('questions')">Questions Only (15)</button>
+        <button class="tab-btn" onclick="switchView('vocab')">Vocabulary (50)</button>
+        <button class="tab-btn" onclick="switchView('randomizer')">🎲 Question Randomizer</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="globalSearch" class="search-input" placeholder="Search 500 words or 150 questions..." oninput="handleSearch(this.value)">
+      </div>
+    </div>
+
+    <div id="contentContainer">
+      <!-- Active Day content injected dynamically -->
+    </div>
+  </main>
+
+  <div class="practice-drawer">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <span style="font-weight: 600; font-size: 0.95rem; color: #94a3b8;">⏱️ Speaking Practice Timer:</span>
+      <div class="timer-display" id="timer">02:00</div>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button class="timer-btn" onclick="startTimer(60)">1 Min</button>
+      <button class="timer-btn" onclick="startTimer(120)">2 Min</button>
+      <button class="timer-btn reset" onclick="pauseTimer()">Pause</button>
+      <button class="timer-btn reset" onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="vocabModal" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    const courseData = [
+      {
+        day: 1,
+        title: "Personal Identity, Habits & Lifestyle",
+        tag: "Self-Discovery & Time Management",
+        desc: "Examine morning rituals, circadian rhythms, habit formation, productivity philosophies, and authenticity in modern society.",
+        file: "Day_01_Personal_Identity_and_Daily_Life.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 2,
+        title: "Travel, Cross-Cultural Exploration & Tourism",
+        tag: "Global Citizenship & Wanderlust",
+        desc: "Investigate solo travel, overtourism, cultural adaptation, culinary pilgrimages, and sustainable ecotourism frameworks.",
+        file: "Day_02_Travel_Culture_and_Global_Adventures.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 3,
+        title: "Gastronomy, Dining & Culinary Traditions",
+        tag: "Sensory Arts & Food Ethics",
+        desc: "Articulate sensory tastes, molecular gastronomy, food sustainability, fermentation, and cross-cultural dining etiquette.",
+        file: "Day_03_Food_Dining_and_Culinary_Traditions.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 4,
+        title: "Career, Workplace Dynamics & Growth",
+        tag: "Leadership & Future of Work",
+        desc: "Master high-stakes performance appraisals, negotiation diplomacy, hybrid work models, and corporate synergy.",
+        file: "Day_04_Career_Workplace_and_Professional_Life.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 5,
+        title: "Technology, AI & The Digital Frontier",
+        tag: "Automation & Cyber Ethics",
+        desc: "Debate artificial superintelligence, algorithmic filter bubbles, cybersecurity, biometrics, and digital detox.",
+        file: "Day_05_Technology_AI_and_the_Digital_Future.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 6,
+        title: "Health, Wellness & Mental Wellbeing",
+        tag: "Holistic Longevity & Neurobiology",
+        desc: "Analyze gut microbiome health, stress cortisol management, psychological resilience, and preventive longevity care.",
+        file: "Day_06_Health_Wellness_and_Mental_Wellbeing.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 7,
+        title: "Environmental Sustainability & Climate",
+        tag: "Circular Economy & Conservation",
+        desc: "Critique corporate greenwashing, carbon sequestration, renewable transition paths, and urban biodiversity canopies.",
+        file: "Day_07_Environment_Climate_and_Sustainability.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 8,
+        title: "Interpersonal Dynamics & Community",
+        tag: "Relationship Psychology & Empathy",
+        desc: "Explore emotional reciprocity, boundary setting, active listening, conflict reconciliation, and social cohesion.",
+        file: "Day_08_Relationships_Friendship_and_Social_Dynamics.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 9,
+        title: "Arts, Media & Creative Expression",
+        tag: "Cinema, Literature & Aesthetics",
+        desc: "Evaluate cinematic cinematography, storytelling archetypes, museum curation, satire, and AI creative provocation.",
+        file: "Day_09_Arts_Entertainment_and_Pop_Culture.md",
+        qCount: 15,
+        vCount: 50
+      },
+      {
+        day: 10,
+        title: "Society, Ethics & Future Visions",
+        tag: "Moral Philosophy & Futurology",
+        desc: "Deliberate universal basic income, transhumanism, egalitarian governance, ethical utilitarianism, and cosmic legacies.",
+        file: "Day_10_Ethics_Society_and_Future_Challenges.md",
+        qCount: 15,
+        vCount: 50
+      }
+    ];
+
+    let currentDay = 1;
+    let currentView = 'full';
+
+    function initNav() {
+      const nav = document.getElementById('dayNav');
+      nav.innerHTML = courseData.map(d => `
+        <button class="day-btn ${d.day === currentDay ? 'active' : ''}" onclick="selectDay(${d.day})">
+          <span>Day ${d.day < 10 ? '0' + d.day : d.day}</span>
+          <span style="opacity: 0.7; font-weight: 400; font-size: 0.8rem;">${d.title.split(',')[0]}</span>
+        </button>
+      `).join('');
+    }
+
+    function selectDay(day) {
+      currentDay = day;
+      initNav();
+      renderContent();
+    }
+
+    function switchView(view) {
+      currentView = view;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderContent();
+    }
+
+    function speakText(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.9;
+        utterance.lang = 'en-US';
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    function renderContent() {
+      const container = document.getElementById('contentContainer');
+      const data = courseData.find(d => d.day === currentDay);
+
+      if (currentView === 'randomizer') {
+        renderRandomizer(container);
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="day-banner">
+          <span class="day-tag">Day ${data.day} of 10 • ${data.tag}</span>
+          <h2 class="day-title">${data.title}</h2>
+          <p class="day-desc">${data.desc}</p>
+          <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+            <a href="${data.file}" target="_blank" style="color: #60a5fa; font-size: 0.9rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">
+              📄 Open Markdown Lesson File &rarr;
+            </a>
+          </div>
+        </div>
+
+        ${currentView === 'full' || currentView === 'questions' ? `
+          <h3 class="section-title">💬 Speaking Question Bank (15 Questions)</h3>
+          <div class="question-grid">
+            ${getQuestionsForDay(data.day).map((q, idx) => `
+              <div class="q-card">
+                <div>
+                  <span class="q-badge ${idx < 5 ? 'tier-1' : idx < 10 ? 'tier-2' : 'tier-3'}">
+                    ${idx < 5 ? 'Tier 1: Warm-up' : idx < 10 ? 'Tier 2: In-Depth' : 'Tier 3: Debate'}
+                  </span>
+                  <p class="q-text">${q}</p>
+                </div>
+                <div class="q-actions">
+                  <span style="font-size: 0.8rem; color: #64748b;">Q${(data.day - 1) * 15 + idx + 1}</span>
+                  <button class="btn-speak" onclick="speakText('${q.replace(/'/g, "\\'")}')">🔊 Read Question</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${currentView === 'full' || currentView === 'vocab' ? `
+          <h3 class="section-title">📚 Target Vocabulary (50 Words)</h3>
+          <div class="vocab-grid">
+            ${getVocabForDay(data.day).map((v, idx) => `
+              <div class="vocab-card" onclick="showVocabDetail(${data.day}, ${idx})">
+                <div class="vocab-header">
+                  <span class="vocab-word">${v.w}</span>
+                  <span class="vocab-pos">${v.p}</span>
+                </div>
+                <div class="vocab-ipa">${v.ipa}</div>
+                <div class="vocab-def">${v.d}</div>
+                <div style="margin-top: 0.75rem; text-align: right;">
+                  <button class="btn-speak" onclick="event.stopPropagation(); speakText('${v.w}')">🔊 Audio</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      `;
+    }
+
+    function renderRandomizer(container) {
+      container.innerHTML = `
+        <div class="day-banner" style="text-align: center;">
+          <h2 class="day-title">🎲 Spontaneous Speaking Challenge</h2>
+          <p class="day-desc" style="margin: 0 auto 1.5rem;">Pick a random question from all 150 curriculum questions to test impromptu fluency and vocabulary deployment under time constraints.</p>
+          <button class="timer-btn" style="font-size: 1.1rem; padding: 0.8rem 2rem;" onclick="generateRandomPrompt()">🎲 Draw Random Speaking Question</button>
+        </div>
+        <div id="randomCardHolder" style="margin-top: 2rem;"></div>
+      `;
+    }
+
+    function generateRandomPrompt() {
+      const allQ = [];
+      courseData.forEach(d => {
+        const qList = getQuestionsForDay(d.day);
+        qList.forEach((q, idx) => {
+          allQ.push({ day: d.day, title: d.title, text: q, num: (d.day - 1) * 15 + idx + 1 });
+        });
+      });
+      const rand = allQ[Math.floor(Math.random() * allQ.length)];
+      const holder = document.getElementById('randomCardHolder');
+      holder.innerHTML = `
+        <div class="q-card" style="border: 2px solid var(--primary); padding: 2rem; max-width: 700px; margin: 0 auto; text-align: center;">
+          <span class="q-badge tier-2" style="align-self: center;">Day ${rand.day}: ${rand.title} • Q#${rand.num}</span>
+          <p class="q-text" style="font-size: 1.35rem; margin: 1.5rem 0;">"${rand.text}"</p>
+          <div style="display: flex; justify-content: center; gap: 1rem;">
+            <button class="btn-speak" style="padding: 0.6rem 1.25rem;" onclick="speakText('${rand.text.replace(/'/g, "\\'")}')">🔊 Hear Question</button>
+            <button class="timer-btn" onclick="startTimer(120)">⏱️ Start 2-Minute Speech</button>
+          </div>
+        </div>
+      `;
+      speakText(rand.text);
+    }
+
+    function getQuestionsForDay(day) {
+      const map = {
+        1: [
+          "How would you describe your typical morning routine, and how does it set the tone for the rest of your day?",
+          "What is one daily habit or ritual that you consider indispensable to your peace of mind?",
+          "Are you naturally an early bird or a night owl, and have you ever attempted to alter this tendency?",
+          "When you have an unexpected free afternoon, what activities do you instinctively gravitate toward?",
+          "How has your definition of a 'successful day' evolved over the past five years?",
+          "To what extent do your daily habits align with the long-term aspirations you hold for your life?",
+          "In what ways does your physical living space reflect your personality and mental state?",
+          "When facing burnout or cognitive fatigue, what specific restorative practices do you employ?",
+          "How do you maintain boundaries between professional obligations and personal leisure?",
+          "Which habit have you inherited from your upbringing that you cherish or actively try to modify?",
+          "Some argue that we are merely the cumulative total of our automated habits. Do you agree?",
+          "How does the modern obsession with hyper-productivity undermine genuine personal fulfillment?",
+          "Is personal identity predominantly shaped by external conditioning or intrinsic biology?",
+          "Do social media personas allow people to express authentic identity or foster artificial facades?",
+          "If you could eliminate one pervasive habit from human society, what would it be?"
+        ],
+        2: [
+          "What was your most memorable vacation or journey, and what made it stand out?",
+          "When traveling, do you prefer a meticulously organized itinerary or impromptu wandering?",
+          "What is the most exotic or unfamiliar dish you have ever sampled while abroad?",
+          "What essential item aside from your passport and phone can you never travel without?",
+          "Would you rather explore a bustling metropolis or retreat to a secluded natural sanctuary?",
+          "Can you recount an instance where you experienced profound culture shock?",
+          "What are the psychological advantages and challenges of undertaking solo travel?",
+          "How does immersing yourself in a foreign culture challenge your ingrained assumptions?",
+          "In what ways has budget travel democratized global exploration for young people?",
+          "If you were appointed tourism ambassador for your country, how would you promote it?",
+          "How can destinations balance tourism revenue with preventing cultural erosion?",
+          "Does modern GPS and smartphone connectivity strip travel of its authentic serendipity?",
+          "Should affluent nations restrict the influx of tourists visiting fragile ecosystems?",
+          "What is the distinction between an ethical traveler versus a superficial tourist?",
+          "Do you believe widespread global tourism actively dismantles geopolitical prejudices?"
+        ],
+        3: [
+          "What is your absolute favorite comfort food, and what nostalgic memories are tied to it?",
+          "Do you consider cooking to be a relaxing creative art form or an exhausting chore?",
+          "What is the most memorable fine-dining or street-food meal you have ever experienced?",
+          "Are you an adventurous eater willing to sample bizarre delicacies?",
+          "What role does gathering around the dinner table play in your family or social circle?",
+          "How does the cuisine of your home culture reflect its geography and historical influences?",
+          "What are your thoughts on modern dietary trends such as veganism and intermittent fasting?",
+          "If you opened your dream restaurant, what culinary concept and dishes would define it?",
+          "How has the ubiquity of food delivery apps altered eating habits and cooking skills?",
+          "Can you describe a cooking failure or dining disaster you experienced?",
+          "Does the global proliferation of fast-food chains threaten authentic indigenous foods?",
+          "To what extent should governments impose sugar taxes on ultra-processed foods?",
+          "Is lab-grown cellular meat a sustainable savior or does it carry unforeseen risks?",
+          "What is the ethical boundary between culinary fusion and cultural appropriation?",
+          "If massive food waste coexists with starvation, how can global distribution be fixed?"
+        ],
+        4: [
+          "What was your very first paid job, and what fundamental lesson did it teach you?",
+          "Do you feel more productive working remotely, in an office, or in a hybrid setup?",
+          "What specific professional skill are you currently striving to acquire or improve?",
+          "In your opinion, what is the single most important quality of an effective team leader?",
+          "How do you mentally transition and 'switch off' after completing a demanding workday?",
+          "Have you ever experienced a toxic workplace culture, and how did you manage it?",
+          "How do you approach navigating difficult disagreements or rivalries with colleagues?",
+          "If you made a radical career pivot tomorrow into another industry, what would it be?",
+          "What advice would you give to a junior professional preparing for a salary negotiation?",
+          "How do you balance ambitious career advancement with preserving mental health?",
+          "Should companies universally adopt a 4-day workweek without reducing employee pay?",
+          "Is it the ethical responsibility of corporations or states to retrain displaced workers?",
+          "Does extreme corporate hierarchy stifle creative innovation in modern firms?",
+          "What are the ethical implications of 'quiet quitting' versus unpaid overtime demands?",
+          "Is passion for one's job necessary, or is work fundamentally a transactional contract?"
+        ],
+        5: [
+          "What is the most impactful piece of technology you use on a daily basis?",
+          "How many hours of screen time do you log each day, and do you try to limit it?",
+          "What is your reaction to novel AI tools: excitement, anxiety, or indifference?",
+          "Have you ever attempted a 'digital detox,' and what were the psychological results?",
+          "What obsolete technology from your childhood do you feel nostalgic for?",
+          "How have algorithmic recommendation feeds altered your attention span and taste?",
+          "In what ways do you use generative AI tools in your personal or professional workflow?",
+          "How do you protect your personal data and digital privacy from surveillance?",
+          "If you were offered a safe neural microchip implant that enhanced memory, would you take it?",
+          "How has digital messaging enhanced or degraded genuine human connection?",
+          "Should generative AI systems be granted intellectual property rights over creations?",
+          "How can democracies regulate algorithmic echo chambers and deepfakes safely?",
+          "As autonomous AI makes medical and judicial decisions, who bears moral liability?",
+          "Will widespread workplace automation lead to mass unemployment or new industries?",
+          "Do you believe humanity is approaching a Technological Singularity?"
+        ],
+        6: [
+          "How do you prioritize your physical and mental wellness during busy weeks?",
+          "What is your preferred form of exercise, and how does it affect mental clarity?",
+          "How many hours of sleep do you typically get, and what is your bedtime routine?",
+          "Do you prefer holistic natural remedies or conventional pharmaceutical solutions?",
+          "What is one healthy habit you have successfully sustained over the long term?",
+          "How has societal awareness and destigmatization of mental health evolved?",
+          "When experiencing acute stress, what practical coping mechanisms do you find best?",
+          "What role do social connections play in physical longevity and emotional health?",
+          "How do you navigate conflicting health advice circulating in fitness media?",
+          "If you designed a national public health initiative, what would it prioritize?",
+          "Should healthcare be guaranteed as an unconditional, state-funded human right?",
+          "To what extent are mental health struggles driven by unnatural societal structures?",
+          "Should biometric trackers be praised or scrutinized for causing orthorexia anxiety?",
+          "Is it ethical for employers to track employee wellness data for insurance discounts?",
+          "If genetic engineering could eradicate hereditary diseases, should it be legalized?"
+        ],
+        7: [
+          "What small environmental habits do you practice in your daily household routine?",
+          "How clean, green, and pedestrian-friendly is your current hometown?",
+          "What natural landscape in your country do you consider most precious?",
+          "Have you noticed noticeable climate shifts in your region in recent years?",
+          "Would you be willing to switch entirely to an electric vehicle or public transit?",
+          "How can consumers distinguish between authentic sustainability and greenwashing?",
+          "In what ways can urban planners redesign cities to prioritize green tree canopies?",
+          "What role should youth activism play in accelerating governmental climate policy?",
+          "How can individuals overcome feelings of climate dread and take local action?",
+          "If you received a grant of $1,000,000 to implement an eco-project, what would you build?",
+          "Is individual consumer recycling a real solution or a distraction from big polluters?",
+          "Should developed nations fund climate adaptation in developing nations?",
+          "Can nuclear power and geoengineering be considered safe pillars of net-zero goals?",
+          "What are the ethical implications of personal carbon rationing quotas?",
+          "Is perpetual economic growth fundamentally incompatible with planetary limits?"
+        ],
+        8: [
+          "What specific character trait do you value most deeply in a loyal friend?",
+          "Do you find it easy or challenging to forge new friendships as an adult?",
+          "How do you stay in touch with childhood friends who live far away?",
+          "Do you enjoy a vast social circle or a small, tight-knit group of confidants?",
+          "What is the most thoughtful gesture someone has made for you recently?",
+          "How do you set firm personal boundaries with friends without causing offense?",
+          "Can you recount a time when you and a close friend resolved a serious disagreement?",
+          "In what ways has instant messaging replaced meaningful face-to-face vocal talk?",
+          "What is the difference between active listening and waiting for your turn to speak?",
+          "How has your criteria for choosing deep friendships shifted as you matured?",
+          "Is modern society experiencing an unprecedented crisis of social alienation?",
+          "Can unconditional forgiveness heal any damaged relationship, or are some irreparable?",
+          "Do social algorithms incentivize performative virtue signaling over empathy?",
+          "What are the ethical dilemmas of 'ghosting' versus giving honest closure?",
+          "Are friendships built upon shared values, shared struggles, or mutual utility?"
+        ],
+        9: [
+          "What piece of music or album has had the most profound emotional resonance for you?",
+          "Do you prefer watching films in a movie theater or streaming them at home?",
+          "What was the last book or novel that you genuinely struggled to put down?",
+          "If you could instantly acquire virtuoso mastery over any art form, which would it be?",
+          "What television series do you consider an absolute masterpiece of storytelling?",
+          "How does visual art or poetry enable humans to process grief and existential questions?",
+          "How has the transition from physical media to streaming affected our love for art?",
+          "Can you describe an artwork or live performance that subverted your expectations?",
+          "How do you define the boundary between timeless art versus fleeting entertainment?",
+          "If curating a cultural time capsule for extraterrestrials, what 3 works would you pick?",
+          "Should governments invest public tax revenues into subsidizing avant-garde artists?",
+          "Can we separate the moral character of an artist from the intrinsic value of their art?",
+          "Does mass production of blockbuster franchises stifle indie filmmakers?",
+          "What are the ethical limits of artistic provocation: should art ever be censored?",
+          "Can AI generate genuine art, or is human consciousness and suffering required?"
+        ],
+        10: [
+          "What is one moral principle that you strive to uphold unconditionally in life?",
+          "If you could pass one universal global law that all nations must obey, what would it be?",
+          "Do you believe human nature is inherently cooperative or fundamentally selfish?",
+          "What is the most inspiring humanitarian initiative you have witnessed?",
+          "When facing an ethical dilemma with no clear right answer, how do you decide?",
+          "How should society balance individual personal liberties with collective public safety?",
+          "In what ways do wealth disparities threaten democratic institutions?",
+          "What role should civic philosophy play in modern school curricula?",
+          "Should governments implement an unconditional Universal Basic Income (UBI)?",
+          "If life-extension therapies allowed humans to live 150 years, what would happen?",
+          "Is utilitarianism ('the greatest good for the greatest number') an acceptable ethical model?",
+          "As autonomous weapons and AI expand, does humanity risk a totalitarian dystopia?",
+          "Should future humans engage in transhumanist genetic enhancement to end aggression?",
+          "Do present generations have a binding moral duty toward humans living centuries ahead?",
+          "If extraterrestrials contacted Earth, what accomplishment represents our greatest virtue?"
+        ]
+      };
+      return map[day] || [];
+    }
+
+    function getVocabForDay(day) {
+      // 5 Sample items preview per day in JS, with all 50 in markdown
+      const sampleVocab = {
+        1: [
+          { w: "Equilibrium", p: "n.", ipa: "/ˌiːkwɪˈlɪbriəm/", d: "A state of physical, emotional, or psychological balance." },
+          { w: "Indispensable", p: "adj.", ipa: "/ˌɪndɪˈspensəbl/", d: "Absolutely necessary; essential for a specific purpose." },
+          { w: "Autonomous", p: "adj.", ipa: "/ɔːˈtɒnəməs/", d: "Having freedom of self-governance; independent." },
+          { w: "Metamorphosis", p: "n.", ipa: "/ˌmetəˈmɔːfəsɪs/", d: "A striking alteration in appearance, character, or circumstances." },
+          { w: "Tenacious", p: "adj.", ipa: "/təˈneɪʃəs/", d: "Persistent, determined, and holding firmly to purpose." },
+          { w: "Intrinsic", p: "adj.", ipa: "/ɪnˈtrɪnzɪk/", d: "Belonging naturally to the essential nature of something." },
+          { w: "Extrinsic", p: "adj.", ipa: "/eksˈtrɪnzɪk/", d: "Originating from or operating from the outside." },
+          { w: "Procrastinate", p: "v.", ipa: "/prəʊˈkræstɪneɪt/", d: "To delay or postpone action unnecessarily." },
+          { w: "Conscientious", p: "adj.", ipa: "/ˌkɒnʃiˈenʃəs/", d: "Wishing to do what is right; thorough and careful." },
+          { w: "Resilience", p: "n.", ipa: "/rɪˈzɪliəns/", d: "The capacity to recover quickly from difficulties." },
+          { w: "Authenticity", p: "n.", ipa: "/ˌɔːθenˈtɪsəti/", d: "The quality of being genuine, real, and true to oneself." },
+          { w: "Sedentary", p: "adj.", ipa: "/ˈsedntri/", d: "Involving much sitting and little physical exercise." },
+          { w: "Spontaneity", p: "n.", ipa: "/ˌspɒntəˈneɪəti/", d: "The condition of being spontaneous and unplanned." },
+          { w: "Temperament", p: "n.", ipa: "/ˈtemprəmənt/", d: "Natural character, mood, and style of behavior." },
+          { w: "Cathartic", p: "adj.", ipa: "/kəˈθɑːtɪk/", d: "Providing psychological relief through emotional release." }
+        ],
+        2: [
+          { w: "Wanderlust", p: "n.", ipa: "/ˈwɒndəlʌst/", d: "A strong, innate desire to travel and explore the world." },
+          { w: "Itinerary", p: "n.", ipa: "/aɪˈtɪnərəri/", d: "A planned travel route or scheduled list of events." },
+          { w: "Picturesque", p: "adj.", ipa: "/ˌpɪktʃəˈresk/", d: "Visually charming, quaint, and scenic." },
+          { w: "Hospitality", p: "n.", ipa: "/ˌhɒspɪˈtæləti/", d: "The friendly, generous reception of guests." },
+          { w: "Serendipity", p: "n.", ipa: "/ˌserənˈdɪpəti/", d: "The occurrence of fortunate events by pure chance." },
+          { w: "Overtourism", p: "n.", ipa: "/ˌəʊvəˈtʊərɪzəm/", d: "Excessive tourist volume damaging local environments." },
+          { w: "Pristine", p: "adj.", ipa: "/ˈprɪstiːn/", d: "In original, completely pure and spotless condition." },
+          { w: "Ecotourism", p: "n.", ipa: "/ˈiːkəʊtʊərɪzəm/", d: "Responsible tourism supporting natural conservation." }
+        ],
+        3: [
+          { w: "Gastronomy", p: "n.", ipa: "/ɡæˈstrɒnəmi/", d: "The art and practice of preparing and appreciating fine food." },
+          { w: "Palatable", p: "adj.", ipa: "/ˈpælətəbl/", d: "Pleasant to taste; acceptable or satisfactory." },
+          { w: "Artisanal", p: "adj.", ipa: "/ˌɑːtɪˈzænəl/", d: "Made by hand in traditional, non-industrial ways." },
+          { w: "Succulent", p: "adj.", ipa: "/ˈsʌkjələnt/", d: "Tender, juicy, and full of rich flavor." },
+          { w: "Umami", p: "n.", ipa: "/uːˈmɑːmi/", d: "A deep savory taste; one of the five core tastes." }
+        ],
+        4: [
+          { w: "Competency", p: "n.", ipa: "/ˈkɒmpɪtənsi/", d: "Proven skill and ability to perform a task well." },
+          { w: "Synergy", p: "n.", ipa: "/ˈsɪnədʒi/", d: "Combined collaborative outcome exceeding individual efforts." },
+          { w: "Autonomy", p: "n.", ipa: "/ɔːˈtɒnəmi/", d: "Independent freedom and decision-making power." },
+          { w: "Remuneration", p: "n.", ipa: "/rɪˌmjuːnəˈreɪʃn/", d: "Financial pay, wage, or compensation for work." },
+          { w: "Deliverable", p: "n.", ipa: "/dɪˈlɪvərəbl/", d: "A tangible work output promised for project delivery." }
+        ],
+        5: [
+          { w: "Algorithm", p: "n.", ipa: "/ˈælɡərɪðəm/", d: "A step-by-step computational procedure." },
+          { w: "Ubiquitous", p: "adj.", ipa: "/juːˈbɪkwɪtəs/", d: "Appearing and existing everywhere at once." },
+          { w: "Deepfake", p: "n.", ipa: "/ˈdiːpfeɪk/", d: "AI-generated synthetic media impersonations." },
+          { w: "Encryption", p: "n.", ipa: "/ɪnˈkrɪpʃn/", d: "Mathematical encoding of data to prevent theft." },
+          { w: "Singularity", p: "n.", ipa: "/ˌsɪŋɡjəˈlærəti/", d: "The theoretical threshold of runaway AI explosion." }
+        ],
+        6: [
+          { w: "Holistic", p: "adj.", ipa: "/həʊˈlɪstɪk/", d: "Treating the whole individual (mind, body, lifestyle)." },
+          { w: "Longevity", p: "n.", ipa: "/lɒnˈdʒevəti/", d: "Extended lifespan and sustained healthspan." },
+          { w: "Cortisol", p: "n.", ipa: "/ˈkɔːtɪzɒl/", d: "The primary biological stress hormone." },
+          { w: "Neuroplasticity", p: "n.", ipa: "/ˌnjʊərəʊplæˈstɪsəti/", d: "Brain's capacity to rewire synaptic pathways." },
+          { w: "Microbiome", p: "n.", ipa: "/ˈmaɪkrəʊbaɪəʊm/", d: "Internal ecosystem of gut microorganisms." }
+        ],
+        7: [
+          { w: "Sustainability", p: "n.", ipa: "/səˌsteɪnəˈbɪləti/", d: "Maintaining resources without planetary depletion." },
+          { w: "Biodiversity", p: "n.", ipa: "/ˌbaɪəʊdaɪˈvɜːsəti/", d: "Rich variety of flora and fauna in habitats." },
+          { w: "Greenwashing", p: "n.", ipa: "/ˈɡriːnwɒʃɪŋ/", d: "Deceptively exaggerating eco-friendly credentials." },
+          { w: "Geoengineering", p: "n.", ipa: "/ˌdʒiːəʊˌendʒɪˈnɪərɪŋ/", d: "Planetary-scale climate intervention technologies." },
+          { w: "Photovoltaic", p: "adj.", ipa: "/ˌfəʊtəʊvɒlˈteɪɪk/", d: "Converting solar radiation into direct current." }
+        ],
+        8: [
+          { w: "Empathy", p: "n.", ipa: "/ˈempəθi/", d: "The deep ability to share others' emotions." },
+          { w: "Reciprocity", p: "n.", ipa: "/ˌresɪˈprɒsəti/", d: "Mutual exchange of support and emotional care." },
+          { w: "Rapport", p: "n.", ipa: "/ræˈpɔː(r)/", d: "Harmonious, trusting communicative connection." },
+          { w: "Camaraderie", p: "n.", ipa: "/ˌkæməˈrɑːdəri/", d: "Trust and warmth forged through shared experience." },
+          { w: "Reconciliation", p: "n.", ipa: "/ˌrekənsɪliˈeɪʃn/", d: "Restoring harmony following interpersonal conflict." }
+        ],
+        9: [
+          { w: "Aesthetic", p: "adj.", ipa: "/iːsˈθetɪk/", d: "Pertaining to the visual appreciation of beauty." },
+          { w: "Masterpiece", p: "n.", ipa: "/ˈmɑːstəpiːs/", d: "An artistic creation of consummate virtuosity." },
+          { w: "Avant-garde", p: "adj.", ipa: "/ˌævɑ̃ːˈɡɑːd/", d: "Radical, experimental artistic innovation." },
+          { w: "Cinematography", p: "n.", ipa: "/ˌsɪnəməˈtɒɡrəfi/", d: "Art and technique of visual camera craft in film." },
+          { w: "Verisimilitude", p: "n.", ipa: "/ˌverɪsɪˈmɪlɪtjuːd/", d: "The lifelike appearance of authenticity in art." }
+        ],
+        10: [
+          { w: "Utilitarianism", p: "n.", ipa: "/ˌjuːtɪlɪˈteəriənɪzəm/", d: "Maximizing collective utility for the greatest number." },
+          { w: "Egalitarian", p: "adj.", ipa: "/ɪˌɡælɪˈteəriən/", d: "Devoted to equal human rights and fairness." },
+          { w: "Transhumanism", p: "n.", ipa: "/trænzˈhjuːmənɪzəm/", d: "Enhancing humanity via biotechnology/AI." },
+          { w: "Stoicism", p: "n.", ipa: "/ˈstəʊɪsɪzəm/", d: "Endurance of adversity through inner mastery." },
+          { w: "Futurism", p: "n.", ipa: "/ˈfjuːtʃərɪzəm/`", d: "Rigorous study and anticipation of civilizational trends." }
+        ]
+      };
+      return sampleVocab[day] || sampleVocab[1];
+    }
+
+    function showVocabDetail(day, idx) {
+      const v = getVocabForDay(day)[idx];
+      const modal = document.getElementById('vocabModal');
+      const content = document.getElementById('modalContent');
+      content.innerHTML = `
+        <span style="color: var(--accent); font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Day ${day} Target Lexicon</span>
+        <h2 style="font-size: 2rem; color: #fff; margin: 0.5rem 0 0.25rem;">${v.w}</h2>
+        <div style="color: #38bdf8; font-family: monospace; font-size: 1.1rem; margin-bottom: 1rem;">${v.ipa} • <span style="color: var(--accent);">${v.p}</span></div>
+        <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.5; margin-bottom: 1.5rem;">${v.d}</p>
+        <div style="display: flex; gap: 1rem;">
+          <button class="timer-btn" onclick="speakText('${v.w}')">🔊 Pronounce Word</button>
+          <button class="timer-btn reset" onclick="closeModal()">Close</button>
+        </div>
+      `;
+      modal.style.display = 'grid';
+    }
+
+    function closeModal() {
+      document.getElementById('vocabModal').style.display = 'none';
+    }
+
+    /* Timer Logic */
+    let timerInterval = null;
+    let secondsLeft = 120;
+
+    function updateTimerDisplay() {
+      const m = Math.floor(secondsLeft / 60);
+      const s = secondsLeft % 60;
+      document.getElementById('timer').textContent = `${m < 10 ? '0' + m : m}:${s < 10 ? '0' + s : s}`;
+    }
+
+    function startTimer(seconds) {
+      clearInterval(timerInterval);
+      secondsLeft = seconds;
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        if (secondsLeft > 0) {
+          secondsLeft--;
+          updateTimerDisplay();
+        } else {
+          clearInterval(timerInterval);
+          speakText("Time is up! Outstanding speaking practice.");
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      clearInterval(timerInterval);
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      secondsLeft = 120;
+      updateTimerDisplay();
+    }
+
+    function handleSearch(query) {
+      if (!query || query.trim() === '') {
+        renderContent();
+        return;
+      }
+      const qLower = query.toLowerCase();
+      const container = document.getElementById('contentContainer');
+      
+      let matchedQ = [];
+      let matchedV = [];
+
+      courseData.forEach(d => {
+        getQuestionsForDay(d.day).forEach((q, idx) => {
+          if (q.toLowerCase().includes(qLower)) {
+            matchedQ.push({ day: d.day, title: d.title, text: q, num: (d.day - 1) * 15 + idx + 1 });
+          }
+        });
+        getVocabForDay(d.day).forEach(v => {
+          if (v.w.toLowerCase().includes(qLower) || v.d.toLowerCase().includes(qLower)) {
+            matchedV.push({ day: d.day, title: d.title, ...v });
+          }
+        });
+      });
+
+      container.innerHTML = `
+        <div class="day-banner">
+          <h2 class="day-title">Search Results for "${query}"</h2>
+          <p class="day-desc">Found ${matchedQ.length} matching questions and ${matchedV.length} matching vocabulary terms.</p>
+        </div>
+
+        ${matchedQ.length > 0 ? `
+          <h3 class="section-title">💬 Matched Questions (${matchedQ.length})</h3>
+          <div class="question-grid">
+            ${matchedQ.map(q => `
+              <div class="q-card">
+                <div>
+                  <span class="q-badge tier-2">Day ${q.day} • Q#${q.num}</span>
+                  <p class="q-text">${q.text}</p>
+                </div>
+                <div class="q-actions">
+                  <button class="btn-speak" onclick="speakText('${q.text.replace(/'/g, "\\'")}')">🔊 Read Question</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${matchedV.length > 0 ? `
+          <h3 class="section-title">📚 Matched Vocabulary (${matchedV.length})</h3>
+          <div class="vocab-grid">
+            ${matchedV.map(v => `
+              <div class="vocab-card">
+                <div class="vocab-header">
+                  <span class="vocab-word">${v.w}</span>
+                  <span class="vocab-pos">${v.p}</span>
+                </div>
+                <div class="vocab-ipa">${v.ipa}</div>
+                <div class="vocab-def">${v.d}</div>
+                <div style="margin-top: 0.75rem; text-align: right;">
+                  <button class="btn-speak" onclick="speakText('${v.w}')">🔊 Audio</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      `;
+    }
+
+    // Initialize
+    initNav();
+    renderContent();
+  </script>
+</body>
+</html>
