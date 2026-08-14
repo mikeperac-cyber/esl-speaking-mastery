@@ -42,13 +42,22 @@ Welcome to the **10-Day ESL Speaking Intensive Course**, engineered specifically
 
 ---
 
-### 🌱 Foundations Track (A2–B1 Easier Level)
+### 🌱 Foundations Track (A2–B1 Speaking & Lexicon)
 Looking for an easier, practical, everyday beginner-to-intermediate speaking curriculum?
 Explore the dedicated **Foundations Curriculum** located in [`Foundations_A2_B1/`](./Foundations_A2_B1/):
 - **Foundations Overview**: [`Foundations_A2_B1/README.md`](./Foundations_A2_B1/README.md)
 - **Foundations 150 Questions**: [`Foundations_A2_B1/MASTER_QUESTIONS_150.md`](./Foundations_A2_B1/MASTER_QUESTIONS_150.md)
 - **Foundations 500 Vocabulary Words**: [`Foundations_A2_B1/MASTER_VOCABULARY_500.md`](./Foundations_A2_B1/MASTER_VOCABULARY_500.md)
 - **Foundations Interactive Portal**: [`Foundations_A2_B1/index.html`](./Foundations_A2_B1/index.html)
+
+---
+
+### 📖 Reading Comprehension Track (A2–B1 Passages & 100 Questions)
+Reinforce the target vocabulary from the 10 daily topics with 10 calibrated reading passages (300–500 words each) and 100 comprehension questions with answer keys:
+- **Reading Comprehension Overview**: [`Reading_Comprehension_A2_B1/README.md`](./Reading_Comprehension_A2_B1/README.md)
+- **Master Reading Passages Booklet**: [`Reading_Comprehension_A2_B1/MASTER_READING_PASSAGES.md`](./Reading_Comprehension_A2_B1/MASTER_READING_PASSAGES.md)
+- **Master 100 Questions & Answers**: [`Reading_Comprehension_A2_B1/MASTER_COMPREHENSION_QUESTIONS.md`](./Reading_Comprehension_A2_B1/MASTER_COMPREHENSION_QUESTIONS.md)
+- **Interactive Reading & Quiz Portal**: [`Reading_Comprehension_A2_B1/index.html`](./Reading_Comprehension_A2_B1/index.html) (Audio TTS, Instant Quiz Feedback & Explanations)
 
 ---
 
