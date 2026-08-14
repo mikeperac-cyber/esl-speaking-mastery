@@ -1,0 +1,5692 @@
+const FOUNDATIONS_DATA = [
+  {
+    "day": 1,
+    "filename": "Day_01_Daily_Routine_and_Family.md",
+    "title": "Daily Routine, Habits & Family Life",
+    "domain": "Morning rituals, family members, household chores, sleep habits, and daily schedules.",
+    "objectives": [
+      "Describe your daily schedule from morning to night using basic time adverbs.",
+      "Talk about family members, household responsibilities, and weekend habits.",
+      "Ask and answer simple questions about personal lifestyle with confidence.",
+      "Use 50 essential everyday words related to routines and home life."
+    ],
+    "questions": [
+      {
+        "num": 1,
+        "tier": "Tier 1: Warm-up",
+        "text": "What time do you usually wake up on weekdays, and what is the first thing you do?"
+      },
+      {
+        "num": 2,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer having a big breakfast or just a quick coffee or tea?"
+      },
+      {
+        "num": 3,
+        "tier": "Tier 1: Warm-up",
+        "text": "How do you usually get to work or school every morning?"
+      },
+      {
+        "num": 4,
+        "tier": "Tier 1: Warm-up",
+        "text": "Who do you live with, and how do you share the household chores?"
+      },
+      {
+        "num": 5,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your favorite part of the day: morning, afternoon, or evening?"
+      },
+      {
+        "num": 6,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a typical Saturday or Sunday in your life?"
+      },
+      {
+        "num": 7,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What household chore do you enjoy doing, and which one do you dislike most?"
+      },
+      {
+        "num": 8,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you usually relax when you feel tired after a long day?"
+      },
+      {
+        "num": 9,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you have a special family tradition or dinner habit that you enjoy?"
+      },
+      {
+        "num": 10,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How has your daily routine changed compared to when you were a child?"
+      },
+      {
+        "num": 11,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is it better to wake up early in the morning or stay up late at night? Why?"
+      },
+      {
+        "num": 12,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Do you think having a fixed daily routine makes life easier or more boring?"
+      },
+      {
+        "num": 13,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How does using a smartphone affect our morning and bedtime habits?"
+      },
+      {
+        "num": 14,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should children help their parents with house cleaning every week?"
+      },
+      {
+        "num": 15,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "If you had two extra free hours every day, how would you spend them?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 1,
+        "word": "Alarm",
+        "pos": "n.",
+        "ipa": "/əˈlɑːm/",
+        "definition": "A clock or device that makes a sound to wake you up.",
+        "collocations": "set an alarm, alarm goes off",
+        "example": "I set my alarm for 6:30 AM every morning."
+      },
+      {
+        "num": 2,
+        "word": "Routine",
+        "pos": "n.",
+        "ipa": "/ruːˈtiːn/",
+        "definition": "A regular way of doing things in a fixed order.",
+        "collocations": "daily routine, morning routine",
+        "example": "Her morning routine includes drinking tea and stretching."
+      },
+      {
+        "num": 3,
+        "word": "Habit",
+        "pos": "n.",
+        "ipa": "/ˈhæbɪt/",
+        "definition": "Something that you do often and almost without thinking.",
+        "collocations": "good habit, healthy habit",
+        "example": "Reading before bed is a very calming habit."
+      },
+      {
+        "num": 4,
+        "word": "Breakfast",
+        "pos": "n.",
+        "ipa": "/ˈbrekfəst/",
+        "definition": "The first meal of the day, usually eaten in the morning.",
+        "collocations": "have breakfast, eat breakfast",
+        "example": "We had scrambled eggs and toast for breakfast."
+      },
+      {
+        "num": 5,
+        "word": "Chores",
+        "pos": "n.",
+        "ipa": "/tʃɔːz/",
+        "definition": "Small daily jobs around the house, like cleaning or washing.",
+        "collocations": "household chores, do chores",
+        "example": "We divide the household chores evenly on weekends."
+      },
+      {
+        "num": 6,
+        "word": "Commute",
+        "pos": "v.",
+        "ipa": "/kəˈmjuːt/",
+        "definition": "To travel regularly between your home and work or school.",
+        "collocations": "daily commute, commute by bus",
+        "example": "He commutes thirty minutes by train every day."
+      },
+      {
+        "num": 7,
+        "word": "Schedule",
+        "pos": "n.",
+        "ipa": "/ˈʃedjuːl/",
+        "definition": "A plan that lists the times when events or tasks will happen.",
+        "collocations": "busy schedule, weekly schedule",
+        "example": "My schedule is very busy on Monday mornings."
+      },
+      {
+        "num": 8,
+        "word": "Sibling",
+        "pos": "n.",
+        "ipa": "/ˈsɪblɪŋ/",
+        "definition": "A brother or sister.",
+        "collocations": "older sibling, have siblings",
+        "example": "Do you have any siblings or are you an only child?"
+      },
+      {
+        "num": 9,
+        "word": "Punctual",
+        "pos": "adj.",
+        "ipa": "/ˈpʌŋktʃuəl/",
+        "definition": "Arriving or doing things at the correct time; not late.",
+        "collocations": "always punctual, be punctual",
+        "example": "She is always punctual for her morning classes."
+      },
+      {
+        "num": 10,
+        "word": "Relax",
+        "pos": "v.",
+        "ipa": "/rɪˈlæks/",
+        "definition": "To rest and become less anxious or tired.",
+        "collocations": "relax at home, time to relax",
+        "example": "I like to listen to soft music to relax."
+      },
+      {
+        "num": 11,
+        "word": "Organized",
+        "pos": "adj.",
+        "ipa": "/ˈɔːɡənaɪzd/",
+        "definition": "Able to plan your work and life in a neat, clear way.",
+        "collocations": "well organized, organized person",
+        "example": "Keeping an organized desk helps me study better."
+      },
+      {
+        "num": 12,
+        "word": "Bedtime",
+        "pos": "n.",
+        "ipa": "/ˈbedtaɪm/",
+        "definition": "The usual time when you go to bed to sleep.",
+        "collocations": "regular bedtime, before bedtime",
+        "example": "His regular bedtime is 10:30 PM on weekdays."
+      },
+      {
+        "num": 13,
+        "word": "Nap",
+        "pos": "n.",
+        "ipa": "/næp/",
+        "definition": "A short period of sleep, especially during the day.",
+        "collocations": "take a nap, afternoon nap",
+        "example": "A twenty-minute afternoon nap gives me fresh energy."
+      },
+      {
+        "num": 14,
+        "word": "Tidy",
+        "pos": "v.",
+        "ipa": "/ˈtaɪdi/",
+        "definition": "To make a room or place neat by putting things in order.",
+        "collocations": "tidy up, tidy the room",
+        "example": "Please tidy your bedroom before leaving for school."
+      },
+      {
+        "num": 15,
+        "word": "Stroll",
+        "pos": "n.",
+        "ipa": "/strəʊl/",
+        "definition": "A slow, relaxed and peaceful walk.",
+        "collocations": "evening stroll, go for a stroll",
+        "example": "We took a peaceful stroll through the neighborhood park."
+      },
+      {
+        "num": 16,
+        "word": "Laundry",
+        "pos": "n.",
+        "ipa": "/ˈlɔːndri/",
+        "definition": "Clothes, sheets, and towels that need to be washed.",
+        "collocations": "do the laundry, wash laundry",
+        "example": "I do the laundry every Sunday morning."
+      },
+      {
+        "num": 17,
+        "word": "Grocery",
+        "pos": "n.",
+        "ipa": "/ˈɡrəʊsəri/",
+        "definition": "Food and small household goods sold in a supermarket.",
+        "collocations": "grocery shopping, buy groceries",
+        "example": "We went grocery shopping to buy fresh fruit and milk."
+      },
+      {
+        "num": 18,
+        "word": "Prepare",
+        "pos": "v.",
+        "ipa": "/prɪˈpeə(r)/",
+        "definition": "To make something ready for use, like cooking a meal.",
+        "collocations": "prepare dinner, prepare lunch",
+        "example": "My father likes to prepare a warm dinner for the family."
+      },
+      {
+        "num": 19,
+        "word": "Leisure",
+        "pos": "n.",
+        "ipa": "/ˈleʒə(r)/",
+        "definition": "Time when you are free from work and can do what you enjoy.",
+        "collocations": "leisure time, leisure activities",
+        "example": "In her leisure time, she enjoys painting and gardening."
+      },
+      {
+        "num": 20,
+        "word": "Hurry",
+        "pos": "v.",
+        "ipa": "/ˈhʌri/",
+        "definition": "To move or do something more quickly than usual.",
+        "collocations": "in a hurry, hurry up",
+        "example": "I had to hurry to catch the morning train."
+      },
+      {
+        "num": 21,
+        "word": "Balance",
+        "pos": "n.",
+        "ipa": "/ˈbæləns/",
+        "definition": "A state where different parts of life receive the right attention.",
+        "collocations": "life balance, work-life balance",
+        "example": "It is important to maintain a healthy work-life balance."
+      },
+      {
+        "num": 22,
+        "word": "Tired",
+        "pos": "adj.",
+        "ipa": "/ˈtaɪəd/",
+        "definition": "Feeling that you need to sleep or rest.",
+        "collocations": "feel tired, very tired",
+        "example": "I felt very tired after working in the garden all day."
+      },
+      {
+        "num": 23,
+        "word": "Energy",
+        "pos": "n.",
+        "ipa": "/ˈenədʒi/",
+        "definition": "The physical strength and mental power to do things.",
+        "collocations": "full of energy, have energy",
+        "example": "Eating a healthy breakfast gives you good energy."
+      },
+      {
+        "num": 24,
+        "word": "Quiet",
+        "pos": "adj.",
+        "ipa": "/ˈkwaɪət/",
+        "definition": "Making very little noise; calm and peaceful.",
+        "collocations": "quiet morning, quiet room",
+        "example": "I enjoy a quiet morning with a warm cup of coffee."
+      },
+      {
+        "num": 25,
+        "word": "Busy",
+        "pos": "adj.",
+        "ipa": "/ˈbɪzi/",
+        "definition": "Having a lot of things to do or active with tasks.",
+        "collocations": "busy day, busy week",
+        "example": "Friday is usually my busiest day of the week."
+      },
+      {
+        "num": 26,
+        "word": "Weekly",
+        "pos": "adj.",
+        "ipa": "/ˈwiːkli/",
+        "definition": "Happening or done once every week.",
+        "collocations": "weekly plan, weekly meeting",
+        "example": "We have a weekly family dinner every Sunday."
+      },
+      {
+        "num": 27,
+        "word": "Morning",
+        "pos": "n.",
+        "ipa": "/ˈmɔːnɪŋ/",
+        "definition": "The early part of the day from sunrise until noon.",
+        "collocations": "early morning, good morning",
+        "example": "The air feels crisp and fresh in the early morning."
+      },
+      {
+        "num": 28,
+        "word": "Evening",
+        "pos": "n.",
+        "ipa": "/ˈiːvnɪŋ/",
+        "definition": "The part of the day between the afternoon and bedtime.",
+        "collocations": "in the evening, quiet evening",
+        "example": "We usually watch a documentary in the evening."
+      },
+      {
+        "num": 29,
+        "word": "Household",
+        "pos": "n.",
+        "ipa": "/ˈhaʊshəʊld/",
+        "definition": "All the people who live together in one house.",
+        "collocations": "household items, household tasks",
+        "example": "Everyone in our household shares the cooking."
+      },
+      {
+        "num": 30,
+        "word": "Shower",
+        "pos": "n.",
+        "ipa": "/ˈʃaʊə(r)/",
+        "definition": "A device that washes you with fine streams of water.",
+        "collocations": "take a shower, hot shower",
+        "example": "A warm shower helps me wake up in the morning."
+      },
+      {
+        "num": 31,
+        "word": "Dinnertime",
+        "pos": "n.",
+        "ipa": "/ˈdɪnətaɪm/",
+        "definition": "The time of day when you eat your evening meal.",
+        "collocations": "at dinnertime, around dinnertime",
+        "example": "Our family gathers together around dinnertime."
+      },
+      {
+        "num": 32,
+        "word": "Relatives",
+        "pos": "n.",
+        "ipa": "/ˈrelətɪvz/",
+        "definition": "Members of your family, such as aunts, uncles, and cousins.",
+        "collocations": "visit relatives, close relatives",
+        "example": "We visit our relatives during the summer holiday."
+      },
+      {
+        "num": 33,
+        "word": "Parent",
+        "pos": "n.",
+        "ipa": "/ˈpeərənt/",
+        "definition": "A mother or a father.",
+        "collocations": "loving parents, single parent",
+        "example": "My parents taught me the importance of kindness."
+      },
+      {
+        "num": 34,
+        "word": "Cousin",
+        "pos": "n.",
+        "ipa": "/ˈkʌzn/",
+        "definition": "A child of your aunt or uncle.",
+        "collocations": "favorite cousin, close cousin",
+        "example": "I spent my summer holidays playing with my cousins."
+      },
+      {
+        "num": 35,
+        "word": "Neighbor",
+        "pos": "n.",
+        "ipa": "/ˈneɪbə(r)/",
+        "definition": "A person who lives near you or next door.",
+        "collocations": "friendly neighbor, next-door neighbor",
+        "example": "Our neighbors helped us water our plants while we traveled."
+      },
+      {
+        "num": 36,
+        "word": "Kitchen",
+        "pos": "n.",
+        "ipa": "/ˈkɪtʃɪn/",
+        "definition": "A room where food is kept, prepared, and cooked.",
+        "collocations": "clean kitchen, in the kitchen",
+        "example": "The kitchen smelled wonderful as bread was baking."
+      },
+      {
+        "num": 37,
+        "word": "Dishes",
+        "pos": "n.",
+        "ipa": "/ˈdɪʃɪz/",
+        "definition": "Plates, bowls, cups, and pans used for eating and cooking.",
+        "collocations": "wash the dishes, do dishes",
+        "example": "I agreed to wash the dishes after dinner."
+      },
+      {
+        "num": 38,
+        "word": "Living room",
+        "pos": "n.",
+        "ipa": "/ˈlɪvɪŋ ruːm/",
+        "definition": "The main comfortable room in a house for relaxing.",
+        "collocations": "in the living room, cozy living room",
+        "example": "We sat in the living room and chatted for hours."
+      },
+      {
+        "num": 39,
+        "word": "Wake up",
+        "pos": "v.",
+        "ipa": "/weɪk ʌp/",
+        "definition": "To stop sleeping and become conscious.",
+        "collocations": "wake up early, wake up naturally",
+        "example": "I like to wake up naturally without an alarm on weekends."
+      },
+      {
+        "num": 40,
+        "word": "Get dressed",
+        "pos": "v.",
+        "ipa": "/ɡet drest/",
+        "definition": "To put on your clothes in the morning.",
+        "collocations": "get dressed quickly, ready to go",
+        "example": "I washed my face and got dressed in five minutes."
+      },
+      {
+        "num": 41,
+        "word": "Brush teeth",
+        "pos": "v.",
+        "ipa": "/brʌʃ tiːθ/",
+        "definition": "To clean your teeth with a toothbrush and paste.",
+        "collocations": "brush your teeth twice",
+        "example": "Dentists recommend you brush your teeth twice a day."
+      },
+      {
+        "num": 42,
+        "word": "Iron",
+        "pos": "v.",
+        "ipa": "/ˈaɪən/",
+        "definition": "To make clothes smooth using a warm heated tool.",
+        "collocations": "iron a shirt, iron clothes",
+        "example": "He ironed his white shirt for the job interview."
+      },
+      {
+        "num": 43,
+        "word": "Trash",
+        "pos": "n.",
+        "ipa": "/træʃ/",
+        "definition": "Waste material that is thrown away; garbage.",
+        "collocations": "take out the trash, throw in the trash",
+        "example": "Please remember to take out the trash before bedtime."
+      },
+      {
+        "num": 44,
+        "word": "Dust",
+        "pos": "v.",
+        "ipa": "/dʌst/",
+        "definition": "To remove dry dirt and powder from furniture surfaces.",
+        "collocations": "dust the shelves, dust the table",
+        "example": "She dusted the wooden bookshelves with a soft cloth."
+      },
+      {
+        "num": 45,
+        "word": "Sweep",
+        "pos": "v.",
+        "ipa": "/swiːp/",
+        "definition": "To clean a floor by pushing away dirt with a broom.",
+        "collocations": "sweep the floor, sweep the patio",
+        "example": "I swept the kitchen floor after cooking."
+      },
+      {
+        "num": 46,
+        "word": "Mop",
+        "pos": "v.",
+        "ipa": "/mɒp/",
+        "definition": "To wash a floor using a wet cloth or sponge tool.",
+        "collocations": "mop the floor, mop with water",
+        "example": "He mopped the bathroom floor until it was clean."
+      },
+      {
+        "num": 47,
+        "word": "Recycle",
+        "pos": "v.",
+        "ipa": "/ˌriːˈsaɪkl/",
+        "definition": "To treat waste paper, glass, or plastic for reuse.",
+        "collocations": "recycle bottles, recycle paper",
+        "example": "Our family separates plastic bottles to recycle them."
+      },
+      {
+        "num": 48,
+        "word": "Overwork",
+        "pos": "v.",
+        "ipa": "/ˌəʊvəˈwɜːk/",
+        "definition": "To work too hard or for too many hours without rest.",
+        "collocations": "avoid overwork, tendency to overwork",
+        "example": "Make sure you rest so you do not overwork your body."
+      },
+      {
+        "num": 49,
+        "word": "Calendar",
+        "pos": "n.",
+        "ipa": "/ˈkælɪndə(r)/",
+        "definition": "A chart showing days, weeks, and months of the year.",
+        "collocations": "check the calendar, wall calendar",
+        "example": "I marked the exam date on my wall calendar."
+      },
+      {
+        "num": 50,
+        "word": "Comfortable",
+        "pos": "adj.",
+        "ipa": "/ˈkʌmftəbl/",
+        "definition": "Providing physical ease, warmth, and relaxation.",
+        "collocations": "comfortable bed, feel comfortable",
+        "example": "This armchair is extremely soft and comfortable."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Early bird",
+        "meaning": "A person who likes getting up early in the morning.",
+        "example": "My father is an early bird; he is always awake before 6:00 AM."
+      },
+      {
+        "phrase": "Night owl",
+        "meaning": "A person who prefers staying awake and working late at night.",
+        "example": "She is a night owl who feels most creative after midnight."
+      },
+      {
+        "phrase": "Call it a day",
+        "meaning": "To stop working on something for the rest of the day.",
+        "example": "We have studied for four hours; let's call it a day and rest."
+      },
+      {
+        "phrase": "Hit the sack",
+        "meaning": "To go to bed to sleep.",
+        "example": "I'm exhausted from moving boxes, so I will hit the sack early tonight."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Planning a Smooth Daily Schedule with a Roommate",
+      "roleA": "Explain your morning schedule, when you need the bathroom, and propose sharing chores like cooking and taking out the trash.",
+      "roleB": "Agree with the plan, explain your work hours, and suggest a fair weekend cleaning routine.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., routine, chores, schedule, punctual)."
+    }
+  },
+  {
+    "day": 2,
+    "filename": "Day_02_Hobbies_and_Free_Time.md",
+    "title": "Hobbies, Free Time & Entertainment",
+    "domain": "Sports, reading, gaming, music, creative arts, and weekend pastimes.",
+    "objectives": [
+      "Talk about your favorite hobbies and why you find them enjoyable.",
+      "Describe how you spend your free time on weekends and holidays.",
+      "Express preferences between outdoor sports and indoor relaxing activities.",
+      "Use 50 practical vocabulary words related to leisure, sports, and entertainment."
+    ],
+    "questions": [
+      {
+        "num": 16,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your absolute favorite hobby, and when did you start doing it?"
+      },
+      {
+        "num": 17,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer spending your weekends outdoors in nature or indoors at home?"
+      },
+      {
+        "num": 18,
+        "tier": "Tier 1: Warm-up",
+        "text": "What kind of music do you like to listen to when you want to feel happy?"
+      },
+      {
+        "num": 19,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you play any musical instruments or video games in your free time?"
+      },
+      {
+        "num": 20,
+        "tier": "Tier 1: Warm-up",
+        "text": "How many hours a week do you usually spend on your personal hobbies?"
+      },
+      {
+        "num": 21,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "If you had the chance to learn a new creative skill (like painting or guitar), what would you pick?"
+      },
+      {
+        "num": 22,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you enjoy playing board games or card games with your friends and family?"
+      },
+      {
+        "num": 23,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What is the most interesting book, movie, or TV show you have enjoyed recently?"
+      },
+      {
+        "num": 24,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you prefer doing sports alone (like jogging) or in a team (like soccer or basketball)?"
+      },
+      {
+        "num": 25,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you feel when you spend an entire day without checking social media?"
+      },
+      {
+        "num": 26,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why is it important for busy adults to have hobbies outside of their jobs?"
+      },
+      {
+        "num": 27,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Do video games help young people develop useful skills or waste their time?"
+      },
+      {
+        "num": 28,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is reading physical paper books better than reading on a digital tablet or phone?"
+      },
+      {
+        "num": 29,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should schools give students more time for arts, music, and physical sports?"
+      },
+      {
+        "num": 30,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Can a hobby ever become a successful full-time career? What are the benefits and risks?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 51,
+        "word": "Hobby",
+        "pos": "n.",
+        "ipa": "/ˈhɒbi/",
+        "definition": "An activity that you do for pleasure in your free time.",
+        "collocations": "favorite hobby, pursue a hobby",
+        "example": "Photography is her favorite creative hobby."
+      },
+      {
+        "num": 52,
+        "word": "Pastime",
+        "pos": "n.",
+        "ipa": "/ˈpɑːstaɪm/",
+        "definition": "Something that you do to pass time pleasantly.",
+        "collocations": "popular pastime, relaxing pastime",
+        "example": "Fishing is a very peaceful weekend pastime."
+      },
+      {
+        "num": 53,
+        "word": "Guitar",
+        "pos": "n.",
+        "ipa": "/ɡɪˈtɑː(r)/",
+        "definition": "A musical instrument with strings played with fingers.",
+        "collocations": "play the guitar, acoustic guitar",
+        "example": "He practices playing the acoustic guitar every evening."
+      },
+      {
+        "num": 54,
+        "word": "Gardening",
+        "pos": "n.",
+        "ipa": "/ˈɡɑːdnɪŋ/",
+        "definition": "The activity of growing plants and flowers in a garden.",
+        "collocations": "enjoy gardening, gardening tools",
+        "example": "Gardening helps my grandmother stay active and happy."
+      },
+      {
+        "num": 55,
+        "word": "Photography",
+        "pos": "n.",
+        "ipa": "/fəˈtɒɡrəfi/",
+        "definition": "The art or hobby of taking photographs with a camera.",
+        "collocations": "nature photography, learn photography",
+        "example": "She enrolled in a photography class to learn lighting."
+      },
+      {
+        "num": 56,
+        "word": "Jogging",
+        "pos": "n.",
+        "ipa": "/ˈdʒɒɡɪŋ/",
+        "definition": "Running at a slow, steady speed for physical fitness.",
+        "collocations": "go jogging, morning jogging",
+        "example": "I go jogging in the park three times a week."
+      },
+      {
+        "num": 57,
+        "word": "Painting",
+        "pos": "n.",
+        "ipa": "/ˈpeɪntɪŋ/",
+        "definition": "The activity of creating pictures using paints and colors.",
+        "collocations": "watercolor painting, oil painting",
+        "example": "Watercolor painting is a very relaxing form of art."
+      },
+      {
+        "num": 58,
+        "word": "Gamer",
+        "pos": "n.",
+        "ipa": "/ˈɡeɪmə(r)/",
+        "definition": "A person who regularly plays computer or video games.",
+        "collocations": "avid gamer, video game gamer",
+        "example": "My younger brother is an avid video gamer."
+      },
+      {
+        "num": 59,
+        "word": "Novel",
+        "pos": "n.",
+        "ipa": "/ˈnɒvl/",
+        "definition": "A book that tells a long story about fictional characters.",
+        "collocations": "read a novel, mystery novel",
+        "example": "I finished reading an exciting adventure novel yesterday."
+      },
+      {
+        "num": 60,
+        "word": "Exciting",
+        "pos": "adj.",
+        "ipa": "/ɪkˈsaɪtɪŋ/",
+        "definition": "Causing great interest, happiness, or enthusiasm.",
+        "collocations": "exciting match, exciting news",
+        "example": "The soccer final was an exciting game to watch."
+      },
+      {
+        "num": 61,
+        "word": "Creative",
+        "pos": "adj.",
+        "ipa": "/kriˈeɪtɪv/",
+        "definition": "Having the ability to make or think of new and original things.",
+        "collocations": "creative ideas, creative skills",
+        "example": "Writing poems is a wonderful creative outlet."
+      },
+      {
+        "num": 62,
+        "word": "Outdoor",
+        "pos": "adj.",
+        "ipa": "/ˈaʊtdɔː(r)/",
+        "definition": "Happening or located outside in the open air.",
+        "collocations": "outdoor sports, outdoor activities",
+        "example": "Hiking and camping are great outdoor activities."
+      },
+      {
+        "num": 63,
+        "word": "Indoor",
+        "pos": "adj.",
+        "ipa": "/ˈɪndɔː(r)/",
+        "definition": "Happening or located inside a building.",
+        "collocations": "indoor pool, indoor games",
+        "example": "We played indoor board games when it rained."
+      },
+      {
+        "num": 64,
+        "word": "Entertain",
+        "pos": "v.",
+        "ipa": "/ˌentəˈteɪn/",
+        "definition": "To provide amusement or enjoyment for someone.",
+        "collocations": "entertain guests, entertain friends",
+        "example": "He entertained his friends with funny stories."
+      },
+      {
+        "num": 65,
+        "word": "Spectator",
+        "pos": "n.",
+        "ipa": "/spekˈteɪtə(r)/",
+        "definition": "A person who watches a sporting event or show.",
+        "collocations": "sports spectator, cheer as a spectator",
+        "example": "Thousands of spectators filled the soccer stadium."
+      },
+      {
+        "num": 66,
+        "word": "Tournament",
+        "pos": "n.",
+        "ipa": "/ˈtʊənəmənt/",
+        "definition": "A sports competition involving many matches or teams.",
+        "collocations": "tennis tournament, chess tournament",
+        "example": "Our school won first place in the chess tournament."
+      },
+      {
+        "num": 67,
+        "word": "Instrument",
+        "pos": "n.",
+        "ipa": "/ˈɪnstrəmənt/",
+        "definition": "An object used to produce musical sounds, like a piano.",
+        "collocations": "musical instrument, play an instrument",
+        "example": "Learning a musical instrument trains your memory."
+      },
+      {
+        "num": 68,
+        "word": "Sculpture",
+        "pos": "n.",
+        "ipa": "/ˈskʌlptʃə(r)/",
+        "definition": "A 3D work of art made by shaping clay, stone, or wood.",
+        "collocations": "clay sculpture, marble sculpture",
+        "example": "The museum displayed a beautiful modern sculpture."
+      },
+      {
+        "num": 69,
+        "word": "Concert",
+        "pos": "n.",
+        "ipa": "/ˈkɒnsət/",
+        "definition": "A musical performance given in public by musicians.",
+        "collocations": "live concert, attend a concert",
+        "example": "We bought tickets to attend a live rock concert."
+      },
+      {
+        "num": 70,
+        "word": "Audience",
+        "pos": "n.",
+        "ipa": "/ˈɔːdiəns/",
+        "definition": "The group of people gathered to watch a performance.",
+        "collocations": "clapping audience, large audience",
+        "example": "The audience clapped enthusiastically after the play."
+      },
+      {
+        "num": 71,
+        "word": "Series",
+        "pos": "n.",
+        "ipa": "/ˈsɪəriːz/",
+        "definition": "A set of television episodes following the same story.",
+        "collocations": "watch a series, streaming series",
+        "example": "We watched an exciting historical drama series."
+      },
+      {
+        "num": 72,
+        "word": "Episode",
+        "pos": "n.",
+        "ipa": "/ˈepɪsəʊd/",
+        "definition": "One single part of a television or radio show series.",
+        "collocations": "latest episode, new episode",
+        "example": "The season finale was the best episode of the show."
+      },
+      {
+        "num": 73,
+        "word": "Festival",
+        "pos": "n.",
+        "ipa": "/ˈfestɪvl/",
+        "definition": "A special celebration with music, food, or cultural arts.",
+        "collocations": "music festival, cultural festival",
+        "example": "The city hosts an annual summer jazz festival."
+      },
+      {
+        "num": 74,
+        "word": "Cinema",
+        "pos": "n.",
+        "ipa": "/ˈsɪnəmə/",
+        "definition": "A movie theater where films are shown on a big screen.",
+        "collocations": "go to the cinema, local cinema",
+        "example": "We went to the local cinema to watch a comedy."
+      },
+      {
+        "num": 75,
+        "word": "Board game",
+        "pos": "n.",
+        "ipa": "/bɔːd ɡeɪm/",
+        "definition": "A game played on a marked board, like chess or Monopoly.",
+        "collocations": "play a board game, fun board game",
+        "example": "Playing board games with family brings great laughter."
+      },
+      {
+        "num": 76,
+        "word": "Puzzle",
+        "pos": "n.",
+        "ipa": "/ˈpʌzl/",
+        "definition": "A game or toy designed to test your brain and patience.",
+        "collocations": "jigsaw puzzle, solve a puzzle",
+        "example": "It took us three days to complete the 1000-piece puzzle."
+      },
+      {
+        "num": 77,
+        "word": "Exercise",
+        "pos": "n.",
+        "ipa": "/ˈeksəsaɪz/",
+        "definition": "Physical activity done to stay healthy and strong.",
+        "collocations": "regular exercise, daily exercise",
+        "example": "Swimming is a great full-body form of exercise."
+      },
+      {
+        "num": 78,
+        "word": "Craft",
+        "pos": "n.",
+        "ipa": "/krɑːft/",
+        "definition": "An activity involving skill in making things by hand.",
+        "collocations": "arts and crafts, handmade craft",
+        "example": "Children love making paper crafts in art class."
+      },
+      {
+        "num": 79,
+        "word": "Sewing",
+        "pos": "n.",
+        "ipa": "/ˈsəʊɪŋ/",
+        "definition": "The activity of joining cloth together using a needle and thread.",
+        "collocations": "learn sewing, sewing machine",
+        "example": "She repaired her favorite jacket using simple sewing."
+      },
+      {
+        "num": 80,
+        "word": "Singing",
+        "pos": "n.",
+        "ipa": "/ˈsɪŋɪŋ/",
+        "definition": "The activity of performing songs with your voice.",
+        "collocations": "love singing, singing in a choir",
+        "example": "He loves singing in the local community choir."
+      },
+      {
+        "num": 81,
+        "word": "Dancing",
+        "pos": "n.",
+        "ipa": "/ˈdɑːnsɪŋ/",
+        "definition": "Moving your body rhythmically to music.",
+        "collocations": "take dancing lessons, salsa dancing",
+        "example": "Salsa dancing is an energetic and social pastime."
+      },
+      {
+        "num": 82,
+        "word": "Hiking",
+        "pos": "n.",
+        "ipa": "/ˈhaɪkɪŋ/",
+        "definition": "The activity of going for long walks in the countryside.",
+        "collocations": "mountain hiking, go hiking",
+        "example": "We packed sandwiches and water for our mountain hiking."
+      },
+      {
+        "num": 83,
+        "word": "Camping",
+        "pos": "n.",
+        "ipa": "/ˈkæmpɪŋ/",
+        "definition": "The activity of spending a holiday living in a tent.",
+        "collocations": "go camping, camping equipment",
+        "example": "We built a cozy campfire during our weekend camping."
+      },
+      {
+        "num": 84,
+        "word": "Biking",
+        "pos": "n.",
+        "ipa": "/ˈbaɪkɪŋ/",
+        "definition": "Riding a bicycle for transport, exercise, or fun.",
+        "collocations": "mountain biking, city biking",
+        "example": "City biking is a fast and eco-friendly way to travel."
+      },
+      {
+        "num": 85,
+        "word": "Swimming",
+        "pos": "n.",
+        "ipa": "/ˈswɪmɪŋ/",
+        "definition": "Moving through water by moving your arms and legs.",
+        "collocations": "go swimming, swimming pool",
+        "example": "Going swimming on a hot summer afternoon feels wonderful."
+      },
+      {
+        "num": 86,
+        "word": "Sketching",
+        "pos": "n.",
+        "ipa": "/ˈsketʃɪŋ/",
+        "definition": "Drawing a quick, rough picture with a pencil.",
+        "collocations": "pencil sketching, sketching nature",
+        "example": "He carried a small notebook for pencil sketching."
+      },
+      {
+        "num": 87,
+        "word": "Origami",
+        "pos": "n.",
+        "ipa": "/ˌɒrɪˈɡɑːmi/",
+        "definition": "The traditional Japanese art of paper folding.",
+        "collocations": "fold origami, paper origami",
+        "example": "She taught the students how to fold an origami crane."
+      },
+      {
+        "num": 88,
+        "word": "Pottery",
+        "pos": "n.",
+        "ipa": "/ˈpɒtəri/",
+        "definition": "Pots, dishes, and cups shaped from wet clay and baked.",
+        "collocations": "make pottery, pottery class",
+        "example": "I shaped a ceramic coffee mug in my first pottery class."
+      },
+      {
+        "num": 89,
+        "word": "Chess",
+        "pos": "n.",
+        "ipa": "/tʃes/",
+        "definition": "A strategic board game for two players with 16 pieces each.",
+        "collocations": "play chess, chess master",
+        "example": "Playing chess teaches you to plan several moves ahead."
+      },
+      {
+        "num": 90,
+        "word": "Cooking",
+        "pos": "n.",
+        "ipa": "/ˈkʊkɪŋ/",
+        "definition": "The activity of preparing food by combining ingredients.",
+        "collocations": "home cooking, love cooking",
+        "example": "Home cooking is often healthier than buying takeout."
+      },
+      {
+        "num": 91,
+        "word": "Baking",
+        "pos": "n.",
+        "ipa": "/ˈbeɪkɪŋ/",
+        "definition": "Cooking food such as cakes or bread in an oven.",
+        "collocations": "baking bread, love baking",
+        "example": "The smell of fresh baking bread filled the entire house."
+      },
+      {
+        "num": 92,
+        "word": "Knitting",
+        "pos": "n.",
+        "ipa": "/ˈnɪtɪŋ/",
+        "definition": "Making clothes by interlocking loops of wool with needles.",
+        "collocations": "hand knitting, knitting a scarf",
+        "example": "My grandmother is knitting a warm wool scarf for winter."
+      },
+      {
+        "num": 93,
+        "word": "Meditation",
+        "pos": "n.",
+        "ipa": "/ˌmedɪˈteɪʃn/",
+        "definition": "The practice of thinking quietly and calming your mind.",
+        "collocations": "daily meditation, mindfulness meditation",
+        "example": "Ten minutes of meditation reduces daily stress."
+      },
+      {
+        "num": 94,
+        "word": "Yoga",
+        "pos": "n.",
+        "ipa": "/ˈjəʊɡə/",
+        "definition": "A system of physical postures and breathing for wellness.",
+        "collocations": "practice yoga, yoga mat",
+        "example": "Practicing yoga improves both flexibility and posture."
+      },
+      {
+        "num": 95,
+        "word": "Podcast",
+        "pos": "n.",
+        "ipa": "/ˈpɒdkɑːst/",
+        "definition": "A digital audio program that you can download or stream.",
+        "collocations": "listen to a podcast, weekly podcast",
+        "example": "I listen to an English learning podcast while walking."
+      },
+      {
+        "num": 96,
+        "word": "Stream",
+        "pos": "v.",
+        "ipa": "/striːm/",
+        "definition": "To play video or audio directly from the internet.",
+        "collocations": "stream a movie, stream music",
+        "example": "We streamed an interesting nature documentary last night."
+      },
+      {
+        "num": 97,
+        "word": "Audience",
+        "pos": "n.",
+        "ipa": "/ˈɔːdiəns/",
+        "definition": "People watching or listening to a performance.",
+        "collocations": "cheer in the audience, large audience",
+        "example": "The audience gave the performers a standing ovation."
+      },
+      {
+        "num": 98,
+        "word": "Skill",
+        "pos": "n.",
+        "ipa": "/skɪl/",
+        "definition": "The ability to do an activity or job well through practice.",
+        "collocations": "learn a skill, useful skill",
+        "example": "Cooking nutritious meals is a life skill everyone needs."
+      },
+      {
+        "num": 99,
+        "word": "Practice",
+        "pos": "v.",
+        "ipa": "/ˈpræktɪs/",
+        "definition": "To do an activity repeatedly to become better at it.",
+        "collocations": "practice daily, practice English",
+        "example": "If you practice speaking every day, you will gain fluency."
+      },
+      {
+        "num": 100,
+        "word": "Fun",
+        "pos": "n./adj.",
+        "ipa": "/fʌn/",
+        "definition": "Enjoyment, amusement, or lighthearted pleasure.",
+        "collocations": "have fun, great fun",
+        "example": "Learning a foreign language can be great fun."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Have a blast",
+        "meaning": "To have a fantastic, highly enjoyable time.",
+        "example": "We had a blast at the amusement park on Saturday!"
+      },
+      {
+        "phrase": "Recharge one's batteries",
+        "meaning": "To rest and regain energy after working hard.",
+        "example": "A quiet weekend in nature helped me recharge my batteries."
+      },
+      {
+        "phrase": "In one's element",
+        "meaning": "Doing what you are best at and most comfortable with.",
+        "example": "When she is baking cakes in the kitchen, she is in her element."
+      },
+      {
+        "phrase": "Take up a hobby",
+        "meaning": "To start doing a new hobby or leisure activity.",
+        "example": "He decided to take up swimming to improve his stamina."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Inviting a Friend to Join a Weekend Club or Sport",
+      "roleA": "Invite your friend to join your weekly hiking or photography group this Saturday. Describe why it is enjoyable and what to bring.",
+      "roleB": "Ask questions about the cost, time, and difficulty level, and explain what hobbies you usually prefer before agreeing.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., hobby, outdoor, hiking, practice)."
+    }
+  },
+  {
+    "day": 3,
+    "filename": "Day_03_Food_Cooking_and_Dining.md",
+    "title": "Food, Cooking & Eating Out",
+    "domain": "Favorite dishes, restaurant ordering, grocery shopping, cooking methods, and healthy diets.",
+    "objectives": [
+      "Order meals, ask for recommendations, and request bills at restaurants politely.",
+      "Describe ingredients, simple recipes, and taste sensations using clear adjectives.",
+      "Discuss dietary preferences, balanced meals, and home cooking traditions.",
+      "Use 50 easy-to-understand vocabulary words related to food, flavors, and cooking."
+    ],
+    "questions": [
+      {
+        "num": 31,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your favorite dish to eat when you feel hungry after a busy day?"
+      },
+      {
+        "num": 32,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you enjoy cooking meals at home or do you prefer eating out at restaurants?"
+      },
+      {
+        "num": 33,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is one food or vegetable that you really dislike eating?"
+      },
+      {
+        "num": 34,
+        "tier": "Tier 1: Warm-up",
+        "text": "Can you cook any signature dish very well? What ingredients do you use?"
+      },
+      {
+        "num": 35,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your favorite dessert or sweet snack?"
+      },
+      {
+        "num": 36,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a traditional dish from your country to a foreign tourist?"
+      },
+      {
+        "num": 37,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How often do you order food delivery using smartphone apps?"
+      },
+      {
+        "num": 38,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What do you look for when choosing a good restaurant for dinner with friends?"
+      },
+      {
+        "num": 39,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Have you ever tried eating strange or exotic foreign food? How was the taste?"
+      },
+      {
+        "num": 40,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What is the best meal you have ever had with your family or friends?"
+      },
+      {
+        "num": 41,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why do many people prefer eating fast food even when they know it is unhealthy?"
+      },
+      {
+        "num": 42,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is home-cooked food always better and cheaper than restaurant food?"
+      },
+      {
+        "num": 43,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should schools teach children how to cook simple, healthy meals in class?"
+      },
+      {
+        "num": 44,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Do you think vegetarian and plant-based diets will become more popular in the future?"
+      },
+      {
+        "num": 45,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How does sharing meals together strengthen friendship and family bonds?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 101,
+        "word": "Delicious",
+        "pos": "adj.",
+        "ipa": "/dɪˈlɪʃəs/",
+        "definition": "Having a very pleasant taste or smell.",
+        "collocations": "delicious meal, taste delicious",
+        "example": "My grandmother made a delicious chicken soup."
+      },
+      {
+        "num": 102,
+        "word": "Recipe",
+        "pos": "n.",
+        "ipa": "/ˈresəpi/",
+        "definition": "A set of instructions explaining how to cook a specific dish.",
+        "collocations": "simple recipe, follow a recipe",
+        "example": "This pasta recipe requires only five ingredients."
+      },
+      {
+        "num": 103,
+        "word": "Ingredient",
+        "pos": "n.",
+        "ipa": "/ɪnˈɡriːdiənt/",
+        "definition": "One of the foods used to make a particular dish.",
+        "collocations": "fresh ingredients, key ingredient",
+        "example": "Fresh tomatoes are the key ingredient in this sauce."
+      },
+      {
+        "num": 104,
+        "word": "Flavor",
+        "pos": "n.",
+        "ipa": "/ˈfleɪvə(r)/",
+        "definition": "The distinctive taste of a food or drink in your mouth.",
+        "collocations": "sweet flavor, rich flavor",
+        "example": "Adding cinnamon gives the oatmeal a warm flavor."
+      },
+      {
+        "num": 105,
+        "word": "Menu",
+        "pos": "n.",
+        "ipa": "/ˈmenjuː/",
+        "definition": "A printed list of the food and drinks available at a restaurant.",
+        "collocations": "look at the menu, lunch menu",
+        "example": "The waiter handed us the dinner menu."
+      },
+      {
+        "num": 106,
+        "word": "Waiter",
+        "pos": "n.",
+        "ipa": "/ˈweɪtə(r)/",
+        "definition": "A person whose job is to serve customers in a restaurant.",
+        "collocations": "friendly waiter, call the waiter",
+        "example": "Our waiter was very polite and brought our drinks quickly."
+      },
+      {
+        "num": 107,
+        "word": "Spicy",
+        "pos": "adj.",
+        "ipa": "/ˈspaɪsi/",
+        "definition": "Having a strong, hot flavor from spices or chilies.",
+        "collocations": "spicy food, very spicy",
+        "example": "I love spicy Thai curry with lots of red peppers."
+      },
+      {
+        "num": 108,
+        "word": "Sweet",
+        "pos": "adj.",
+        "ipa": "/swiːt/",
+        "definition": "Having a pleasant taste like that of sugar or honey.",
+        "collocations": "sweet dessert, sweet fruit",
+        "example": "Ripe mangoes are naturally juicy and sweet."
+      },
+      {
+        "num": 109,
+        "word": "Sour",
+        "pos": "adj.",
+        "ipa": "/ˈsaʊə(r)/",
+        "definition": "Having an acid taste like lemon juice or vinegar.",
+        "collocations": "sour taste, sour lemon",
+        "example": "Fresh lemon juice has a sharp, sour taste."
+      },
+      {
+        "num": 110,
+        "word": "Salty",
+        "pos": "adj.",
+        "ipa": "/ˈsɔːlti/",
+        "definition": "Tasting of or containing a lot of salt.",
+        "collocations": "salty snack, too salty",
+        "example": "Potato chips are a popular salty snack."
+      },
+      {
+        "num": 111,
+        "word": "Bitter",
+        "pos": "adj.",
+        "ipa": "/ˈbɪtə(r)/",
+        "definition": "Having a sharp, pungent taste that is not sweet.",
+        "collocations": "bitter coffee, bitter taste",
+        "example": "Dark chocolate has a pleasant, slightly bitter flavor."
+      },
+      {
+        "num": 112,
+        "word": "Boil",
+        "pos": "v.",
+        "ipa": "/bɔɪl/",
+        "definition": "To cook food in water that is heated to 100 degrees Celsius.",
+        "collocations": "boil eggs, boil water",
+        "example": "Boil the potatoes in salted water for twenty minutes."
+      },
+      {
+        "num": 113,
+        "word": "Fry",
+        "pos": "v.",
+        "ipa": "/fraɪ/",
+        "definition": "To cook food in hot oil or fat in a shallow pan.",
+        "collocations": "fry an egg, pan-fry",
+        "example": "He fried two eggs and bacon for Sunday breakfast."
+      },
+      {
+        "num": 114,
+        "word": "Bake",
+        "pos": "v.",
+        "ipa": "/beɪk/",
+        "definition": "To cook food using dry heat in an oven.",
+        "collocations": "bake cookies, bake bread",
+        "example": "We baked warm chocolate chip cookies this afternoon."
+      },
+      {
+        "num": 115,
+        "word": "Grill",
+        "pos": "v.",
+        "ipa": "/ɡrɪl/",
+        "definition": "To cook food over direct heat on a metal grill.",
+        "collocations": "grill meat, grilled vegetables",
+        "example": "We grilled salmon fillets and bell peppers outside."
+      },
+      {
+        "num": 116,
+        "word": "Steam",
+        "pos": "v.",
+        "ipa": "/stiːm/",
+        "definition": "To cook food over boiling water using hot vapor.",
+        "collocations": "steam vegetables, steamed rice",
+        "example": "Steaming broccoli keeps its bright green color and vitamins."
+      },
+      {
+        "num": 117,
+        "word": "Chop",
+        "pos": "v.",
+        "ipa": "/tʃɒp/",
+        "definition": "To cut food into small pieces with a sharp knife.",
+        "collocations": "chop onions, chop finely",
+        "example": "Please chop the onions and carrots into small cubes."
+      },
+      {
+        "num": 118,
+        "word": "Slice",
+        "pos": "n./v.",
+        "ipa": "/slaɪs/",
+        "definition": "A thin, flat piece cut from food; or to cut into slices.",
+        "collocations": "slice of bread, slice of pizza",
+        "example": "He cut two thick slices of cheddar cheese."
+      },
+      {
+        "num": 119,
+        "word": "Peel",
+        "pos": "v.",
+        "ipa": "/piːl/",
+        "definition": "To remove the outer skin or rind from fruit or vegetables.",
+        "collocations": "peel an apple, peel potatoes",
+        "example": "Peel the potatoes before boiling them for mash."
+      },
+      {
+        "num": 120,
+        "word": "Stir",
+        "pos": "v.",
+        "ipa": "/stɜː(r)/",
+        "definition": "To mix a liquid or soup by moving a spoon in circles.",
+        "collocations": "stir the soup, stir well",
+        "example": "Stir the tomato sauce continuously so it does not burn."
+      },
+      {
+        "num": 121,
+        "word": "Appetizer",
+        "pos": "n.",
+        "ipa": "/ˈæpɪtaɪzə(r)/",
+        "definition": "A small dish eaten before the main course of a meal.",
+        "collocations": "order an appetizer, light appetizer",
+        "example": "We ordered garlic bread as an appetizer."
+      },
+      {
+        "num": 122,
+        "word": "Main course",
+        "pos": "n.",
+        "ipa": "/meɪn kɔːs/",
+        "definition": "The principal dish of a meal, usually with meat or pasta.",
+        "collocations": "order the main course, delicious main course",
+        "example": "For the main course, I chose grilled steak with fries."
+      },
+      {
+        "num": 123,
+        "word": "Dessert",
+        "pos": "n.",
+        "ipa": "/dɪˈzɜːt/",
+        "definition": "Sweet food eaten at the end of a meal.",
+        "collocations": "eat dessert, chocolate dessert",
+        "example": "We ordered apple pie with vanilla ice cream for dessert."
+      },
+      {
+        "num": 124,
+        "word": "Beverage",
+        "pos": "n.",
+        "ipa": "/ˈbevərɪdʒ/",
+        "definition": "A drink of any type, such as water, juice, or tea.",
+        "collocations": "cold beverage, hot beverage",
+        "example": "Would you like a cold beverage with your lunch?"
+      },
+      {
+        "num": 125,
+        "word": "Bill",
+        "pos": "n.",
+        "ipa": "/bɪl/",
+        "definition": "A printed statement showing how much you must pay for food.",
+        "collocations": "ask for the bill, pay the bill",
+        "example": "Excuse me, could we please have the bill?"
+      },
+      {
+        "num": 126,
+        "word": "Tip",
+        "pos": "n./v.",
+        "ipa": "/tɪp/",
+        "definition": "Extra money given to a waiter for good service.",
+        "collocations": "leave a tip, generous tip",
+        "example": "We left a generous tip for the friendly waitress."
+      },
+      {
+        "num": 127,
+        "word": "Diet",
+        "pos": "n.",
+        "ipa": "/ˈdaɪət/",
+        "definition": "The food and drink that a person habitually consumes.",
+        "collocations": "healthy diet, balanced diet",
+        "example": "Eating fresh fruit and greens is part of a balanced diet."
+      },
+      {
+        "num": 128,
+        "word": "Nutrition",
+        "pos": "n.",
+        "ipa": "/njuːˈtrɪʃn/",
+        "definition": "The process of taking in food necessary for health and growth.",
+        "collocations": "good nutrition, poor nutrition",
+        "example": "Good nutrition helps children grow strong and healthy."
+      },
+      {
+        "num": 129,
+        "word": "Calorie",
+        "pos": "n.",
+        "ipa": "/ˈkæləri/",
+        "definition": "A unit measuring the energy value of food.",
+        "collocations": "count calories, low calorie",
+        "example": "Drinking plain water contains zero calories."
+      },
+      {
+        "num": 130,
+        "word": "Fresh",
+        "pos": "adj.",
+        "ipa": "/freʃ/",
+        "definition": "Recently made, harvested, or gathered; not stale.",
+        "collocations": "fresh fruit, fresh bread",
+        "example": "We buy fresh vegetables from the local market every Saturday."
+      },
+      {
+        "num": 131,
+        "word": "Stale",
+        "pos": "adj.",
+        "ipa": "/steɪl/",
+        "definition": "No longer fresh and pleasant to eat; hard or dry.",
+        "collocations": "stale bread, taste stale",
+        "example": "Do not eat that bread; it has become hard and stale."
+      },
+      {
+        "num": 132,
+        "word": "Snack",
+        "pos": "n.",
+        "ipa": "/snæk/",
+        "definition": "A small amount of food eaten between regular meals.",
+        "collocations": "healthy snack, afternoon snack",
+        "example": "Almonds and fresh fruit make a healthy afternoon snack."
+      },
+      {
+        "num": 133,
+        "word": "Takeout",
+        "pos": "n.",
+        "ipa": "/ˈteɪkaʊt/",
+        "definition": "Prepared food bought from a restaurant to eat at home.",
+        "collocations": "order takeout, Chinese takeout",
+        "example": "We were too tired to cook, so we ordered pizza takeout."
+      },
+      {
+        "num": 134,
+        "word": "Vegetarian",
+        "pos": "n./adj.",
+        "ipa": "/ˌvedʒəˈteəriən/",
+        "definition": "A person who does not eat meat or fish.",
+        "collocations": "strict vegetarian, vegetarian dish",
+        "example": "This restaurant offers several delicious vegetarian options."
+      },
+      {
+        "num": 135,
+        "word": "Vegan",
+        "pos": "n./adj.",
+        "ipa": "/ˈviːɡən/",
+        "definition": "A person who eats no animal products, including dairy and eggs.",
+        "collocations": "vegan meal, follow a vegan diet",
+        "example": "She ordered a vegan burger made from black beans."
+      },
+      {
+        "num": 136,
+        "word": "Organic",
+        "pos": "adj.",
+        "ipa": "/ɔːˈɡænɪk/",
+        "definition": "Produced without using artificial chemical fertilizers or pesticides.",
+        "collocations": "organic vegetables, buy organic",
+        "example": "Organic apples are grown naturally without chemical sprays."
+      },
+      {
+        "num": 137,
+        "word": "Seasoning",
+        "pos": "n.",
+        "ipa": "/ˈsiːzənɪŋ/",
+        "definition": "Salt, pepper, or herbs added to food to enhance flavor.",
+        "collocations": "add seasoning, taste for seasoning",
+        "example": "Taste the soup before serving to check the seasoning."
+      },
+      {
+        "num": 138,
+        "word": "Herbs",
+        "pos": "n.",
+        "ipa": "/hɜːbz/",
+        "definition": "Plants used to add flavor to food, like basil, mint, and oregano.",
+        "collocations": "fresh herbs, dried herbs",
+        "example": "Fresh basil and oregano smell wonderful on homemade pizza."
+      },
+      {
+        "num": 139,
+        "word": "Garlic",
+        "pos": "n.",
+        "ipa": "/ˈɡɑːlɪk/",
+        "definition": "A plant of the onion family with a strong pungent taste.",
+        "collocations": "clove of garlic, minced garlic",
+        "example": "Fry two cloves of minced garlic in olive oil."
+      },
+      {
+        "num": 140,
+        "word": "Onion",
+        "pos": "n.",
+        "ipa": "/ˈʌnjən/",
+        "definition": "A round vegetable with many layers and a pungent taste.",
+        "collocations": "sliced onion, chopped onions",
+        "example": "Chopping raw onions often makes your eyes water."
+      },
+      {
+        "num": 141,
+        "word": "Dairy",
+        "pos": "n.",
+        "ipa": "/ˈdeəri/",
+        "definition": "Food products made from milk, like butter and cheese.",
+        "collocations": "dairy products, avoid dairy",
+        "example": "Milk, yogurt, and cheese are common dairy foods."
+      },
+      {
+        "num": 142,
+        "word": "Protein",
+        "pos": "n.",
+        "ipa": "/ˈprəʊtiːn/",
+        "definition": "A substance found in meat, eggs, and beans that builds muscle.",
+        "collocations": "high in protein, lean protein",
+        "example": "Eggs and chicken breast are excellent sources of protein."
+      },
+      {
+        "num": 143,
+        "word": "Grain",
+        "pos": "n.",
+        "ipa": "/ɡreɪn/",
+        "definition": "Wheat, rice, oats, or other cereal seeds used as food.",
+        "collocations": "whole grains, grain bread",
+        "example": "Whole grains provide long-lasting energy for the body."
+      },
+      {
+        "num": 144,
+        "word": "Seafood",
+        "pos": "n.",
+        "ipa": "/ˈsiːfuːd/",
+        "definition": "Fish, shrimp, and shellfish from the ocean eaten as food.",
+        "collocations": "fresh seafood, seafood restaurant",
+        "example": "We had grilled shrimp and calamari at the seaside restaurant."
+      },
+      {
+        "num": 145,
+        "word": "Poultry",
+        "pos": "n.",
+        "ipa": "/ˈpəʊltri/",
+        "definition": "Domestic birds like chickens, turkeys, or ducks kept for meat.",
+        "collocations": "poultry farm, fresh poultry",
+        "example": "Chicken and turkey are popular types of poultry."
+      },
+      {
+        "num": 146,
+        "word": "Cuisine",
+        "pos": "n.",
+        "ipa": "/kwɪˈziːn/",
+        "definition": "A style or method of cooking characteristic of a country.",
+        "collocations": "Italian cuisine, Asian cuisine",
+        "example": "Italian cuisine is famous for handmade pasta and fresh herbs."
+      },
+      {
+        "num": 147,
+        "word": "Portion",
+        "pos": "n.",
+        "ipa": "/ˈpɔːʃn/",
+        "definition": "The amount of food served for one person at a meal.",
+        "collocations": "large portion, portion size",
+        "example": "The restaurant served very generous portions of pasta."
+      },
+      {
+        "num": 148,
+        "word": "Appetite",
+        "pos": "n.",
+        "ipa": "/ˈæpɪtaɪt/",
+        "definition": "A natural desire to eat food.",
+        "collocations": "have a good appetite, lose appetite",
+        "example": "The long mountain walk gave us a healthy appetite."
+      },
+      {
+        "num": 149,
+        "word": "Thirst",
+        "pos": "n.",
+        "ipa": "/θɜːst/",
+        "definition": "The feeling of needing to drink liquid.",
+        "collocations": "quench your thirst, feel thirst",
+        "example": "A cold glass of lemonade quenched our thirst after the run."
+      },
+      {
+        "num": 150,
+        "word": "Chew",
+        "pos": "v.",
+        "ipa": "/tʃuː/",
+        "definition": "To crush food with your teeth before swallowing.",
+        "collocations": "chew slowly, chew your food",
+        "example": "Always chew your food slowly to help your digestion."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Piece of cake",
+        "meaning": "Something that is very easy to do.",
+        "example": "Don't worry about the English test; it will be a piece of cake!"
+      },
+      {
+        "phrase": "Spill the beans",
+        "meaning": "To reveal a secret by accident.",
+        "example": "We planned a surprise birthday dinner, but Tom spilled the beans."
+      },
+      {
+        "phrase": "Cup of tea",
+        "meaning": "Something that you like or are interested in.",
+        "example": "Heavy metal music is just not my cup of tea."
+      },
+      {
+        "phrase": "Take with a grain of salt",
+        "meaning": "To not completely believe what someone says.",
+        "example": "You should take online rumors with a grain of salt."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Ordering Food and Asking for Recommendations at a Restaurant",
+      "roleA": "You are a customer at an Italian restaurant. Ask the waiter about the ingredients in the pasta, state that you dislike spicy food, and order dessert.",
+      "roleB": "You are the waiter. Welcome the customer, recommend the chef's special dish, explain the ingredients, and take their order politely.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., menu, ingredient, delicious, appetizer, bill)."
+    }
+  },
+  {
+    "day": 4,
+    "filename": "Day_04_Travel_and_Holidays.md",
+    "title": "Travel, Holidays & Transportation",
+    "domain": "Airports, hotels, packing luggage, sightseeing, trains, and dream vacations.",
+    "objectives": [
+      "Ask for directions, buy transit tickets, and check in at hotels and airports.",
+      "Share travel stories, favorite holiday destinations, and packing habits.",
+      "Compare different types of transportation (planes, trains, buses, bikes).",
+      "Use 50 essential travel, navigation, and hospitality vocabulary words."
+    ],
+    "questions": [
+      {
+        "num": 46,
+        "tier": "Tier 1: Warm-up",
+        "text": "What was the most enjoyable vacation or trip you have ever taken in your life?"
+      },
+      {
+        "num": 47,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer traveling by airplane, train, car, or bus? Why?"
+      },
+      {
+        "num": 48,
+        "tier": "Tier 1: Warm-up",
+        "text": "What are three essential items you always pack in your suitcase when traveling?"
+      },
+      {
+        "num": 49,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you like relaxing on a beach or exploring historical cities when on holiday?"
+      },
+      {
+        "num": 50,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your dream country or city that you hope to visit in the next three years?"
+      },
+      {
+        "num": 51,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a time when you got lost in a new city and how you found your way?"
+      },
+      {
+        "num": 52,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you prefer planning every detail of your trip before leaving or being spontaneous?"
+      },
+      {
+        "num": 53,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What is your favorite type of accommodation: hotels, apartments, or hostels?"
+      },
+      {
+        "num": 54,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What do you like to do when you have a long delay at an airport or train station?"
+      },
+      {
+        "num": 55,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you enjoy buying souvenirs and gifts for friends when you travel abroad?"
+      },
+      {
+        "num": 56,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is it better to travel alone (solo travel) or travel with a group of friends?"
+      },
+      {
+        "num": 57,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How does traveling to other countries help people understand different cultures?"
+      },
+      {
+        "num": 58,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Do you think tourists should try to speak the local language of the country they visit?"
+      },
+      {
+        "num": 59,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How can tourists protect historical monuments and natural parks from damage?"
+      },
+      {
+        "num": 60,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Will virtual reality travel ever replace real physical journeys in the future?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 151,
+        "word": "Passport",
+        "pos": "n.",
+        "ipa": "/ˈpɑːspɔːt/",
+        "definition": "An official document issued by a government certifying identity for travel.",
+        "collocations": "valid passport, show your passport",
+        "example": "Make sure your passport is valid before booking flights."
+      },
+      {
+        "num": 152,
+        "word": "Luggage",
+        "pos": "n.",
+        "ipa": "/ˈlʌɡɪdʒ/",
+        "definition": "Suitcases and bags containing your clothes and items for travel.",
+        "collocations": "pack luggage, heavy luggage",
+        "example": "We packed our luggage the evening before departure."
+      },
+      {
+        "num": 153,
+        "word": "Airport",
+        "pos": "n.",
+        "ipa": "/ˈeəpɔːt/",
+        "definition": "A complex where airplanes take off and land with passenger terminals.",
+        "collocations": "international airport, arrive at the airport",
+        "example": "We arrived at the airport two hours before our flight."
+      },
+      {
+        "num": 154,
+        "word": "Flight",
+        "pos": "n.",
+        "ipa": "/flaɪt/",
+        "definition": "A journey in an aircraft between two destinations.",
+        "collocations": "book a flight, domestic flight",
+        "example": "Our direct flight from London to Rome took two hours."
+      },
+      {
+        "num": 155,
+        "word": "Boarding",
+        "pos": "n.",
+        "ipa": "/ˈbɔːdɪŋ/",
+        "definition": "The action of getting onto a ship, train, or airplane.",
+        "collocations": "boarding pass, boarding gate",
+        "example": "Show your boarding pass at the gate before entering."
+      },
+      {
+        "num": 156,
+        "word": "Hotel",
+        "pos": "n.",
+        "ipa": "/həʊˈtel/",
+        "definition": "An establishment providing accommodation, meals, and guest services.",
+        "collocations": "book a hotel, luxury hotel",
+        "example": "We booked a cozy hotel near the historic city center."
+      },
+      {
+        "num": 157,
+        "word": "Reservation",
+        "pos": "n.",
+        "ipa": "/ˌrezəˈveɪʃn/",
+        "definition": "An arrangement where a room, seat, or table is kept for you.",
+        "collocations": "make a reservation, have a reservation",
+        "example": "I made a hotel reservation for three nights."
+      },
+      {
+        "num": 158,
+        "word": "Ticket",
+        "pos": "n.",
+        "ipa": "/ˈtɪkɪt/",
+        "definition": "A piece of paper or electronic code giving admission or transport.",
+        "collocations": "train ticket, round-trip ticket",
+        "example": "He bought a round-trip train ticket at the station counter."
+      },
+      {
+        "num": 159,
+        "word": "Destination",
+        "pos": "n.",
+        "ipa": "/ˌdestɪˈneɪʃn/",
+        "definition": "The place to which someone or something is traveling.",
+        "collocations": "travel destination, final destination",
+        "example": "Paris remains one of the most popular travel destinations."
+      },
+      {
+        "num": 160,
+        "word": "Itinerary",
+        "pos": "n.",
+        "ipa": "/aɪˈtɪnərəri/",
+        "definition": "A planned route or schedule of a journey.",
+        "collocations": "travel itinerary, detailed itinerary",
+        "example": "Our travel itinerary included visits to three ancient castles."
+      },
+      {
+        "num": 161,
+        "word": "Souvenir",
+        "pos": "n.",
+        "ipa": "/ˌsuːvəˈnɪə(r)/",
+        "definition": "A thing kept as a reminder of a person, place, or trip.",
+        "collocations": "buy a souvenir, local souvenir",
+        "example": "She bought a handmade ceramic plate as a travel souvenir."
+      },
+      {
+        "num": 162,
+        "word": "Sightseeing",
+        "pos": "n.",
+        "ipa": "/ˈsaɪtsiːɪŋ/",
+        "definition": "The activity of visiting famous places of interest in a city.",
+        "collocations": "go sightseeing, sightseeing tour",
+        "example": "We spent our first day in Rome sightseeing around the Colosseum."
+      },
+      {
+        "num": 163,
+        "word": "Tourist",
+        "pos": "n.",
+        "ipa": "/ˈtʊərɪst/",
+        "definition": "A person who is traveling or visiting a place for pleasure.",
+        "collocations": "foreign tourist, tourist attraction",
+        "example": "The museum attracts millions of international tourists every year."
+      },
+      {
+        "num": 164,
+        "word": "Backpack",
+        "pos": "n.",
+        "ipa": "/ˈbækpæk/",
+        "definition": "A bag carried on the back, often used by travelers.",
+        "collocations": "pack a backpack, heavy backpack",
+        "example": "He traveled across Europe with just a small backpack."
+      },
+      {
+        "num": 165,
+        "word": "Guidebook",
+        "pos": "n.",
+        "ipa": "/ˈɡaɪdbʊk/",
+        "definition": "A book of information about a place for tourists.",
+        "collocations": "read a guidebook, travel guidebook",
+        "example": "The guidebook recommended several wonderful local cafes."
+      },
+      {
+        "num": 166,
+        "word": "Platform",
+        "pos": "n.",
+        "ipa": "/ˈplætfɔːm/",
+        "definition": "The raised area beside railway tracks where passengers board trains.",
+        "collocations": "train platform, platform number",
+        "example": "The train to Edinburgh departs from platform four."
+      },
+      {
+        "num": 167,
+        "word": "Departure",
+        "pos": "n.",
+        "ipa": "/dɪˈpɑːtʃə(r)/",
+        "definition": "The action of leaving, especially on a journey.",
+        "collocations": "departure time, departure lounge",
+        "example": "The flight departure was delayed by thirty minutes due to rain."
+      },
+      {
+        "num": 168,
+        "word": "Arrival",
+        "pos": "n.",
+        "ipa": "/əˈraɪvl/",
+        "definition": "The act of reaching a destination.",
+        "collocations": "arrival time, safe arrival",
+        "example": "Our scheduled arrival time in Tokyo is 8:00 AM."
+      },
+      {
+        "num": 169,
+        "word": "Delayed",
+        "pos": "adj.",
+        "ipa": "/dɪˈleɪd/",
+        "definition": "Happening later than planned or expected.",
+        "collocations": "delayed flight, be delayed",
+        "example": "The train was delayed because of heavy winter snow."
+      },
+      {
+        "num": 170,
+        "word": "Canceled",
+        "pos": "adj.",
+        "ipa": "/ˈkænsld/",
+        "definition": "Decided that a planned event or flight will not happen.",
+        "collocations": "canceled flight, service canceled",
+        "example": "Passengers were refunded after the ferry trip was canceled."
+      },
+      {
+        "num": 171,
+        "word": "Ferry",
+        "pos": "n.",
+        "ipa": "/ˈferi/",
+        "definition": "A boat that carries people and cars across a body of water.",
+        "collocations": "take a ferry, ferry terminal",
+        "example": "We took a scenic ferry across the lake to the island."
+      },
+      {
+        "num": 172,
+        "word": "Baggage claim",
+        "pos": "n.",
+        "ipa": "/ˈbæɡɪdʒ kleɪm/",
+        "definition": "The airport area where passengers collect checked bags.",
+        "collocations": "at baggage claim, collect bags",
+        "example": "We waited at the baggage claim carousel for our suitcases."
+      },
+      {
+        "num": 173,
+        "word": "Check-in",
+        "pos": "n./v.",
+        "ipa": "/ˈtʃek ɪn/",
+        "definition": "The process of registering at a hotel or airport.",
+        "collocations": "check-in desk, check in online",
+        "example": "You can check in online 24 hours before your flight."
+      },
+      {
+        "num": 174,
+        "word": "Check-out",
+        "pos": "n./v.",
+        "ipa": "/ˈtʃek aʊt/",
+        "definition": "The process of paying and leaving a hotel room.",
+        "collocations": "check-out time, late check-out",
+        "example": "Hotel check-out time is strictly 11:00 AM."
+      },
+      {
+        "num": 175,
+        "word": "Currency",
+        "pos": "n.",
+        "ipa": "/ˈkʌrənsi/",
+        "definition": "The system of money in general use in a particular country.",
+        "collocations": "foreign currency, exchange currency",
+        "example": "We exchanged our euros for Japanese yen at the bank."
+      },
+      {
+        "num": 176,
+        "word": "Exchange",
+        "pos": "v.",
+        "ipa": "/ɪksˈtʃeɪndʒ/",
+        "definition": "To give something and receive something else in return.",
+        "collocations": "exchange money, exchange rates",
+        "example": "Where is the best place to exchange currency near the station?"
+      },
+      {
+        "num": 177,
+        "word": "Map",
+        "pos": "n.",
+        "ipa": "/mæp/",
+        "definition": "A visual representation of an area of land or city streets.",
+        "collocations": "check the map, city map",
+        "example": "We opened the digital city map to find the museum."
+      },
+      {
+        "num": 178,
+        "word": "Directions",
+        "pos": "n.",
+        "ipa": "/dəˈrekʃnz/",
+        "definition": "Instructions on how to reach a particular place.",
+        "collocations": "ask for directions, follow directions",
+        "example": "The friendly police officer gave us clear directions to the station."
+      },
+      {
+        "num": 179,
+        "word": "Hostel",
+        "pos": "n.",
+        "ipa": "/ˈhɒstl/",
+        "definition": "An inexpensive lodging facility with shared dormitory rooms.",
+        "collocations": "youth hostel, stay in a hostel",
+        "example": "Staying in a youth hostel is a great way to meet travelers."
+      },
+      {
+        "num": 180,
+        "word": "Resort",
+        "pos": "n.",
+        "ipa": "/rɪˈzɔːt/",
+        "definition": "A place that is a popular destination for vacations and relaxation.",
+        "collocations": "beach resort, ski resort",
+        "example": "We spent five relaxing days at a seaside beach resort."
+      },
+      {
+        "num": 181,
+        "word": "Customs",
+        "pos": "n.",
+        "ipa": "/ˈkʌstəmz/",
+        "definition": "The government department that checks goods entering a country.",
+        "collocations": "pass through customs, customs officer",
+        "example": "We passed through airport customs without any issues."
+      },
+      {
+        "num": 182,
+        "word": "Security",
+        "pos": "n.",
+        "ipa": "/sɪˈkjʊərəti/",
+        "definition": "Measures taken to ensure safety at an airport or building.",
+        "collocations": "airport security, security check",
+        "example": "Please place your laptop in a tray at airport security."
+      },
+      {
+        "num": 183,
+        "word": "Terminal",
+        "pos": "n.",
+        "ipa": "/ˈtɜːmɪnl/",
+        "definition": "A large building at an airport where passengers arrive and depart.",
+        "collocations": "airport terminal, terminal 2",
+        "example": "Our flight to New York departs from Terminal 3."
+      },
+      {
+        "num": 184,
+        "word": "Gate",
+        "pos": "n.",
+        "ipa": "/ɡeɪt/",
+        "definition": "The specific door in an airport where passengers board an aircraft.",
+        "collocations": "boarding gate, gate number",
+        "example": "Passengers should proceed to gate number twelve immediately."
+      },
+      {
+        "num": 185,
+        "word": "Window seat",
+        "pos": "n.",
+        "ipa": "/ˈwɪndəʊ siːt/",
+        "definition": "A seat next to a window in an aircraft or train.",
+        "collocations": "prefer window seat, choose window seat",
+        "example": "I love the window seat because you can see clouds and mountains."
+      },
+      {
+        "num": 186,
+        "word": "Aisle seat",
+        "pos": "n.",
+        "ipa": "/aɪl siːt/",
+        "definition": "A seat next to the walkway in an airplane or bus.",
+        "collocations": "book aisle seat, request aisle seat",
+        "example": "He prefers an aisle seat so he can stand up easily."
+      },
+      {
+        "num": 187,
+        "word": "Subway",
+        "pos": "n.",
+        "ipa": "/ˈsʌbweɪ/",
+        "definition": "An underground urban electric railway network; metro.",
+        "collocations": "take the subway, subway station",
+        "example": "The subway is the fastest way to travel around New York City."
+      },
+      {
+        "num": 188,
+        "word": "Cab",
+        "pos": "n.",
+        "ipa": "/kæb/",
+        "definition": "A taxi car that transports passengers for a fare.",
+        "collocations": "hail a cab, take a cab",
+        "example": "We hailed a yellow cab outside the train station."
+      },
+      {
+        "num": 189,
+        "word": "Fare",
+        "pos": "n.",
+        "ipa": "/feə(r)/",
+        "definition": "The money paid for a journey on public transport.",
+        "collocations": "bus fare, train fare",
+        "example": "The bus fare is two dollars per single ride."
+      },
+      {
+        "num": 190,
+        "word": "Seatbelt",
+        "pos": "n.",
+        "ipa": "/ˈsiːtbelt/",
+        "definition": "A safety belt used in cars and airplanes to secure passengers.",
+        "collocations": "fasten seatbelt, wear a seatbelt",
+        "example": "Please fasten your seatbelt while the airplane is moving."
+      },
+      {
+        "num": 191,
+        "word": "Rental",
+        "pos": "n.",
+        "ipa": "/ˈrentl/",
+        "definition": "Something available to be rented, like a car or apartment.",
+        "collocations": "car rental, vacation rental",
+        "example": "We arranged a car rental to drive through the countryside."
+      },
+      {
+        "num": 192,
+        "word": "Cruise",
+        "pos": "n.",
+        "ipa": "/kruːz/",
+        "definition": "A voyage on a ship or boat taken for pleasure.",
+        "collocations": "ocean cruise, cruise ship",
+        "example": "My parents celebrated their anniversary on a Mediterranean cruise."
+      },
+      {
+        "num": 193,
+        "word": "Landscape",
+        "pos": "n.",
+        "ipa": "/ˈlændskeɪp/",
+        "definition": "All the visible features of an area of countryside or land.",
+        "collocations": "beautiful landscape, mountain landscape",
+        "example": "The train window offered views of a stunning mountain landscape."
+      },
+      {
+        "num": 194,
+        "word": "Monument",
+        "pos": "n.",
+        "ipa": "/ˈmɒnjumənt/",
+        "definition": "A statue or building erected to commemorate a person or event.",
+        "collocations": "historic monument, famous monument",
+        "example": "The Eiffel Tower is Paris's most famous monument."
+      },
+      {
+        "num": 195,
+        "word": "Exotic",
+        "pos": "adj.",
+        "ipa": "/ɪɡˈzɒtɪk/",
+        "definition": "Originating in or characteristic of a distant foreign country.",
+        "collocations": "exotic fruits, exotic destination",
+        "example": "We tasted delicious exotic fruits in the tropical market."
+      },
+      {
+        "num": 196,
+        "word": "Scenery",
+        "pos": "n.",
+        "ipa": "/ˈsiːnəri/",
+        "definition": "The natural features of a landscape considered in terms of beauty.",
+        "collocations": "breathtaking scenery, mountain scenery",
+        "example": "Switzerland is famous for its clean lakes and alpine scenery."
+      },
+      {
+        "num": 197,
+        "word": "Trek",
+        "pos": "n./v.",
+        "ipa": "/trek/",
+        "definition": "A long, arduous journey, usually made on foot in mountains.",
+        "collocations": "mountain trek, go on a trek",
+        "example": "We went on a three-day trek through the national forest."
+      },
+      {
+        "num": 198,
+        "word": "Lodge",
+        "pos": "n.",
+        "ipa": "/lɒdʒ/",
+        "definition": "A small house in the country or mountains used by visitors.",
+        "collocations": "mountain lodge, stay at a lodge",
+        "example": "We warmed up by the fireplace in the wooden mountain lodge."
+      },
+      {
+        "num": 199,
+        "word": "Wander",
+        "pos": "v.",
+        "ipa": "/ˈwɒndə(r)/",
+        "definition": "To walk or move in a leisurely, casual, or aimless way.",
+        "collocations": "wander around, wander the streets",
+        "example": "We spent the afternoon wandering through the old town alleys."
+      },
+      {
+        "num": 200,
+        "word": "Journey",
+        "pos": "n.",
+        "ipa": "/ˈdʒɜːni/",
+        "definition": "An act of traveling from one place to another.",
+        "collocations": "long journey, safe journey",
+        "example": "Have a safe journey and call us when you arrive!"
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Hit the road",
+        "meaning": "To begin a journey or depart.",
+        "example": "It is getting late, so let's pack up and hit the road."
+      },
+      {
+        "phrase": "Travel light",
+        "meaning": "To travel with very little luggage or small bags.",
+        "example": "I always travel light with just a small carry-on backpack."
+      },
+      {
+        "phrase": "Off the beaten track",
+        "meaning": "In a quiet place far away from main tourist crowds.",
+        "example": "We found a lovely traditional restaurant off the beaten track."
+      },
+      {
+        "phrase": "Live out of a suitcase",
+        "meaning": "To travel continuously without settling in one place.",
+        "example": "His job requires him to live out of a suitcase for six months."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Checking In at an International Hotel and Inquiring About Tours",
+      "roleA": "You are a traveler checking in. You have a reservation for three nights, ask for a quiet room with a nice view, and ask for a city map.",
+      "roleB": "You are the hotel receptionist. Welcome the guest, ask for their passport, hand them their room key, and explain breakfast hours.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., reservation, passport, hotel, check-in, map)."
+    }
+  },
+  {
+    "day": 5,
+    "filename": "Day_05_Shopping_and_Money.md",
+    "title": "Shopping, Clothes & Money Management",
+    "domain": "Department stores, online shopping, bargaining, budgets, clothes styles, and saving money.",
+    "objectives": [
+      "Ask about prices, sizes, colors, and return policies when shopping.",
+      "Discuss personal clothing styles, shopping habits, and online purchases.",
+      "Express simple opinions about saving money, budgeting, and discounts.",
+      "Use 50 easy vocabulary words related to shopping, apparel, and personal finance."
+    ],
+    "questions": [
+      {
+        "num": 61,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer shopping for clothes in physical stores or on online websites?"
+      },
+      {
+        "num": 62,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is the most useful or enjoyable thing you bought recently?"
+      },
+      {
+        "num": 63,
+        "tier": "Tier 1: Warm-up",
+        "text": "How do you usually pay for everyday items: cash, debit card, or phone apps?"
+      },
+      {
+        "num": 64,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your favorite type of clothing to wear when relaxing at home?"
+      },
+      {
+        "num": 65,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you enjoy shopping during seasonal sales and Black Friday discounts?"
+      },
+      {
+        "num": 66,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a time when you returned an item to a store because it didn't fit?"
+      },
+      {
+        "num": 67,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you decide whether a product is worth its price before buying it?"
+      },
+      {
+        "num": 68,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you have a monthly budget for saving money, or do you spend freely?"
+      },
+      {
+        "num": 69,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What clothing style do you wear for formal events like weddings or job interviews?"
+      },
+      {
+        "num": 70,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Have you ever tried bargaining or negotiating a lower price in an open market?"
+      },
+      {
+        "num": 71,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why do many people buy things they do not really need when they feel stressed?"
+      },
+      {
+        "num": 72,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is it better to buy a few expensive high-quality items or many cheap items?"
+      },
+      {
+        "num": 73,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How does social media advertising influence what teenagers want to buy?"
+      },
+      {
+        "num": 74,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should schools teach basic money management and personal budgeting to teenagers?"
+      },
+      {
+        "num": 75,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Will physical shopping malls disappear in the future because of e-commerce?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 201,
+        "word": "Bargain",
+        "pos": "n./v.",
+        "ipa": "/ˈbɑːɡən/",
+        "definition": "Something bought for a lower price than usual; to negotiate.",
+        "collocations": "good bargain, bargain for price",
+        "example": "I got a wonderful winter coat at a bargain price."
+      },
+      {
+        "num": 202,
+        "word": "Discount",
+        "pos": "n.",
+        "ipa": "/ˈdɪskaʊnt/",
+        "definition": "A reduction in the usual price of a product or service.",
+        "collocations": "twenty percent discount, student discount",
+        "example": "Students receive a 10% discount on all books."
+      },
+      {
+        "num": 203,
+        "word": "Receipt",
+        "pos": "n.",
+        "ipa": "/rɪˈsiːt/",
+        "definition": "A written proof that you have paid for goods or services.",
+        "collocations": "keep the receipt, sales receipt",
+        "example": "Keep your receipt in case you want to return the shirt."
+      },
+      {
+        "num": 204,
+        "word": "Refund",
+        "pos": "n./v.",
+        "ipa": "/ˈriːfʌnd/",
+        "definition": "Money returned to a customer who is not satisfied with an item.",
+        "collocations": "ask for a refund, full refund",
+        "example": "The store gave me a full refund for the broken mug."
+      },
+      {
+        "num": 205,
+        "word": "Cashier",
+        "pos": "n.",
+        "ipa": "/kæˈʃɪə(r)/",
+        "definition": "A person handling payments in a store or supermarket.",
+        "collocations": "friendly cashier, pay the cashier",
+        "example": "I handed my cash and items to the cashier at the counter."
+      },
+      {
+        "num": 206,
+        "word": "Customer",
+        "pos": "n.",
+        "ipa": "/ˈkʌstəmə(r)/",
+        "definition": "A person who buys goods or services from a shop or business.",
+        "collocations": "satisfied customer, customer service",
+        "example": "The store offers excellent customer service and free returns."
+      },
+      {
+        "num": 207,
+        "word": "Wallet",
+        "pos": "n.",
+        "ipa": "/ˈwɒlɪt/",
+        "definition": "A small, flat pocket-sized case for holding paper money and cards.",
+        "collocations": "leather wallet, open wallet",
+        "example": "He pulled his debit card from his leather wallet."
+      },
+      {
+        "num": 208,
+        "word": "Purse",
+        "pos": "n.",
+        "ipa": "/pɜːs/",
+        "definition": "A small bag used by women for carrying money, keys, and makeup.",
+        "collocations": "shoulder purse, in her purse",
+        "example": "She searched her purse for her car keys."
+      },
+      {
+        "num": 209,
+        "word": "Aisle",
+        "pos": "n.",
+        "ipa": "/aɪl/",
+        "definition": "A passage between rows of shelves in a supermarket or shop.",
+        "collocations": "cereal aisle, walk down the aisle",
+        "example": "Fresh olive oil is located in aisle number four."
+      },
+      {
+        "num": 210,
+        "word": "Cart",
+        "pos": "n.",
+        "ipa": "/kɑːt/",
+        "definition": "A wheeled basket used for holding goods in a supermarket.",
+        "collocations": "shopping cart, fill the cart",
+        "example": "We filled our shopping cart with fruits and vegetables."
+      },
+      {
+        "num": 211,
+        "word": "Fitting room",
+        "pos": "n.",
+        "ipa": "/ˈfɪtɪŋ ruːm/",
+        "definition": "A small booth in a clothing store where you can try on clothes.",
+        "collocations": "in the fitting room, try in fitting room",
+        "example": "She took three dresses into the fitting room to try them on."
+      },
+      {
+        "num": 212,
+        "word": "Size",
+        "pos": "n.",
+        "ipa": "/saɪz/",
+        "definition": "How large or small a garment or shoe is (S, M, L, XL).",
+        "collocations": "medium size, shoe size",
+        "example": "Excuse me, do you have this blue sweater in medium size?"
+      },
+      {
+        "num": 213,
+        "word": "Brand",
+        "pos": "n.",
+        "ipa": "/brænd/",
+        "definition": "A type of product made by a particular company under a name.",
+        "collocations": "popular brand, luxury brand",
+        "example": "This sportswear brand is known for comfortable running shoes."
+      },
+      {
+        "num": 214,
+        "word": "Quality",
+        "pos": "n.",
+        "ipa": "/ˈkwɒləti/",
+        "definition": "How good or bad something is; standard of excellence.",
+        "collocations": "high quality, good quality",
+        "example": "These leather boots are expensive but of high quality."
+      },
+      {
+        "num": 215,
+        "word": "Affordable",
+        "pos": "adj.",
+        "ipa": "/əˈfɔːdəbl/",
+        "definition": "Inexpensive and reasonably priced so people can afford it.",
+        "collocations": "affordable price, affordable housing",
+        "example": "The store sells stylish clothes at very affordable prices."
+      },
+      {
+        "num": 216,
+        "word": "Expensive",
+        "pos": "adj.",
+        "ipa": "/ɪkˈspensɪv/",
+        "definition": "Costing a lot of money; high-priced.",
+        "collocations": "expensive watch, too expensive",
+        "example": "That designer handbag is far too expensive for my budget."
+      },
+      {
+        "num": 217,
+        "word": "Cheap",
+        "pos": "adj.",
+        "ipa": "/tʃiːp/",
+        "definition": "Costing little money; low in price.",
+        "collocations": "cheap ticket, very cheap",
+        "example": "We bought cheap flight tickets during the seasonal sale."
+      },
+      {
+        "num": 218,
+        "word": "Exchange",
+        "pos": "v.",
+        "ipa": "/ɪksˈtʃeɪndʒ/",
+        "definition": "To give an item back to a store in return for another one.",
+        "collocations": "exchange for another size",
+        "example": "I exchanged the blue jacket for a black one."
+      },
+      {
+        "num": 219,
+        "word": "Sale",
+        "pos": "n.",
+        "ipa": "/seɪl/",
+        "definition": "A period during which a shop sells goods at reduced prices.",
+        "collocations": "on sale, summer sale",
+        "example": "I bought this winter coat while it was on sale."
+      },
+      {
+        "num": 220,
+        "word": "Credit card",
+        "pos": "n.",
+        "ipa": "/ˈkredɪt kɑːd/",
+        "definition": "A plastic card used to pay for purchases on credit.",
+        "collocations": "pay by credit card, swipe card",
+        "example": "Can I pay by credit card, or do you take only cash?"
+      },
+      {
+        "num": 221,
+        "word": "Debit card",
+        "pos": "n.",
+        "ipa": "/ˈdebɪt kɑːd/",
+        "definition": "A bank card that takes money directly from your bank account.",
+        "collocations": "insert debit card, debit card PIN",
+        "example": "I used my debit card to withdraw cash at the ATM."
+      },
+      {
+        "num": 222,
+        "word": "Cash",
+        "pos": "n.",
+        "ipa": "/kæʃ/",
+        "definition": "Money in the form of physical coins or banknotes.",
+        "collocations": "pay in cash, carry cash",
+        "example": "I always carry a small amount of cash for emergency needs."
+      },
+      {
+        "num": 223,
+        "word": "Coin",
+        "pos": "n.",
+        "ipa": "/kɔɪn/",
+        "definition": "A flat, round piece of metal used as money.",
+        "collocations": "metal coin, shiny coins",
+        "example": "He dropped a few coins into the parking meter."
+      },
+      {
+        "num": 224,
+        "word": "Banknote",
+        "pos": "n.",
+        "ipa": "/ˈbæŋknəʊt/",
+        "definition": "A piece of printed paper money issued by a central bank.",
+        "collocations": "paper banknote, twenty-dollar banknote",
+        "example": "She handed the shopkeeper a twenty-dollar banknote."
+      },
+      {
+        "num": 225,
+        "word": "Budget",
+        "pos": "n.",
+        "ipa": "/ˈbʌdʒɪt/",
+        "definition": "A financial plan for spending and saving your money.",
+        "collocations": "monthly budget, stay on budget",
+        "example": "Creating a monthly budget helps you save for vacations."
+      },
+      {
+        "num": 226,
+        "word": "Save",
+        "pos": "v.",
+        "ipa": "/seɪv/",
+        "definition": "To keep money for future use rather than spending it now.",
+        "collocations": "save money, save for the future",
+        "example": "I try to save twenty percent of my salary every month."
+      },
+      {
+        "num": 227,
+        "word": "Spend",
+        "pos": "v.",
+        "ipa": "/spend/",
+        "definition": "To give money to pay for goods, services, or activities.",
+        "collocations": "spend money, spend wisely",
+        "example": "She spends money wisely on books and healthy food."
+      },
+      {
+        "num": 228,
+        "word": "Waste",
+        "pos": "v./n.",
+        "ipa": "/weɪst/",
+        "definition": "To use money, time, or goods carelessly or without need.",
+        "collocations": "waste money, waste of time",
+        "example": "Buying clothes you never wear is a total waste of money."
+      },
+      {
+        "num": 229,
+        "word": "Cost",
+        "pos": "n./v.",
+        "ipa": "/kɒst/",
+        "definition": "The amount of money needed to buy or do something.",
+        "collocations": "total cost, cost of living",
+        "example": "The total cost of our grocery trip was fifty dollars."
+      },
+      {
+        "num": 230,
+        "word": "Price",
+        "pos": "n.",
+        "ipa": "/praɪs/",
+        "definition": "The amount of money for which something is sold.",
+        "collocations": "fair price, check the price",
+        "example": "Can you check the price of this jacket for me?"
+      },
+      {
+        "num": 231,
+        "word": "Outfit",
+        "pos": "n.",
+        "ipa": "/ˈaʊtfɪt/",
+        "definition": "A set of clothes worn together for a particular occasion.",
+        "collocations": "casual outfit, stylish outfit",
+        "example": "She wore a casual outfit of blue jeans and a white blouse."
+      },
+      {
+        "num": 232,
+        "word": "Jacket",
+        "pos": "n.",
+        "ipa": "/ˈdʒækɪt/",
+        "definition": "A short coat with sleeves that fastens in the front.",
+        "collocations": "warm jacket, leather jacket",
+        "example": "Put on a warm jacket because it is chilly outside."
+      },
+      {
+        "num": 233,
+        "word": "Sweater",
+        "pos": "n.",
+        "ipa": "/ˈswetə(r)/",
+        "definition": "A knitted wool or cotton garment worn on the upper body.",
+        "collocations": "wool sweater, cozy sweater",
+        "example": "This soft wool sweater keeps me warm during autumn."
+      },
+      {
+        "num": 234,
+        "word": "Trousers",
+        "pos": "n.",
+        "ipa": "/ˈtraʊzəz/",
+        "definition": "A piece of clothing covering the body from waist to ankles.",
+        "collocations": "pair of trousers, cotton trousers",
+        "example": "He bought a pair of dark cotton trousers for work."
+      },
+      {
+        "num": 235,
+        "word": "Jeans",
+        "pos": "n.",
+        "ipa": "/dʒiːnz/",
+        "definition": "Casual trousers made of sturdy denim cotton fabric.",
+        "collocations": "blue jeans, wear jeans",
+        "example": "Blue jeans and sneakers are popular worldwide."
+      },
+      {
+        "num": 236,
+        "word": "Sneakers",
+        "pos": "n.",
+        "ipa": "/ˈsniːkəz/",
+        "definition": "Soft, comfortable shoes suitable for sports or casual wear.",
+        "collocations": "running sneakers, white sneakers",
+        "example": "She wears comfortable white sneakers for city walks."
+      },
+      {
+        "num": 237,
+        "word": "Boots",
+        "pos": "n.",
+        "ipa": "/buːts/",
+        "definition": "Sturdy footwear covering the foot and ankle or lower leg.",
+        "collocations": "leather boots, winter boots",
+        "example": "Waterproof boots keep your feet dry in the snow."
+      },
+      {
+        "num": 238,
+        "word": "Dress",
+        "pos": "n.",
+        "ipa": "/dres/",
+        "definition": "A one-piece garment for women covering the body and legs.",
+        "collocations": "summer dress, elegant dress",
+        "example": "She wore an elegant floral dress to the garden party."
+      },
+      {
+        "num": 239,
+        "word": "Suit",
+        "pos": "n.",
+        "ipa": "/suːt/",
+        "definition": "A set of formal matching clothes (jacket and trousers or skirt).",
+        "collocations": "business suit, wear a suit",
+        "example": "He wore a navy blue business suit for his interview."
+      },
+      {
+        "num": 240,
+        "word": "Shirt",
+        "pos": "n.",
+        "ipa": "/ʃɜːt/",
+        "definition": "A garment for the upper body with a collar and buttons.",
+        "collocations": "buttoned shirt, white shirt",
+        "example": "Iron your formal shirt before attending the meeting."
+      },
+      {
+        "num": 241,
+        "word": "T-shirt",
+        "pos": "n.",
+        "ipa": "/ˈtiː ʃɜːt/",
+        "definition": "A short-sleeved casual cotton shirt with no collar.",
+        "collocations": "cotton T-shirt, graphic T-shirt",
+        "example": "I wear a plain cotton T-shirt when exercising."
+      },
+      {
+        "num": 242,
+        "word": "Jewelry",
+        "pos": "n.",
+        "ipa": "/ˈdʒuːəlri/",
+        "definition": "Personal ornaments, such as necklaces, rings, or bracelets.",
+        "collocations": "gold jewelry, wear jewelry",
+        "example": "She wore a delicate silver necklace and gold earrings."
+      },
+      {
+        "num": 243,
+        "word": "Watch",
+        "pos": "n.",
+        "ipa": "/wɒtʃ/",
+        "definition": "A small clock worn on a strap around the wrist.",
+        "collocations": "wrist watch, check your watch",
+        "example": "He glanced at his watch to make sure he wasn't late."
+      },
+      {
+        "num": 244,
+        "word": "Accessories",
+        "pos": "n.",
+        "ipa": "/əkˈsesəriz/",
+        "definition": "Items worn to complete an outfit (belts, scarves, hats).",
+        "collocations": "fashion accessories, matching accessories",
+        "example": "A colorful silk scarf is a wonderful fashion accessory."
+      },
+      {
+        "num": 245,
+        "word": "Online shopping",
+        "pos": "n.",
+        "ipa": "/ˈɒnlaɪn ˈʃɒpɪŋ/",
+        "definition": "The activity of purchasing goods via the internet.",
+        "collocations": "do online shopping, convenience of online shopping",
+        "example": "Online shopping makes it easy to compare prices from home."
+      },
+      {
+        "num": 246,
+        "word": "Delivery",
+        "pos": "n.",
+        "ipa": "/dɪˈlɪvəri/",
+        "definition": "The action of bringing ordered goods to a home address.",
+        "collocations": "fast delivery, delivery address",
+        "example": "The package was scheduled for home delivery on Friday."
+      },
+      {
+        "num": 247,
+        "word": "Package",
+        "pos": "n.",
+        "ipa": "/ˈpækɪdʒ/",
+        "definition": "An object or items wrapped in paper or packed in a box.",
+        "collocations": "receive a package, heavy package",
+        "example": "The postal courier delivered a cardboard package to our door."
+      },
+      {
+        "num": 248,
+        "word": "Return",
+        "pos": "v.",
+        "ipa": "/rɪˈtɜːn/",
+        "definition": "To take an item back to a shop to get your money back.",
+        "collocations": "return an item, return policy",
+        "example": "The shop allows customers thirty days to return items."
+      },
+      {
+        "num": 249,
+        "word": "Warranty",
+        "pos": "n.",
+        "ipa": "/ˈwɒrənti/",
+        "definition": "A written guarantee promising to repair or replace a product.",
+        "collocations": "two-year warranty, under warranty",
+        "example": "This laptop comes with a full two-year warranty."
+      },
+      {
+        "num": 250,
+        "word": "Mall",
+        "pos": "n.",
+        "ipa": "/mɔːl/",
+        "definition": "A large enclosed building containing many diverse shops.",
+        "collocations": "shopping mall, visit the mall",
+        "example": "We walked around the shopping mall and had lunch in the food court."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Shop around",
+        "meaning": "To compare prices and quality at different stores before buying.",
+        "example": "It is smart to shop around before purchasing expensive electronics."
+      },
+      {
+        "phrase": "Cost an arm and a leg",
+        "meaning": "To be extremely expensive.",
+        "example": "Eating at that five-star restaurant cost an arm and a leg!"
+      },
+      {
+        "phrase": "Tighten one's belt",
+        "meaning": "To spend less money because you have less available.",
+        "example": "We had to tighten our belts while saving for our new home."
+      },
+      {
+        "phrase": "Window shopping",
+        "meaning": "Looking at goods displayed in shop windows without buying.",
+        "example": "We spent Sunday afternoon window shopping downtown."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Returning a Garment to a Clothing Store",
+      "roleA": "You are a customer. You bought a jacket last week, but the zipper is broken and the size is too small. Politely ask to exchange it or receive a refund.",
+      "roleB": "You are the shop assistant. Check the receipt, examine the jacket, apologize for the problem, and offer to find the correct size or process a refund.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., receipt, refund, size, exchange, quality)."
+    }
+  },
+  {
+    "day": 6,
+    "filename": "Day_06_Health_and_Exercise.md",
+    "title": "Health, Exercise & Well-Being",
+    "domain": "Doctor visits, common illnesses, gym workouts, sleep quality, and healthy lifestyle choices.",
+    "objectives": [
+      "Explain common health symptoms to a doctor, pharmacist, or friend.",
+      "Discuss workout routines, sports, and physical exercise for fitness.",
+      "Give friendly health advice and suggestions using should / shouldn't.",
+      "Use 50 practical vocabulary words related to the body, medicine, and wellness."
+    ],
+    "questions": [
+      {
+        "num": 76,
+        "tier": "Tier 1: Warm-up",
+        "text": "What do you usually do to stay physically active and healthy during the week?"
+      },
+      {
+        "num": 77,
+        "tier": "Tier 1: Warm-up",
+        "text": "How many hours of sleep do you need every night to feel energetic and happy?"
+      },
+      {
+        "num": 78,
+        "tier": "Tier 1: Warm-up",
+        "text": "What home remedies do you use when you catch a common cold or sore throat?"
+      },
+      {
+        "num": 79,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer exercising at an indoor gym, at home, or outdoors in a park?"
+      },
+      {
+        "num": 80,
+        "tier": "Tier 1: Warm-up",
+        "text": "How much plain water do you drink on a typical day?"
+      },
+      {
+        "num": 81,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a visit to a doctor or dentist and what advice they gave you?"
+      },
+      {
+        "num": 82,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What do you do to calm your mind when you feel nervous or overwhelmed?"
+      },
+      {
+        "num": 83,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Have you ever had a sports injury or sprained ankle? How did you recover?"
+      },
+      {
+        "num": 84,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you motivate yourself to exercise on days when you feel lazy?"
+      },
+      {
+        "num": 85,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What healthy habit would you like to start practicing this year?"
+      },
+      {
+        "num": 86,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why do many people find it difficult to maintain regular exercise habits?"
+      },
+      {
+        "num": 87,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is mental health just as important as physical health for a happy life?"
+      },
+      {
+        "num": 88,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How does sitting in front of a computer screen for long hours harm the human body?"
+      },
+      {
+        "num": 89,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should companies give employees 30 minutes of paid exercise time every day?"
+      },
+      {
+        "num": 90,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "What is the best way for a society to encourage citizens to eat healthier food?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 251,
+        "word": "Doctor",
+        "pos": "n.",
+        "ipa": "/ˈdɒktə(r)/",
+        "definition": "A qualified person licensed to treat sick or injured people.",
+        "collocations": "see a doctor, visit the doctor",
+        "example": "You should see a doctor if your fever continues."
+      },
+      {
+        "num": 252,
+        "word": "Dentist",
+        "pos": "n.",
+        "ipa": "/ˈdentɪst/",
+        "definition": "A person qualified to treat diseases and conditions of teeth.",
+        "collocations": "visit the dentist, dental checkup",
+        "example": "I go to the dentist twice a year for teeth cleaning."
+      },
+      {
+        "num": 253,
+        "word": "Medicine",
+        "pos": "n.",
+        "ipa": "/ˈmedsn/",
+        "definition": "A drug or remedy used to treat or prevent illness.",
+        "collocations": "take medicine, prescribed medicine",
+        "example": "Take this cough medicine twice daily after meals."
+      },
+      {
+        "num": 254,
+        "word": "Pharmacy",
+        "pos": "n.",
+        "ipa": "/ˈfɑːməsi/",
+        "definition": "A shop where medicinal drugs are prepared and sold; drugstore.",
+        "collocations": "local pharmacy, go to the pharmacy",
+        "example": "I bought bandages and aspirin at the neighborhood pharmacy."
+      },
+      {
+        "num": 255,
+        "word": "Prescription",
+        "pos": "n.",
+        "ipa": "/prɪˈskrɪpʃn/",
+        "definition": "An official note from a doctor authorizing medicine.",
+        "collocations": "doctor prescription, fill a prescription",
+        "example": "The doctor wrote a prescription for antibiotic pills."
+      },
+      {
+        "num": 256,
+        "word": "Headache",
+        "pos": "n.",
+        "ipa": "/ˈhedeɪk/",
+        "definition": "A continuous pain in the head.",
+        "collocations": "have a headache, severe headache",
+        "example": "Drinking a large glass of water helped soothe my headache."
+      },
+      {
+        "num": 257,
+        "word": "Fever",
+        "pos": "n.",
+        "ipa": "/ˈfiːvə(r)/",
+        "definition": "An abnormally high body temperature, usually from illness.",
+        "collocations": "high fever, have a fever",
+        "example": "The thermometer showed that the child had a mild fever."
+      },
+      {
+        "num": 258,
+        "word": "Cough",
+        "pos": "n./v.",
+        "ipa": "/kɒf/",
+        "definition": "Expelling air from the lungs with a sudden sharp sound.",
+        "collocations": "dry cough, cough badly",
+        "example": "Cover your mouth when you cough to prevent spreading germs."
+      },
+      {
+        "num": 259,
+        "word": "Sore throat",
+        "pos": "n.",
+        "ipa": "/sɔː θrəʊt/",
+        "definition": "A painful or inflamed throat caused by a cold or infection.",
+        "collocations": "have a sore throat, soothe sore throat",
+        "example": "Warm tea with honey is wonderful for a sore throat."
+      },
+      {
+        "num": 260,
+        "word": "Stomachache",
+        "pos": "n.",
+        "ipa": "/ˈstʌməkeɪk/",
+        "definition": "Pain in a person's stomach or belly.",
+        "collocations": "have a stomachache, bad stomachache",
+        "example": "Eating too many green apples gave him a stomachache."
+      },
+      {
+        "num": 261,
+        "word": "Symptom",
+        "pos": "n.",
+        "ipa": "/ˈsɪmptəm/",
+        "definition": "A physical feeling indicating the presence of an illness.",
+        "collocations": "common symptoms, flu symptoms",
+        "example": "Sneezing and fever are common symptoms of the flu."
+      },
+      {
+        "num": 262,
+        "word": "Allergy",
+        "pos": "n.",
+        "ipa": "/ˈælədʒi/",
+        "definition": "A damaging immune reaction to substances like pollen or nuts.",
+        "collocations": "food allergy, seasonal allergy",
+        "example": "He has a severe peanut allergy and carries medication."
+      },
+      {
+        "num": 263,
+        "word": "Gym",
+        "pos": "n.",
+        "ipa": "/dʒɪm/",
+        "definition": "A hall or building equipped for physical exercise and sports.",
+        "collocations": "go to the gym, gym membership",
+        "example": "I work out at the fitness gym three mornings a week."
+      },
+      {
+        "num": 264,
+        "word": "Workout",
+        "pos": "n.",
+        "ipa": "/ˈwɜːkaʊt/",
+        "definition": "A session of vigorous physical exercise or training.",
+        "collocations": "daily workout, morning workout",
+        "example": "A 30-minute cardio workout boosts your metabolism."
+      },
+      {
+        "num": 265,
+        "word": "Stretching",
+        "pos": "n.",
+        "ipa": "/ˈstretʃɪŋ/",
+        "definition": "Exercising by extending limbs to increase muscle flexibility.",
+        "collocations": "gentle stretching, do stretching",
+        "example": "Morning stretching prevents back stiffness after sleep."
+      },
+      {
+        "num": 266,
+        "word": "Cardio",
+        "pos": "n.",
+        "ipa": "/ˈkɑːdiəʊ/",
+        "definition": "Cardiovascular exercise (running, cycling) that raises heart rate.",
+        "collocations": "cardio exercises, do cardio",
+        "example": "Running and jumping rope are excellent cardio exercises."
+      },
+      {
+        "num": 267,
+        "word": "Hydration",
+        "pos": "n.",
+        "ipa": "/haɪˈdreɪʃn/",
+        "definition": "The process of maintaining adequate water levels in the body.",
+        "collocations": "proper hydration, stay hydrated",
+        "example": "Proper hydration is essential when exercising in summer heat."
+      },
+      {
+        "num": 268,
+        "word": "Nutrition",
+        "pos": "n.",
+        "ipa": "/njuːˈtrɪʃn/",
+        "definition": "The food necessary for health, growth, and bodily energy.",
+        "collocations": "healthy nutrition, good nutrition",
+        "example": "Good nutrition supports a strong immune system."
+      },
+      {
+        "num": 269,
+        "word": "Vitamins",
+        "pos": "n.",
+        "ipa": "/ˈvɪtəmɪnz/",
+        "definition": "Organic substances essential in small quantities for health.",
+        "collocations": "take vitamins, vitamin C",
+        "example": "Oranges and lemons are rich in natural vitamin C."
+      },
+      {
+        "num": 270,
+        "word": "Sleep",
+        "pos": "n./v.",
+        "ipa": "/sliːp/",
+        "definition": "A condition of rest in which the nervous system is inactive.",
+        "collocations": "deep sleep, quality sleep",
+        "example": "Getting eight hours of quality sleep improves your focus."
+      },
+      {
+        "num": 271,
+        "word": "Rest",
+        "pos": "n./v.",
+        "ipa": "/rest/",
+        "definition": "Ceasing work or movement to relax and recover strength.",
+        "collocations": "take a rest, bed rest",
+        "example": "The doctor advised three days of quiet bed rest."
+      },
+      {
+        "num": 272,
+        "word": "Stress",
+        "pos": "n.",
+        "ipa": "/stres/",
+        "definition": "A state of mental or emotional strain resulting from pressure.",
+        "collocations": "reduce stress, manage stress",
+        "example": "Deep breathing exercises help you manage workplace stress."
+      },
+      {
+        "num": 273,
+        "word": "Fatigue",
+        "pos": "n.",
+        "ipa": "/fəˈtiːɡ/",
+        "definition": "Extreme tiredness resulting from mental or physical exertion.",
+        "collocations": "muscle fatigue, mental fatigue",
+        "example": "Chronic fatigue is often caused by lack of proper sleep."
+      },
+      {
+        "num": 274,
+        "word": "Immunity",
+        "pos": "n.",
+        "ipa": "/ɪˈmjuːnəti/",
+        "definition": "The ability of an organism to resist a particular disease.",
+        "collocations": "strong immunity, boost immunity",
+        "example": "Nutritious foods and exercise build strong natural immunity."
+      },
+      {
+        "num": 275,
+        "word": "Bandage",
+        "pos": "n.",
+        "ipa": "/ˈbændɪdʒ/",
+        "definition": "A strip of fabric used to bind and protect a wound.",
+        "collocations": "apply a bandage, clean bandage",
+        "example": "She wrapped a clean bandage around her scraped knee."
+      },
+      {
+        "num": 276,
+        "word": "Wound",
+        "pos": "n.",
+        "ipa": "/wuːnd/",
+        "definition": "An injury to living tissue caused by a cut, blow, or impact.",
+        "collocations": "clean the wound, heal a wound",
+        "example": "Wash the minor wound with clean water and soap."
+      },
+      {
+        "num": 277,
+        "word": "Injury",
+        "pos": "n.",
+        "ipa": "/ˈɪndʒəri/",
+        "definition": "Physical damage done to a person's body in an accident.",
+        "collocations": "sports injury, prevent injury",
+        "example": "Warming up before running helps prevent muscle injury."
+      },
+      {
+        "num": 278,
+        "word": "Sprain",
+        "pos": "v./n.",
+        "ipa": "/spreɪn/",
+        "definition": "Wrenching the ligaments of an ankle or wrist painfully.",
+        "collocations": "sprained ankle, sprain a wrist",
+        "example": "He sprained his ankle while playing soccer in the rain."
+      },
+      {
+        "num": 279,
+        "word": "Dizzy",
+        "pos": "adj.",
+        "ipa": "/ˈdɪzi/",
+        "definition": "Having a sensation of spinning and losing one's balance.",
+        "collocations": "feel dizzy, dizzy spell",
+        "example": "Stand up slowly so you do not feel dizzy."
+      },
+      {
+        "num": 280,
+        "word": "Thermometer",
+        "pos": "n.",
+        "ipa": "/θəˈmɒmɪtə(r)/",
+        "definition": "An instrument for measuring body temperature.",
+        "collocations": "check with thermometer, digital thermometer",
+        "example": "The digital thermometer showed a temperature of 37 degrees."
+      },
+      {
+        "num": 281,
+        "word": "Tablet",
+        "pos": "n.",
+        "ipa": "/ˈtæblət/",
+        "definition": "A small solid disk of compressed medicine; a pill.",
+        "collocations": "take a tablet, pain tablet",
+        "example": "Swallow one tablet with a glass of water after dinner."
+      },
+      {
+        "num": 282,
+        "word": "Ointment",
+        "pos": "n.",
+        "ipa": "/ˈɔɪntmənt/",
+        "definition": "A smooth oily substance rubbed on skin to heal or soothe.",
+        "collocations": "apply ointment, soothing ointment",
+        "example": "Apply this soothing ointment to the burn twice daily."
+      },
+      {
+        "num": 283,
+        "word": "Infection",
+        "pos": "n.",
+        "ipa": "/ɪnˈfekʃn/",
+        "definition": "The process of infecting or the state of being diseased by bacteria.",
+        "collocations": "skin infection, fight infection",
+        "example": "Keep the cut clean and covered to prevent bacterial infection."
+      },
+      {
+        "num": 284,
+        "word": "Recovery",
+        "pos": "n.",
+        "ipa": "/rɪˈkʌvəri/",
+        "definition": "A return to a normal state of health, mind, or strength.",
+        "collocations": "speedy recovery, full recovery",
+        "example": "We sent flowers wishing our colleague a speedy recovery."
+      },
+      {
+        "num": 285,
+        "word": "Healthy",
+        "pos": "adj.",
+        "ipa": "/ˈhelθi/",
+        "definition": "In good physical or mental condition; not diseased.",
+        "collocations": "healthy lifestyle, healthy food",
+        "example": "Eating greens and walking daily keeps you healthy."
+      },
+      {
+        "num": 286,
+        "word": "Unhealthy",
+        "pos": "adj.",
+        "ipa": "/ʌnˈhelθi/",
+        "definition": "Harmful to health; not in good physical condition.",
+        "collocations": "unhealthy habits, unhealthy snacks",
+        "example": "Drinking sugary sodas every day is an unhealthy habit."
+      },
+      {
+        "num": 287,
+        "word": "Pulse",
+        "pos": "n.",
+        "ipa": "/pʌls/",
+        "definition": "The rhythmic throbbing of arteries as blood is propelled.",
+        "collocations": "check the pulse, rapid pulse",
+        "example": "The nurse gently checked my pulse and blood pressure."
+      },
+      {
+        "num": 288,
+        "word": "Blood pressure",
+        "pos": "n.",
+        "ipa": "/blʌd ˈpreʃə(r)/",
+        "definition": "The pressure of the blood in the circulatory system.",
+        "collocations": "high blood pressure, normal blood pressure",
+        "example": "Reducing salt intake helps lower high blood pressure."
+      },
+      {
+        "num": 289,
+        "word": "Muscle",
+        "pos": "n.",
+        "ipa": "/ˈmʌsl/",
+        "definition": "A band or bundle of fibrous tissue in the human body.",
+        "collocations": "build muscle, sore muscle",
+        "example": "Lifting light weights helps strengthen your arm muscles."
+      },
+      {
+        "num": 290,
+        "word": "Joint",
+        "pos": "n.",
+        "ipa": "/dʒɔɪnt/",
+        "definition": "A point at which parts of the artificial or bodily structure join.",
+        "collocations": "knee joint, stiff joints",
+        "example": "Swimming is gentle on the knee joints and back."
+      },
+      {
+        "num": 291,
+        "word": "Bone",
+        "pos": "n.",
+        "ipa": "/bəʊn/",
+        "definition": "Any of the pieces of hard, whitish tissue making up skeleton.",
+        "collocations": "broken bone, strong bones",
+        "example": "Milk and sunlight supply calcium for strong bones."
+      },
+      {
+        "num": 292,
+        "word": "Breath",
+        "pos": "n.",
+        "ipa": "/breθ/",
+        "definition": "The air taken into and expelled from the lungs.",
+        "collocations": "deep breath, catch your breath",
+        "example": "Take a deep breath and exhale slowly to calm down."
+      },
+      {
+        "num": 293,
+        "word": "Lungs",
+        "pos": "n.",
+        "ipa": "/lʌŋz/",
+        "definition": "The pair of organs situated within the ribcage for breathing.",
+        "collocations": "healthy lungs, breathe with lungs",
+        "example": "Clean outdoor air is wonderful for healthy lungs."
+      },
+      {
+        "num": 294,
+        "word": "Heart",
+        "pos": "n.",
+        "ipa": "/hɑːt/",
+        "definition": "A hollow muscular organ that pumps the blood through body.",
+        "collocations": "heart rate, healthy heart",
+        "example": "Aerobic exercise keeps your heart strong and healthy."
+      },
+      {
+        "num": 295,
+        "word": "Walking",
+        "pos": "n.",
+        "ipa": "/ˈwɔːkɪŋ/",
+        "definition": "The activity of going along on foot at an easy pace.",
+        "collocations": "brisk walking, daily walking",
+        "example": "Thirty minutes of brisk walking reduces stress effectively."
+      },
+      {
+        "num": 296,
+        "word": "Posture",
+        "pos": "n.",
+        "ipa": "/ˈpɒstʃə(r)/",
+        "definition": "The position in which someone holds their body when standing.",
+        "collocations": "good posture, improve posture",
+        "example": "Sit up straight in your chair to maintain good posture."
+      },
+      {
+        "num": 297,
+        "word": "Hygiene",
+        "pos": "n.",
+        "ipa": "/ˈhaɪdʒiːn/",
+        "definition": "Conditions or practices conducive to maintaining health.",
+        "collocations": "personal hygiene, good hygiene",
+        "example": "Washing your hands before eating is basic personal hygiene."
+      },
+      {
+        "num": 298,
+        "word": "Relaxation",
+        "pos": "n.",
+        "ipa": "/ˌriːlækˈseɪʃn/",
+        "definition": "The state of being free from tension and anxiety.",
+        "collocations": "mental relaxation, time for relaxation",
+        "example": "Listening to nature sounds promotes deep relaxation."
+      },
+      {
+        "num": 299,
+        "word": "Well-being",
+        "pos": "n.",
+        "ipa": "/ˌwel ˈbiːɪŋ/",
+        "definition": "The state of being comfortable, healthy, or happy.",
+        "collocations": "overall well-being, emotional well-being",
+        "example": "Balancing work, family, and hobbies improves your overall well-being."
+      },
+      {
+        "num": 300,
+        "word": "Strength",
+        "pos": "n.",
+        "ipa": "/streŋkθ/",
+        "definition": "The quality or state of being physically strong.",
+        "collocations": "physical strength, build strength",
+        "example": "Regular bodyweight exercises build core physical strength."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Under the weather",
+        "meaning": "Feeling slightly ill or unwell.",
+        "example": "I won't come to the party tonight because I feel under the weather."
+      },
+      {
+        "phrase": "Fit as a fiddle",
+        "meaning": "In very good health and physical condition.",
+        "example": "My seventy-year-old grandfather runs daily and is as fit as a fiddle."
+      },
+      {
+        "phrase": "An apple a day keeps the doctor away",
+        "meaning": "Eating nutritious food helps you stay healthy.",
+        "example": "Remember to pack fruit for lunch; an apple a day keeps the doctor away!"
+      },
+      {
+        "phrase": "Back on one's feet",
+        "meaning": "Fully recovered from an illness or injury.",
+        "example": "After a week in bed, she is finally back on her feet."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Visiting a Doctor for a Health Checkup and Cold Symptoms",
+      "roleA": "You are a patient visiting a doctor. Explain that you have a fever, a bad cough, and a sore throat. Ask how many times a day to take the medicine.",
+      "roleB": "You are the doctor. Listen to the symptoms, check their temperature, prescribe rest and cough syrup, and give advice on drinking water.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., doctor, symptom, fever, cough, medicine)."
+    }
+  },
+  {
+    "day": 7,
+    "filename": "Day_07_Home_and_Neighborhood.md",
+    "title": "Home, Neighborhood & Hometown Life",
+    "domain": "Apartments, houses, furniture, neighbors, hometown memories, and local community facilities.",
+    "objectives": [
+      "Describe your home, favorite rooms, and furniture arrangement clearly.",
+      "Talk about your hometown, local neighborhood, and community amenities.",
+      "Compare the pros and cons of living in a busy metropolis vs. a quiet village.",
+      "Use 50 practical vocabulary words related to housing, cities, and neighborhoods."
+    ],
+    "questions": [
+      {
+        "num": 91,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you live in an apartment, a detached house, or a shared room? Describe it."
+      },
+      {
+        "num": 92,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your favorite room in your home, and why do you feel comfortable there?"
+      },
+      {
+        "num": 93,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your hometown like? Is it a large metropolis or a quiet small town?"
+      },
+      {
+        "num": 94,
+        "tier": "Tier 1: Warm-up",
+        "text": "What local shops, parks, or facilities are located near your current home?"
+      },
+      {
+        "num": 95,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you know your next-door neighbors well, and do you talk to them often?"
+      },
+      {
+        "num": 96,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "If you could change or renovate one thing in your living space, what would it be?"
+      },
+      {
+        "num": 97,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What do you like most about your current neighborhood, and what is one drawback?"
+      },
+      {
+        "num": 98,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What tourist attractions or famous sights would you show a visitor in your hometown?"
+      },
+      {
+        "num": 99,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you keep your room neat, clean, and nicely decorated?"
+      },
+      {
+        "num": 100,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What are the advantages and disadvantages of renting an apartment vs. buying a home?"
+      },
+      {
+        "num": 101,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is it better for young children to grow up in a countryside village or a big city?"
+      },
+      {
+        "num": 102,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How can neighbors build a safer and friendlier community spirit together?"
+      },
+      {
+        "num": 103,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why are housing prices and rental costs rising so fast in many modern cities?"
+      },
+      {
+        "num": 104,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should cities build more public green parks and bicycle lanes instead of parking lots?"
+      },
+      {
+        "num": 105,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "If you could live anywhere in the world, where would your dream home be?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 301,
+        "word": "Apartment",
+        "pos": "n.",
+        "ipa": "/əˈpɑːtmənt/",
+        "definition": "A set of rooms for living in, especially on one floor of a building.",
+        "collocations": "rent an apartment, modern apartment",
+        "example": "We rented a sunny two-bedroom apartment near downtown."
+      },
+      {
+        "num": 302,
+        "word": "Balcony",
+        "pos": "n.",
+        "ipa": "/ˈbælkəni/",
+        "definition": "A platform enclosed by a wall or railing on the outside of a building.",
+        "collocations": "sit on the balcony, small balcony",
+        "example": "I like to drink my morning tea on the balcony."
+      },
+      {
+        "num": 303,
+        "word": "Neighborhood",
+        "pos": "n.",
+        "ipa": "/ˈneɪbəhʊd/",
+        "definition": "A district or community within a town or city.",
+        "collocations": "quiet neighborhood, friendly neighborhood",
+        "example": "Our neighborhood has lots of green trees and quiet streets."
+      },
+      {
+        "num": 304,
+        "word": "Suburbs",
+        "pos": "n.",
+        "ipa": "/ˈsʌbɜːbz/",
+        "definition": "An outlying residential district of a city.",
+        "collocations": "live in the suburbs, peaceful suburbs",
+        "example": "Many families move to the suburbs for larger gardens."
+      },
+      {
+        "num": 305,
+        "word": "Downtown",
+        "pos": "n./adv.",
+        "ipa": "/ˌdaʊnˈtaʊn/",
+        "definition": "The central part or commercial center of a city.",
+        "collocations": "go downtown, in downtown",
+        "example": "We took the bus downtown to go shopping and visit museums."
+      },
+      {
+        "num": 306,
+        "word": "Rent",
+        "pos": "n./v.",
+        "ipa": "/rent/",
+        "definition": "A regular payment made for the use of property or an apartment.",
+        "collocations": "pay the rent, monthly rent",
+        "example": "The monthly rent includes water and internet bills."
+      },
+      {
+        "num": 307,
+        "word": "Landlord",
+        "pos": "n.",
+        "ipa": "/ˈlændlɔːd/",
+        "definition": "A person who rents out an apartment, house, or land to a tenant.",
+        "collocations": "helpful landlord, contact the landlord",
+        "example": "Our landlord fixed the kitchen faucet the day after we asked."
+      },
+      {
+        "num": 308,
+        "word": "Tenant",
+        "pos": "n.",
+        "ipa": "/ˈtenənt/",
+        "definition": "A person who occupies land or property rented from a landlord.",
+        "collocations": "reliable tenant, new tenant",
+        "example": "The previous tenant left the apartment clean and tidy."
+      },
+      {
+        "num": 309,
+        "word": "Furniture",
+        "pos": "n.",
+        "ipa": "/ˈfɜːnɪtʃə(r)/",
+        "definition": "Large movable objects (tables, chairs, beds) used in a room.",
+        "collocations": "wooden furniture, comfortable furniture",
+        "example": "We bought simple wooden furniture for the new living room."
+      },
+      {
+        "num": 310,
+        "word": "Couch",
+        "pos": "n.",
+        "ipa": "/kaʊtʃ/",
+        "definition": "A comfortable long upholstered seat with a back and arms; sofa.",
+        "collocations": "sit on the couch, comfortable couch",
+        "example": "We relaxed on the couch and watched a movie together."
+      },
+      {
+        "num": 311,
+        "word": "Armchair",
+        "pos": "n.",
+        "ipa": "/ˈɑːmtʃeə(r)/",
+        "definition": "A comfortable chair with side supports for a person's arms.",
+        "collocations": "cozy armchair, leather armchair",
+        "example": "My grandfather loves reading in his comfortable armchair."
+      },
+      {
+        "num": 312,
+        "word": "Bookshelf",
+        "pos": "n.",
+        "ipa": "/ˈbʊkʃelf/",
+        "definition": "A shelf or set of shelves on which books are kept.",
+        "collocations": "wooden bookshelf, full bookshelf",
+        "example": "The wooden bookshelf was packed with novels and magazines."
+      },
+      {
+        "num": 313,
+        "word": "Wardrobe",
+        "pos": "n.",
+        "ipa": "/ˈwɔːdrəʊb/",
+        "definition": "A large, tall cupboard in which clothes may be hung or stored.",
+        "collocations": "hang in wardrobe, bedroom wardrobe",
+        "example": "She hung her winter coats inside the bedroom wardrobe."
+      },
+      {
+        "num": 314,
+        "word": "Mirror",
+        "pos": "n.",
+        "ipa": "/ˈmɪrə(r)/",
+        "definition": "A reflective surface, now typically of glass coated with metal.",
+        "collocations": "look in the mirror, bathroom mirror",
+        "example": "He adjusted his tie while looking in the bathroom mirror."
+      },
+      {
+        "num": 315,
+        "word": "Curtains",
+        "pos": "n.",
+        "ipa": "/ˈkɜːtnz/",
+        "definition": "Hanging pieces of fabric used to shut out light from windows.",
+        "collocations": "close the curtains, draw the curtains",
+        "example": "Close the curtains to keep the bedroom dark and cool."
+      },
+      {
+        "num": 316,
+        "word": "Carpet",
+        "pos": "n.",
+        "ipa": "/ˈkɑːpɪt/",
+        "definition": "A floor covering made from thick woven fabric.",
+        "collocations": "soft carpet, clean the carpet",
+        "example": "The soft living room carpet felt warm under our feet."
+      },
+      {
+        "num": 317,
+        "word": "Ceiling",
+        "pos": "n.",
+        "ipa": "/ˈsiːlɪŋ/",
+        "definition": "The upper interior surface of a room.",
+        "collocations": "high ceiling, ceiling fan",
+        "example": "The old historic apartment had high ceilings and big windows."
+      },
+      {
+        "num": 318,
+        "word": "Basement",
+        "pos": "n.",
+        "ipa": "/ˈbeɪsmənt/",
+        "definition": "The floor of a building partly or entirely below ground level.",
+        "collocations": "in the basement, basement storage",
+        "example": "We store our winter ski gear and old boxes in the basement."
+      },
+      {
+        "num": 319,
+        "word": "Attic",
+        "pos": "n.",
+        "ipa": "/ˈætɪk/",
+        "definition": "A space or room just below the roof of a house.",
+        "collocations": "dusty attic, in the attic",
+        "example": "She found vintage photograph albums in the wooden attic."
+      },
+      {
+        "num": 320,
+        "word": "Garage",
+        "pos": "n.",
+        "ipa": "/ˈɡærɑːʒ/",
+        "definition": "A building or shed for housing a motor vehicle or tools.",
+        "collocations": "park in the garage, single-car garage",
+        "example": "He parked his car in the garage and closed the door."
+      },
+      {
+        "num": 321,
+        "word": "Garden",
+        "pos": "n.",
+        "ipa": "/ˈɡɑːdn/",
+        "definition": "A piece of ground adjoining a house, used for growing flowers.",
+        "collocations": "flower garden, vegetable garden",
+        "example": "Our vegetable garden produces sweet tomatoes and fresh basil."
+      },
+      {
+        "num": 322,
+        "word": "Backyard",
+        "pos": "n.",
+        "ipa": "/ˌbækˈjɑːd/",
+        "definition": "A yard behind a house, typically fenced and with grass.",
+        "collocations": "in the backyard, play in the backyard",
+        "example": "The children loved playing soccer in the green backyard."
+      },
+      {
+        "num": 323,
+        "word": "Fence",
+        "pos": "n.",
+        "ipa": "/fens/",
+        "definition": "A wooden or metal barrier enclosing an area of ground.",
+        "collocations": "wooden fence, build a fence",
+        "example": "A white wooden fence surrounds their country cottage."
+      },
+      {
+        "num": 324,
+        "word": "Elevator",
+        "pos": "n.",
+        "ipa": "/ˈelɪveɪtə(r)/",
+        "definition": "A platform or compartment housed in a shaft for raising passengers.",
+        "collocations": "take the elevator, elevator button",
+        "example": "We took the elevator up to the eighth floor apartment."
+      },
+      {
+        "num": 325,
+        "word": "Stairs",
+        "pos": "n.",
+        "ipa": "/steəz/",
+        "definition": "A set of steps leading from one floor of a building to another.",
+        "collocations": "climb the stairs, take the stairs",
+        "example": "Taking the stairs instead of the elevator is great exercise."
+      },
+      {
+        "num": 326,
+        "word": "Hallway",
+        "pos": "n.",
+        "ipa": "/ˈhɔːlweɪ/",
+        "definition": "An interior passage or corridor onto which rooms open.",
+        "collocations": "down the hallway, front hallway",
+        "example": "Leave your wet umbrella and boots in the front hallway."
+      },
+      {
+        "num": 327,
+        "word": "Heating",
+        "pos": "n.",
+        "ipa": "/ˈhiːtɪŋ/",
+        "definition": "Equipment used to provide warmth in a building.",
+        "collocations": "central heating, turn on the heating",
+        "example": "Turn on the central heating because it is freezing tonight."
+      },
+      {
+        "num": 328,
+        "word": "Air conditioning",
+        "pos": "n.",
+        "ipa": "/ˈeə kəndɪʃənɪŋ/",
+        "definition": "A system for controlling the temperature and humidity in a room.",
+        "collocations": "turn on air conditioning, cool room",
+        "example": "The air conditioning kept our apartment cool during the heatwave."
+      },
+      {
+        "num": 329,
+        "word": "Electricity",
+        "pos": "n.",
+        "ipa": "/ɪˌlekˈtrɪsəti/",
+        "definition": "A form of energy that powers lighting and appliances.",
+        "collocations": "save electricity, electricity bill",
+        "example": "Turn off the lights when leaving a room to save electricity."
+      },
+      {
+        "num": 330,
+        "word": "Plumbing",
+        "pos": "n.",
+        "ipa": "/ˈplʌmɪŋ/",
+        "definition": "The system of pipes, tanks, and fittings for water in a building.",
+        "collocations": "plumbing system, fix the plumbing",
+        "example": "The plumber repaired the leaking pipes in the bathroom."
+      },
+      {
+        "num": 331,
+        "word": "Appliances",
+        "pos": "n.",
+        "ipa": "/əˈplaɪənsɪz/",
+        "definition": "A device or machine in the home (fridge, washing machine).",
+        "collocations": "kitchen appliances, electrical appliances",
+        "example": "Modern kitchen appliances save busy families a lot of time."
+      },
+      {
+        "num": 332,
+        "word": "Refrigerator",
+        "pos": "n.",
+        "ipa": "/rɪˈfrɪdʒəreɪtə(r)/",
+        "definition": "An appliance or compartment artificially cooled for food storage.",
+        "collocations": "in the refrigerator, cold fridge",
+        "example": "Store the milk and fresh cheese inside the refrigerator."
+      },
+      {
+        "num": 333,
+        "word": "Microwave",
+        "pos": "n.",
+        "ipa": "/ˈmaɪkrəweɪv/",
+        "definition": "An electric oven that heats and cooks food rapidly.",
+        "collocations": "heat in microwave, microwave oven",
+        "example": "I warmed up leftover soup in the microwave for lunch."
+      },
+      {
+        "num": 334,
+        "word": "Dishwasher",
+        "pos": "n.",
+        "ipa": "/ˈdɪʃwɒʃə(r)/",
+        "definition": "A machine for washing dishes and cookware automatically.",
+        "collocations": "load the dishwasher, run the dishwasher",
+        "example": "We loaded the plates and glasses into the dishwasher."
+      },
+      {
+        "num": 335,
+        "word": "Sink",
+        "pos": "n.",
+        "ipa": "/sɪŋk/",
+        "definition": "A fixed basin with a water supply and drain.",
+        "collocations": "kitchen sink, wash in the sink",
+        "example": "Wash your hands at the bathroom sink before dining."
+      },
+      {
+        "num": 336,
+        "word": "Faucet",
+        "pos": "n.",
+        "ipa": "/ˈfɔːsɪt/",
+        "definition": "A device by which a flow of liquid or gas from a pipe is controlled.",
+        "collocations": "turn on the faucet, dripping faucet",
+        "example": "Please tighten the bathroom faucet so it doesn't drip."
+      },
+      {
+        "num": 337,
+        "word": "Community",
+        "pos": "n.",
+        "ipa": "/kəˈmjuːnəti/",
+        "definition": "A group of people living in the same place under common rules.",
+        "collocations": "local community, strong community",
+        "example": "Our local community organized a park cleanup this Saturday."
+      },
+      {
+        "num": 338,
+        "word": "Facility",
+        "pos": "n.",
+        "ipa": "/fəˈsɪləti/",
+        "definition": "A place, amenity, or piece of equipment provided for a purpose.",
+        "collocations": "sports facility, public facilities",
+        "example": "The neighborhood has a modern library and sports facility."
+      },
+      {
+        "num": 339,
+        "word": "Park",
+        "pos": "n.",
+        "ipa": "/pɑːk/",
+        "definition": "A large public green area used for recreation and walks.",
+        "collocations": "city park, walk in the park",
+        "example": "We had a lovely family picnic in the sunny city park."
+      },
+      {
+        "num": 340,
+        "word": "Sidewalk",
+        "pos": "n.",
+        "ipa": "/ˈsaɪdwɔːk/",
+        "definition": "A paved path for pedestrians at the side of a road.",
+        "collocations": "walk on the sidewalk, wide sidewalk",
+        "example": "Pedestrians should always walk on the safe sidewalk."
+      },
+      {
+        "num": 341,
+        "word": "Crosswalk",
+        "pos": "n.",
+        "ipa": "/ˈkrɒswɔːk/",
+        "definition": "A marked part of a road where pedestrians have right of way.",
+        "collocations": "pedestrian crosswalk, use the crosswalk",
+        "example": "Always cross the busy street at the painted crosswalk."
+      },
+      {
+        "num": 342,
+        "word": "Traffic",
+        "pos": "n.",
+        "ipa": "/ˈtræfɪk/",
+        "definition": "Vehicles moving on a road or public highway.",
+        "collocations": "heavy traffic, stuck in traffic",
+        "example": "We were stuck in heavy morning traffic for forty minutes."
+      },
+      {
+        "num": 343,
+        "word": "Noise",
+        "pos": "n.",
+        "ipa": "/nɔɪz/",
+        "definition": "A sound, especially one that is loud, unpleasant, or disturbing.",
+        "collocations": "street noise, loud noise",
+        "example": "Double-glazed windows help block outside traffic noise."
+      },
+      {
+        "num": 344,
+        "word": "Peaceful",
+        "pos": "adj.",
+        "ipa": "/ˈpiːsfl/",
+        "definition": "Free from disturbance; tranquil and calm.",
+        "collocations": "peaceful street, peaceful town",
+        "example": "Living near the forest is very quiet and peaceful."
+      },
+      {
+        "num": 345,
+        "word": "Convenient",
+        "pos": "adj.",
+        "ipa": "/kənˈviːniənt/",
+        "definition": "Fitting in well with a person's needs, activities, and ease.",
+        "collocations": "convenient location, very convenient",
+        "example": "The apartment is in a convenient location near the subway."
+      },
+      {
+        "num": 346,
+        "word": "Spacious",
+        "pos": "adj.",
+        "ipa": "/ˈspeɪʃəs/",
+        "definition": "Having ample space; roomy and open.",
+        "collocations": "spacious living room, spacious flat",
+        "example": "The new apartment has a spacious living room with large windows."
+      },
+      {
+        "num": 347,
+        "word": "Cozy",
+        "pos": "adj.",
+        "ipa": "/ˈkəʊzi/",
+        "definition": "Giving a feeling of comfort, warmth, and relaxation.",
+        "collocations": "cozy room, cozy home",
+        "example": "Their cottage felt warm and cozy with the wood stove burning."
+      },
+      {
+        "num": 348,
+        "word": "Renovate",
+        "pos": "v.",
+        "ipa": "/ˈrenəveɪt/",
+        "definition": "Restore something old (especially a building) to a good state.",
+        "collocations": "renovate a house, renovate the kitchen",
+        "example": "They spent the summer renovating their old country home."
+      },
+      {
+        "num": 349,
+        "word": "Move in",
+        "pos": "v.",
+        "ipa": "/muːv ɪn/",
+        "definition": "To start living in a new house or flat.",
+        "collocations": "move in next week, ready to move in",
+        "example": "We are excited to move in to our new home next Monday."
+      },
+      {
+        "num": 350,
+        "word": "Hometown",
+        "pos": "n.",
+        "ipa": "/ˈhəʊmtaʊn/",
+        "definition": "The town or city of one's birth, childhood, or home.",
+        "collocations": "visit my hometown, small hometown",
+        "example": "I returned to my hometown to visit my childhood friends."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Home sweet home",
+        "meaning": "Said to express happiness upon returning to one's own home.",
+        "example": "After a two-week business trip, it feels so good to be back: home sweet home!"
+      },
+      {
+        "phrase": "Make yourself at home",
+        "meaning": "Feel comfortable and relaxed as if you were in your own home.",
+        "example": "Come in, take off your coat, and make yourself at home."
+      },
+      {
+        "phrase": "Right around the corner",
+        "meaning": "Very close by and easy to reach.",
+        "example": "You don't need to drive; the supermarket is right around the corner."
+      },
+      {
+        "phrase": "Hit close to home",
+        "meaning": "To affect you deeply on a personal level.",
+        "example": "The story about elderly neighbors hit close to home for me."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Showing a Friend Your New Apartment and Neighborhood",
+      "roleA": "You just moved into a new apartment. Welcome your friend, show them your living room, balcony, and tell them about the nearby shops and park.",
+      "roleB": "You are the friend visiting. Compliment the cozy decoration, ask about the monthly rent and neighborhood facilities, and offer congratulations.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., apartment, balcony, neighborhood, cozy, convenient)."
+    }
+  },
+  {
+    "day": 8,
+    "filename": "Day_08_Work_School_and_Goals.md",
+    "title": "Work, School & Future Goals",
+    "domain": "Job roles, school subjects, career ambitions, job interviews, learning English, and future dreams.",
+    "objectives": [
+      "Talk about your current job or study field and daily responsibilities.",
+      "Answer simple job interview questions and describe your strengths.",
+      "Discuss your long-term goals, dreams, and motivation for learning English.",
+      "Use 50 clear vocabulary words related to careers, education, and achievements."
+    ],
+    "questions": [
+      {
+        "num": 106,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your current occupation or field of study, and what do you do every day?"
+      },
+      {
+        "num": 107,
+        "tier": "Tier 1: Warm-up",
+        "text": "What was your favorite subject when you were a student at school?"
+      },
+      {
+        "num": 108,
+        "tier": "Tier 1: Warm-up",
+        "text": "Why are you learning English, and how do you plan to use your speaking skills?"
+      },
+      {
+        "num": 109,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer working alone or collaborating in a team with colleagues?"
+      },
+      {
+        "num": 110,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is one professional skill that you are good at?"
+      },
+      {
+        "num": 111,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a challenging project or exam you completed successfully?"
+      },
+      {
+        "num": 112,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What are the qualities of a helpful boss or an inspiring schoolteacher?"
+      },
+      {
+        "num": 113,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you prepare before an important interview, presentation, or test?"
+      },
+      {
+        "num": 114,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What are your top three career or personal goals for the next five years?"
+      },
+      {
+        "num": 115,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What is your dream job, and why would it bring you happiness?"
+      },
+      {
+        "num": 116,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is it better to work for a large international company or a small family business?"
+      },
+      {
+        "num": 117,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Do you think working from home (remote work) is more productive than office work?"
+      },
+      {
+        "num": 118,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is getting a university degree still necessary for success in today's world?"
+      },
+      {
+        "num": 119,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How can people maintain motivation when learning a challenging foreign language?"
+      },
+      {
+        "num": 120,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "What is more important in a career: earning a high salary or doing what you love?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 351,
+        "word": "Career",
+        "pos": "n.",
+        "ipa": "/kəˈrɪə(r)/",
+        "definition": "An occupation undertaken for a significant period of a person's life.",
+        "collocations": "career path, start a career",
+        "example": "She chose a career in software development and design."
+      },
+      {
+        "num": 352,
+        "word": "Colleague",
+        "pos": "n.",
+        "ipa": "/ˈkɒliːɡ/",
+        "definition": "A person with whom one works in a profession or business.",
+        "collocations": "friendly colleague, work with colleagues",
+        "example": "My colleagues supported me while I was learning the job."
+      },
+      {
+        "num": 353,
+        "word": "Manager",
+        "pos": "n.",
+        "ipa": "/ˈmænɪdʒə(r)/",
+        "definition": "A person responsible for controlling or administering a team.",
+        "collocations": "project manager, office manager",
+        "example": "Our manager held a team meeting to discuss weekly targets."
+      },
+      {
+        "num": 354,
+        "word": "Employee",
+        "pos": "n.",
+        "ipa": "/ɪmˈplɔɪiː/",
+        "definition": "A person employed for wages or salary, especially at non-exec level.",
+        "collocations": "new employee, full-time employee",
+        "example": "The company hired ten new employees for the customer desk."
+      },
+      {
+        "num": 355,
+        "word": "Employer",
+        "pos": "n.",
+        "ipa": "/ɪmˈplɔɪə(r)/",
+        "definition": "A person or organization that employs people.",
+        "collocations": "fair employer, top employer",
+        "example": "They are recognized as one of the best employers in the region."
+      },
+      {
+        "num": 356,
+        "word": "Interview",
+        "pos": "n./v.",
+        "ipa": "/ˈɪntəvjuː/",
+        "definition": "A formal meeting in which someone is asked questions for a job.",
+        "collocations": "job interview, conduct an interview",
+        "example": "He wore a smart suit for his morning job interview."
+      },
+      {
+        "num": 357,
+        "word": "Resume",
+        "pos": "n.",
+        "ipa": "/ˈrezjumeɪ/",
+        "definition": "A brief account of a person's education, qualifications, and work.",
+        "collocations": "update resume, send a resume",
+        "example": "I updated my resume with my latest English certificates."
+      },
+      {
+        "num": 358,
+        "word": "Salary",
+        "pos": "n.",
+        "ipa": "/ˈsæləri/",
+        "definition": "A fixed regular payment, typically paid on a monthly basis.",
+        "collocations": "monthly salary, good salary",
+        "example": "She negotiated a fair starting salary for her new position."
+      },
+      {
+        "num": 359,
+        "word": "Bonus",
+        "pos": "n.",
+        "ipa": "/ˈbəʊnəs/",
+        "definition": "An extra sum of money given to an employee on top of pay.",
+        "collocations": "annual bonus, performance bonus",
+        "example": "The sales team received a holiday bonus for meeting goals."
+      },
+      {
+        "num": 360,
+        "word": "Deadline",
+        "pos": "n.",
+        "ipa": "/ˈdedlaɪn/",
+        "definition": "The latest time or date by which something should be completed.",
+        "collocations": "meet the deadline, tight deadline",
+        "example": "We worked hard all Friday to meet the project deadline."
+      },
+      {
+        "num": 361,
+        "word": "Project",
+        "pos": "n.",
+        "ipa": "/ˈprɒdʒekt/",
+        "definition": "An individual or collaborative enterprise planned to achieve an aim.",
+        "collocations": "team project, new project",
+        "example": "Our engineering team completed the bridge project on time."
+      },
+      {
+        "num": 362,
+        "word": "Meeting",
+        "pos": "n.",
+        "ipa": "/ˈmiːtɪŋ/",
+        "definition": "An assembly of people for discussion or entertainment.",
+        "collocations": "staff meeting, schedule a meeting",
+        "example": "We scheduled a 30-minute meeting to discuss the budget."
+      },
+      {
+        "num": 363,
+        "word": "Presentation",
+        "pos": "n.",
+        "ipa": "/ˌpreznˈteɪʃn/",
+        "definition": "A speech or talk in which a new product or idea is shown.",
+        "collocations": "give a presentation, clear presentation",
+        "example": "She gave an inspiring presentation on renewable energy."
+      },
+      {
+        "num": 364,
+        "word": "Skill",
+        "pos": "n.",
+        "ipa": "/skɪl/",
+        "definition": "The ability to do something well; expertise gained by training.",
+        "collocations": "technical skills, communication skills",
+        "example": "Speaking two foreign languages is a valuable professional skill."
+      },
+      {
+        "num": 365,
+        "word": "Experience",
+        "pos": "n.",
+        "ipa": "/ɪkˈspɪəriəns/",
+        "definition": "Practical contact with and observation of facts or events.",
+        "collocations": "work experience, gain experience",
+        "example": "He has five years of practical experience in graphic design."
+      },
+      {
+        "num": 366,
+        "word": "Degree",
+        "pos": "n.",
+        "ipa": "/dɪˈɡriː/",
+        "definition": "An academic rank conferred by a college or university.",
+        "collocations": "university degree, bachelor degree",
+        "example": "She completed a four-year bachelor's degree in economics."
+      },
+      {
+        "num": 367,
+        "word": "Certificate",
+        "pos": "n.",
+        "ipa": "/səˈtɪfɪkət/",
+        "definition": "An official document attesting a certain fact or achievement.",
+        "collocations": "English certificate, training certificate",
+        "example": "He received a certificate after completing the coding course."
+      },
+      {
+        "num": 368,
+        "word": "Classroom",
+        "pos": "n.",
+        "ipa": "/ˈklɑːsruːm/",
+        "definition": "A room, typically in a school, in which a class of students is taught.",
+        "collocations": "modern classroom, in the classroom",
+        "example": "The classroom was equipped with a digital smart screen."
+      },
+      {
+        "num": 369,
+        "word": "Subject",
+        "pos": "n.",
+        "ipa": "/ˈsʌbdʒɪkt/",
+        "definition": "A branch of knowledge studied or taught in a school or college.",
+        "collocations": "favorite subject, school subject",
+        "example": "History and geography were my favorite school subjects."
+      },
+      {
+        "num": 370,
+        "word": "Homework",
+        "pos": "n.",
+        "ipa": "/ˈhəʊmwɜːk/",
+        "definition": "Schoolwork that a student is required to do at home.",
+        "collocations": "do homework, finish homework",
+        "example": "I finish my English homework before dinner every day."
+      },
+      {
+        "num": 371,
+        "word": "Exam",
+        "pos": "n.",
+        "ipa": "/ɪɡˈzæm/",
+        "definition": "A formal test of a person's knowledge or proficiency in a subject.",
+        "collocations": "pass an exam, final exam",
+        "example": "She studied for two weeks to pass her driving exam."
+      },
+      {
+        "num": 372,
+        "word": "Grade",
+        "pos": "n.",
+        "ipa": "/ɡreɪd/",
+        "definition": "A mark indicating the quality of a student's work.",
+        "collocations": "get good grades, top grade",
+        "example": "He received an 'A' grade on his biology presentation."
+      },
+      {
+        "num": 373,
+        "word": "Promote",
+        "pos": "v.",
+        "ipa": "/prəˈməʊt/",
+        "definition": "Raise someone to a higher position or rank at work.",
+        "collocations": "get promoted, promote an employee",
+        "example": "She was promoted to senior manager after three years of work."
+      },
+      {
+        "num": 374,
+        "word": "Retire",
+        "pos": "v.",
+        "ipa": "/rɪˈtaɪə(r)/",
+        "definition": "Leave one's job and cease to work, typically upon reaching age.",
+        "collocations": "retire at 65, plan to retire",
+        "example": "My father plans to retire next year and travel the world."
+      },
+      {
+        "num": 375,
+        "word": "Full-time",
+        "pos": "adj./adv.",
+        "ipa": "/ˌfʊl ˈtaɪm/",
+        "definition": "Occupying the whole of someone's available working time (40h).",
+        "collocations": "full-time job, work full-time",
+        "example": "She accepted a full-time position at an architectural firm."
+      },
+      {
+        "num": 376,
+        "word": "Part-time",
+        "pos": "adj./adv.",
+        "ipa": "/ˌpɑːt ˈtaɪm/",
+        "definition": "For only part of the usual working day or week.",
+        "collocations": "part-time job, work part-time",
+        "example": "Students often work part-time at cafes on weekends."
+      },
+      {
+        "num": 377,
+        "word": "Freelance",
+        "pos": "adj./v.",
+        "ipa": "/ˈfriːlɑːns/",
+        "definition": "Working for different companies at different times rather than one.",
+        "collocations": "freelance writer, work freelance",
+        "example": "He works as a freelance graphic designer from his home office."
+      },
+      {
+        "num": 378,
+        "word": "Remote",
+        "pos": "adj.",
+        "ipa": "/rɪˈməʊt/",
+        "definition": "Working from home or another place rather than an office.",
+        "collocations": "remote work, work remotely",
+        "example": "Remote work saves time that would be spent on long commutes."
+      },
+      {
+        "num": 379,
+        "word": "Office",
+        "pos": "n.",
+        "ipa": "/ˈɒfɪs/",
+        "definition": "A room, set of rooms, or building used for commercial work.",
+        "collocations": "modern office, office building",
+        "example": "Our team moved to a bright, modern office downtown."
+      },
+      {
+        "num": 380,
+        "word": "Department",
+        "pos": "n.",
+        "ipa": "/dɪˈpɑːtmənt/",
+        "definition": "A division of a large organization such as a business or school.",
+        "collocations": "marketing department, sales department",
+        "example": "She was transferred to the international marketing department."
+      },
+      {
+        "num": 381,
+        "word": "Ambition",
+        "pos": "n.",
+        "ipa": "/æmˈbɪʃn/",
+        "definition": "A strong desire to do or to achieve something.",
+        "collocations": "lifelong ambition, have ambition",
+        "example": "Her lifelong ambition is to start her own eco-friendly company."
+      },
+      {
+        "num": 382,
+        "word": "Goal",
+        "pos": "n.",
+        "ipa": "/ɡəʊl/",
+        "definition": "The object of a person's ambition or effort; an aim or desired result.",
+        "collocations": "set a goal, achieve a goal",
+        "example": "Setting daily small goals helps you make steady progress."
+      },
+      {
+        "num": 383,
+        "word": "Achieve",
+        "pos": "v.",
+        "ipa": "/əˈtʃiːv/",
+        "definition": "Successfully bring about or reach a desired objective.",
+        "collocations": "achieve success, achieve goals",
+        "example": "With dedication and practice, you can achieve your dreams."
+      },
+      {
+        "num": 384,
+        "word": "Success",
+        "pos": "n.",
+        "ipa": "/səkˈses/",
+        "definition": "The accomplishment of an aim or purpose; triumph.",
+        "collocations": "great success, secret to success",
+        "example": "Hard work and patience are key ingredients for long-term success."
+      },
+      {
+        "num": 385,
+        "word": "Failure",
+        "pos": "n.",
+        "ipa": "/ˈfeɪljə(r)/",
+        "definition": "Lack of success in doing or achieving something.",
+        "collocations": "learn from failure, fear of failure",
+        "example": "Do not fear failure; it is simply an opportunity to learn."
+      },
+      {
+        "num": 386,
+        "word": "Motivation",
+        "pos": "n.",
+        "ipa": "/ˌməʊtɪˈveɪʃn/",
+        "definition": "The reason or reasons one has for acting or behaving in a way.",
+        "collocations": "high motivation, lose motivation",
+        "example": "Seeing my speaking improve gave me high motivation to study."
+      },
+      {
+        "num": 387,
+        "word": "Confident",
+        "pos": "adj.",
+        "ipa": "/ˈkɒnfɪdənt/",
+        "definition": "Feeling or showing certainty about something; self-assured.",
+        "collocations": "feel confident, confident speaker",
+        "example": "Practicing English aloud helped her feel confident in meetings."
+      },
+      {
+        "num": 388,
+        "word": "Teamwork",
+        "pos": "n.",
+        "ipa": "/ˈtiːmwɜːk/",
+        "definition": "The combined action of a group of people, especially effectively.",
+        "collocations": "effective teamwork, great teamwork",
+        "example": "Good communication is the foundation of great teamwork."
+      },
+      {
+        "num": 389,
+        "word": "Leadership",
+        "pos": "n.",
+        "ipa": "/ˈliːdəʃɪp/",
+        "definition": "The action of leading a group of people or an organization.",
+        "collocations": "strong leadership, leadership skills",
+        "example": "She demonstrated strong leadership during the team challenge."
+      },
+      {
+        "num": 390,
+        "word": "Improve",
+        "pos": "v.",
+        "ipa": "/ɪmˈpruːv/",
+        "definition": "Make or become better in quality or skill.",
+        "collocations": "improve English, improve skills",
+        "example": "Daily reading is a fantastic way to improve your vocabulary."
+      },
+      {
+        "num": 391,
+        "word": "Task",
+        "pos": "n.",
+        "ipa": "/tɑːsk/",
+        "definition": "A piece of work to be done or undertaken.",
+        "collocations": "daily task, complete a task",
+        "example": "He wrote a list of five key tasks to complete before noon."
+      },
+      {
+        "num": 392,
+        "word": "Organize",
+        "pos": "v.",
+        "ipa": "/ˈɔːɡənaɪz/",
+        "definition": "Arrange into a structured whole; order systematically.",
+        "collocations": "organize files, organize an event",
+        "example": "She organized the office files so everyone could find them."
+      },
+      {
+        "num": 393,
+        "word": "Communicate",
+        "pos": "v.",
+        "ipa": "/kəˈmjuːnɪkeɪt/",
+        "definition": "Share or exchange information, news, or ideas.",
+        "collocations": "communicate clearly, communicate in English",
+        "example": "It is vital to communicate clearly when working on a team."
+      },
+      {
+        "num": 394,
+        "word": "Feedback",
+        "pos": "n.",
+        "ipa": "/ˈfiːdbæk/",
+        "definition": "Information about reactions to a product or a person's performance.",
+        "collocations": "positive feedback, give feedback",
+        "example": "The teacher provided constructive feedback on my essay."
+      },
+      {
+        "num": 395,
+        "word": "Train",
+        "pos": "v.",
+        "ipa": "/treɪn/",
+        "definition": "Teach a person a particular skill or type of behavior.",
+        "collocations": "train employees, train hard",
+        "example": "The company trains new staff members for two weeks."
+      },
+      {
+        "num": 396,
+        "word": "Workshop",
+        "pos": "n.",
+        "ipa": "/ˈwɜːkʃɒp/",
+        "definition": "A meeting at which a group of people engage in intensive discussion.",
+        "collocations": "attend a workshop, skills workshop",
+        "example": "I attended a weekend workshop on public speaking skills."
+      },
+      {
+        "num": 397,
+        "word": "Opportunity",
+        "pos": "n.",
+        "ipa": "/ˌɒpəˈtjuːnəti/",
+        "definition": "A set of circumstances that makes it possible to do something.",
+        "collocations": "great opportunity, career opportunity",
+        "example": "This job offer is a fantastic career opportunity for her."
+      },
+      {
+        "num": 398,
+        "word": "Challenge",
+        "pos": "n.",
+        "ipa": "/ˈtʃælɪndʒ/",
+        "definition": "A task or situation that tests someone's abilities.",
+        "collocations": "face a challenge, big challenge",
+        "example": "Learning English pronunciation can be a fun challenge."
+      },
+      {
+        "num": 399,
+        "word": "Effort",
+        "pos": "n.",
+        "ipa": "/ˈefət/",
+        "definition": "A vigorous or determined attempt to do something.",
+        "collocations": "make an effort, put in effort",
+        "example": "She put great effort into studying and passed with honors."
+      },
+      {
+        "num": 400,
+        "word": "Reward",
+        "pos": "n.",
+        "ipa": "/rɪˈwɔːd/",
+        "definition": "A thing given in recognition of one's service, effort, or achievement.",
+        "collocations": "fair reward, reward for hard work",
+        "example": "Achieving fluency in a foreign language is a lifelong reward."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Learn the ropes",
+        "meaning": "To learn how to do a new job or activity properly.",
+        "example": "It took me a few weeks to learn the ropes at my new company."
+      },
+      {
+        "phrase": "Keep up the good work",
+        "meaning": "Encouragement to continue performing well.",
+        "example": "Your English is improving rapidly; keep up the good work!"
+      },
+      {
+        "phrase": "Think outside the box",
+        "meaning": "To think creatively and in an unconventional way.",
+        "example": "To solve this difficult problem, we need to think outside the box."
+      },
+      {
+        "phrase": "Burn the midnight oil",
+        "meaning": "To stay up very late working or studying.",
+        "example": "She burned the midnight oil studying for her final university exams."
+      }
+    ],
+    "roleplay": {
+      "scenario": "A Friendly Job Interview for an Entry-Level Role",
+      "roleA": "You are a job applicant. Introduce yourself, explain your strengths (organized, punctual, good teamwork), and state your future career goals.",
+      "roleB": "You are the interviewer. Welcome the candidate, ask why they want this job, ask about their experience, and explain the team tasks.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., interview, skill, experience, goal, teamwork)."
+    }
+  },
+  {
+    "day": 9,
+    "filename": "Day_09_Weather_Nature_and_Environment.md",
+    "title": "Weather, Nature & the Environment",
+    "domain": "Four seasons, weather forecasts, animals, beaches, recycling, and simple eco-friendly habits.",
+    "objectives": [
+      "Describe current weather conditions and forecast predictions naturally.",
+      "Talk about your favorite season of the year and outdoor nature activities.",
+      "Discuss simple environmental habits like recycling, saving water, and planting trees.",
+      "Use 50 easy vocabulary words related to weather, nature, and the planet."
+    ],
+    "questions": [
+      {
+        "num": 121,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is your favorite season of the year (spring, summer, autumn, or winter) and why?"
+      },
+      {
+        "num": 122,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is the weather like in your city today?"
+      },
+      {
+        "num": 123,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you prefer hot sunny weather or cool rainy weather?"
+      },
+      {
+        "num": 124,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you have any pets at home, or what is your favorite animal?"
+      },
+      {
+        "num": 125,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is the most beautiful natural place (mountain, forest, lake) you have visited?"
+      },
+      {
+        "num": 126,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What do you like to do on a rainy Sunday when you cannot go outside?"
+      },
+      {
+        "num": 127,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do extreme weather conditions (like snowstorms or heatwaves) affect your day?"
+      },
+      {
+        "num": 128,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What small things do you do at home to save water and electricity?"
+      },
+      {
+        "num": 129,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you separate your household waste to recycle plastic, paper, and glass?"
+      },
+      {
+        "num": 130,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Have you ever planted a tree or flowers in a garden? How did it feel?"
+      },
+      {
+        "num": 131,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why are summers getting hotter in many countries around the world?"
+      },
+      {
+        "num": 132,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How can people reduce the amount of single-use plastic they use every day?"
+      },
+      {
+        "num": 133,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Should city governments plant more trees along streets to clean the air?"
+      },
+      {
+        "num": 134,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why is spending time in green nature so good for reducing human stress?"
+      },
+      {
+        "num": 135,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "What can ordinary citizens do to keep their local parks and beaches clean?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 401,
+        "word": "Sunny",
+        "pos": "adj.",
+        "ipa": "/ˈsʌni/",
+        "definition": "Bright with sunlight; full of sunshine.",
+        "collocations": "sunny day, warm and sunny",
+        "example": "We went for a walk in the park on a bright sunny day."
+      },
+      {
+        "num": 402,
+        "word": "Rainy",
+        "pos": "adj.",
+        "ipa": "/ˈreɪni/",
+        "definition": "Having a lot of rain; characterized by rainfall.",
+        "collocations": "rainy afternoon, rainy season",
+        "example": "Take your umbrella with you on this rainy afternoon."
+      },
+      {
+        "num": 403,
+        "word": "Cloudy",
+        "pos": "adj.",
+        "ipa": "/ˈklaʊdi/",
+        "definition": "Covered with or characterized by clouds.",
+        "collocations": "cloudy sky, partly cloudy",
+        "example": "The sky looked gray and cloudy before the storm."
+      },
+      {
+        "num": 404,
+        "word": "Windy",
+        "pos": "adj.",
+        "ipa": "/ˈwɪndi/",
+        "definition": "Characterized by strong winds.",
+        "collocations": "windy day, cold and windy",
+        "example": "Hold onto your hat because it is very windy outside."
+      },
+      {
+        "num": 405,
+        "word": "Snowy",
+        "pos": "adj.",
+        "ipa": "/ˈsnəʊi/",
+        "definition": "Covered with snow; having snow falling.",
+        "collocations": "snowy weather, snowy mountains",
+        "example": "The children built a snowman during the snowy weekend."
+      },
+      {
+        "num": 406,
+        "word": "Storm",
+        "pos": "n.",
+        "ipa": "/stɔːm/",
+        "definition": "A violent disturbance of the atmosphere with strong winds and rain.",
+        "collocations": "thunder storm, severe storm",
+        "example": "The thunderstorm knocked down branches in the garden."
+      },
+      {
+        "num": 407,
+        "word": "Lightning",
+        "pos": "n.",
+        "ipa": "/ˈlaɪtnɪŋ/",
+        "definition": "A flash of bright light in the sky caused by electricity.",
+        "collocations": "flash of lightning, thunder and lightning",
+        "example": "A bright flash of lightning illuminated the dark sky."
+      },
+      {
+        "num": 408,
+        "word": "Thunder",
+        "pos": "n.",
+        "ipa": "/ˈθʌndə(r)/",
+        "definition": "A loud rumbling or crashing noise heard after lightning.",
+        "collocations": "sound of thunder, loud thunder",
+        "example": "The loud thunder startled our pet dog."
+      },
+      {
+        "num": 409,
+        "word": "Temperature",
+        "pos": "n.",
+        "ipa": "/ˈtemprətʃə(r)/",
+        "definition": "The degree or intensity of heat present in the air.",
+        "collocations": "high temperature, measure temperature",
+        "example": "The afternoon temperature reached thirty degrees Celsius."
+      },
+      {
+        "num": 410,
+        "word": "Forecast",
+        "pos": "n.",
+        "ipa": "/ˈfɔːkɑːst/",
+        "definition": "A prediction of weather conditions for the upcoming days.",
+        "collocations": "weather forecast, check the forecast",
+        "example": "I checked the weather forecast to see if it will rain tomorrow."
+      },
+      {
+        "num": 411,
+        "word": "Spring",
+        "pos": "n.",
+        "ipa": "/sprɪŋ/",
+        "definition": "The season after winter and before summer when plants grow.",
+        "collocations": "in the spring, spring flowers",
+        "example": "Tulips and cherry blossoms bloom beautifully in the spring."
+      },
+      {
+        "num": 412,
+        "word": "Summer",
+        "pos": "n.",
+        "ipa": "/ˈsʌmə(r)/",
+        "definition": "The warmest season of the year, between spring and autumn.",
+        "collocations": "hot summer, summer holiday",
+        "example": "We spent our summer holiday swimming at the beach."
+      },
+      {
+        "num": 413,
+        "word": "Autumn",
+        "pos": "n.",
+        "ipa": "/ˈɔːtəm/",
+        "definition": "The season after summer and before winter; fall.",
+        "collocations": "golden autumn, in autumn",
+        "example": "In autumn, tree leaves turn golden yellow and red."
+      },
+      {
+        "num": 414,
+        "word": "Winter",
+        "pos": "n.",
+        "ipa": "/ˈwɪntə(r)/",
+        "definition": "The coldest season of the year, between autumn and spring.",
+        "collocations": "freezing winter, winter coat",
+        "example": "We wore thick jackets and gloves during the cold winter."
+      },
+      {
+        "num": 415,
+        "word": "Breeze",
+        "pos": "n.",
+        "ipa": "/briːz/",
+        "definition": "A gentle, pleasant wind.",
+        "collocations": "cool breeze, gentle breeze",
+        "example": "A cool ocean breeze made the summer afternoon pleasant."
+      },
+      {
+        "num": 416,
+        "word": "Humidity",
+        "pos": "n.",
+        "ipa": "/hjuːˈmɪdəti/",
+        "definition": "The amount of water vapor in the atmosphere.",
+        "collocations": "high humidity, sticky humidity",
+        "example": "The high humidity made the tropical afternoon feel hot."
+      },
+      {
+        "num": 417,
+        "word": "Rainbow",
+        "pos": "n.",
+        "ipa": "/ˈreɪnbəʊ/",
+        "definition": "An arch of colors formed in the sky by sunlight in rain droplets.",
+        "collocations": "beautiful rainbow, see a rainbow",
+        "example": "A colorful rainbow appeared across the valley after the rain."
+      },
+      {
+        "num": 418,
+        "word": "Sunlight",
+        "pos": "n.",
+        "ipa": "/ˈsʌnlaɪt/",
+        "definition": "Light from the sun.",
+        "collocations": "bright sunlight, warm sunlight",
+        "example": "Plants need water and sunlight to grow strong."
+      },
+      {
+        "num": 419,
+        "word": "Shade",
+        "pos": "n.",
+        "ipa": "/ʃeɪd/",
+        "definition": "Comparative darkness and coolness caused by shelter from sun.",
+        "collocations": "in the shade, sit in the shade",
+        "example": "We sat in the cool shade under a large oak tree."
+      },
+      {
+        "num": 420,
+        "word": "Forest",
+        "pos": "n.",
+        "ipa": "/ˈfɒrɪst/",
+        "definition": "A large area covered chiefly with trees and undergrowth.",
+        "collocations": "green forest, pine forest",
+        "example": "We walked along a peaceful trail in the pine forest."
+      },
+      {
+        "num": 421,
+        "word": "Mountain",
+        "pos": "n.",
+        "ipa": "/ˈmaʊntən/",
+        "definition": "A large natural elevation of the earth's surface.",
+        "collocations": "snowy mountain, climb a mountain",
+        "example": "The hikers climbed to the top of the rocky mountain."
+      },
+      {
+        "num": 422,
+        "word": "River",
+        "pos": "n.",
+        "ipa": "/ˈrɪvə(r)/",
+        "definition": "A large natural stream of water flowing in a channel to the sea.",
+        "collocations": "flow into a river, clean river",
+        "example": "We rented kayaks and paddled down the calm river."
+      },
+      {
+        "num": 423,
+        "word": "Lake",
+        "pos": "n.",
+        "ipa": "/leɪk/",
+        "definition": "A large body of water surrounded by land.",
+        "collocations": "swim in the lake, peaceful lake",
+        "example": "The wooden cabin overlooked a calm, crystal-clear lake."
+      },
+      {
+        "num": 424,
+        "word": "Ocean",
+        "pos": "n.",
+        "ipa": "/ˈəʊʃn/",
+        "definition": "A very large expanse of sea, in particular Atlantic, Pacific, etc.",
+        "collocations": "swim in the ocean, deep ocean",
+        "example": "Dolphins and whales live in the deep blue ocean."
+      },
+      {
+        "num": 425,
+        "word": "Beach",
+        "pos": "n.",
+        "ipa": "/biːtʃ/",
+        "definition": "A pebbly or sandy shore, especially by the ocean.",
+        "collocations": "sandy beach, walk on the beach",
+        "example": "We collected seashells along the sandy beach."
+      },
+      {
+        "num": 426,
+        "word": "Island",
+        "pos": "n.",
+        "ipa": "/ˈaɪlənd/",
+        "definition": "A piece of land surrounded by water on all sides.",
+        "collocations": "tropical island, visit an island",
+        "example": "We took a forty-minute boat trip to the green island."
+      },
+      {
+        "num": 427,
+        "word": "Valley",
+        "pos": "n.",
+        "ipa": "/ˈvæli/",
+        "definition": "A low area of land between hills or mountains, often with a river.",
+        "collocations": "green valley, valley floor",
+        "example": "A quiet farming village rests in the green valley."
+      },
+      {
+        "num": 428,
+        "word": "Desert",
+        "pos": "n.",
+        "ipa": "/ˈdezət/",
+        "definition": "A dry, barren area of land with little water and sparse vegetation.",
+        "collocations": "sandy desert, desert heat",
+        "example": "Camels are well adapted to survive in the arid desert."
+      },
+      {
+        "num": 429,
+        "word": "Wildlife",
+        "pos": "n.",
+        "ipa": "/ˈwaɪldlaɪf/",
+        "definition": "Wild animals, birds, and other living things in nature.",
+        "collocations": "protect wildlife, observe wildlife",
+        "example": "The national park was created to protect endangered wildlife."
+      },
+      {
+        "num": 430,
+        "word": "Plant",
+        "pos": "n./v.",
+        "ipa": "/plɑːnt/",
+        "definition": "A living organism of the vegetable group; or to put in soil.",
+        "collocations": "house plant, plant trees",
+        "example": "She watered the green house plants on the windowsill."
+      },
+      {
+        "num": 431,
+        "word": "Flower",
+        "pos": "n.",
+        "ipa": "/ˈflaʊə(r)/",
+        "definition": "The seed-bearing part of a plant consisting of colorful petals.",
+        "collocations": "smell the flower, fresh flowers",
+        "example": "He gave his mother a bouquet of fresh spring flowers."
+      },
+      {
+        "num": 432,
+        "word": "Tree",
+        "pos": "n.",
+        "ipa": "/triː/",
+        "definition": "A woody perennial plant with a single stem or trunk.",
+        "collocations": "plant a tree, tall tree",
+        "example": "The tall oak tree provides wonderful cooling shade."
+      },
+      {
+        "num": 433,
+        "word": "Leaf",
+        "pos": "n.",
+        "ipa": "/liːf/",
+        "definition": "A flattened structure of a higher plant, typically green and bladelike.",
+        "collocations": "green leaf, falling leaves",
+        "example": "Dry autumn leaves crunched under our boots as we walked."
+      },
+      {
+        "num": 434,
+        "word": "Soil",
+        "pos": "n.",
+        "ipa": "/sɔɪl/",
+        "definition": "The upper layer of earth in which plants grow; dirt.",
+        "collocations": "rich soil, fertile soil",
+        "example": "Dark, rich soil is essential for growing healthy vegetables."
+      },
+      {
+        "num": 435,
+        "word": "Pollution",
+        "pos": "n.",
+        "ipa": "/pəˈluːʃn/",
+        "definition": "The presence in the environment of poisonous substances.",
+        "collocations": "air pollution, plastic pollution",
+        "example": "Biking to work reduces carbon air pollution in cities."
+      },
+      {
+        "num": 436,
+        "word": "Recycle",
+        "pos": "v.",
+        "ipa": "/ˌriːˈsaɪkl/",
+        "definition": "Convert waste into reusable material.",
+        "collocations": "recycle cans, recycle plastic",
+        "example": "Please recycle your plastic water bottles in the blue bin."
+      },
+      {
+        "num": 437,
+        "word": "Plastic",
+        "pos": "n.",
+        "ipa": "/ˈplæstɪk/",
+        "definition": "A synthetic material made from polymers.",
+        "collocations": "plastic bottle, reduce plastic",
+        "example": "Carry a reusable cloth bag to avoid single-use plastic bags."
+      },
+      {
+        "num": 438,
+        "word": "Reusable",
+        "pos": "adj.",
+        "ipa": "/ˌriːˈjuːzəbl/",
+        "definition": "Able to be used more than once.",
+        "collocations": "reusable bottle, reusable bag",
+        "example": "Using a reusable stainless steel water bottle saves money."
+      },
+      {
+        "num": 439,
+        "word": "Conserve",
+        "pos": "v.",
+        "ipa": "/kənˈsɜːv/",
+        "definition": "Protect something of value from loss, waste, or destruction.",
+        "collocations": "conserve water, conserve energy",
+        "example": "Turn off the running tap while brushing teeth to conserve water."
+      },
+      {
+        "num": 440,
+        "word": "Environment",
+        "pos": "n.",
+        "ipa": "/ɪnˈvaɪrənmənt/",
+        "definition": "The surroundings or conditions in which humans and animals live.",
+        "collocations": "protect the environment, natural environment",
+        "example": "We must protect the natural environment for future generations."
+      },
+      {
+        "num": 441,
+        "word": "Eco-friendly",
+        "pos": "adj.",
+        "ipa": "/ˌiːkəʊ ˈfrendli/",
+        "definition": "Not harmful to the environment; sustainable.",
+        "collocations": "eco-friendly products, eco-friendly lifestyle",
+        "example": "She uses eco-friendly bamboo toothbrushes and soap bars."
+      },
+      {
+        "num": 442,
+        "word": "Climate",
+        "pos": "n.",
+        "ipa": "/ˈklaɪmət/",
+        "definition": "The weather conditions prevailing in an area over a long period.",
+        "collocations": "tropical climate, climate change",
+        "example": "The Mediterranean region enjoys a warm, sunny climate."
+      },
+      {
+        "num": 443,
+        "word": "Sunrise",
+        "pos": "n.",
+        "ipa": "/ˈsʌnraɪz/",
+        "definition": "The time in the morning when the sun appears above horizon.",
+        "collocations": "watch the sunrise, early sunrise",
+        "example": "We woke up at dawn to watch the golden sunrise over the sea."
+      },
+      {
+        "num": 444,
+        "word": "Sunset",
+        "pos": "n.",
+        "ipa": "/ˈsʌnset/",
+        "definition": "The time in the evening when the sun disappears below horizon.",
+        "collocations": "romantic sunset, beautiful sunset",
+        "example": "The evening sky turned purple and orange during the sunset."
+      },
+      {
+        "num": 445,
+        "word": "Fresh air",
+        "pos": "n.",
+        "ipa": "/freʃ eə(r)/",
+        "definition": "Outdoor air that is clean, refreshing, and invigorating.",
+        "collocations": "breathe fresh air, get fresh air",
+        "example": "Opening the bedroom window lets in cool fresh air."
+      },
+      {
+        "num": 446,
+        "word": "Oxygen",
+        "pos": "n.",
+        "ipa": "/ˈɒksɪdʒən/",
+        "definition": "A colorless, odorless gas essential for human respiration.",
+        "collocations": "produce oxygen, breath oxygen",
+        "example": "Trees and rainforests produce the oxygen we breathe."
+      },
+      {
+        "num": 447,
+        "word": "Habitat",
+        "pos": "n.",
+        "ipa": "/ˈhæbɪtæt/",
+        "definition": "The natural home or environment of an animal or plant.",
+        "collocations": "natural habitat, preserve habitat",
+        "example": "Cutting down forests destroys the natural habitat of birds."
+      },
+      {
+        "num": 448,
+        "word": "Resource",
+        "pos": "n.",
+        "ipa": "/rɪˈsɔːs/",
+        "definition": "A stock or supply of materials that can be drawn on by society.",
+        "collocations": "natural resources, water resources",
+        "example": "Fresh water is one of the planet's most precious natural resources."
+      },
+      {
+        "num": 449,
+        "word": "Clean",
+        "pos": "adj./v.",
+        "ipa": "/kliːn/",
+        "definition": "Free from dirt, marks, or pollutants; or to remove dirt.",
+        "collocations": "clean air, clean water",
+        "example": "Keeping our rivers and oceans clean is everyone's duty."
+      },
+      {
+        "num": 450,
+        "word": "Earth",
+        "pos": "n.",
+        "ipa": "/ɜːθ/",
+        "definition": "The planet on which we live; our shared world.",
+        "collocations": "protect the Earth, on Earth",
+        "example": "Earth is the only home we have, so we must care for it."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Rain or shine",
+        "meaning": "Whatever the weather or situation may be.",
+        "example": "We are going hiking on Saturday morning, rain or shine!"
+      },
+      {
+        "phrase": "A breath of fresh air",
+        "meaning": "Something new, refreshing, and pleasant.",
+        "example": "Her cheerful attitude was a breath of fresh air in the office."
+      },
+      {
+        "phrase": "Save for a rainy day",
+        "meaning": "To reserve money for a possible future time of need.",
+        "example": "It is always wise to keep savings for a rainy day."
+      },
+      {
+        "phrase": "Under the sun",
+        "meaning": "Everything that exists on Earth; everything possible.",
+        "example": "They sat on the porch chatting about everything under the sun."
+      }
+    ],
+    "roleplay": {
+      "scenario": "Discussing the Weekend Weather Forecast and Planning an Outdoor Trip",
+      "roleA": "Check the weather forecast for Saturday. Tell your friend that it will be warm and sunny, and suggest going for a hike in the forest.",
+      "roleB": "Agree with the plan, but remind your friend to bring sunscreen, reusable water bottles, and a light jacket in case of evening breezes.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., forecast, sunny, forest, breeze, reusable)."
+    }
+  },
+  {
+    "day": 10,
+    "filename": "Day_10_Friends_and_Celebrations.md",
+    "title": "Friendship, Celebrations & Special Memories",
+    "domain": "Birthdays, cultural holidays, gift giving, making new friends, and cherished life memories.",
+    "objectives": [
+      "Congratulate friends, express gratitude, and make polite social small talk.",
+      "Describe how your culture celebrates holidays, birthdays, and special festivals.",
+      "Share meaningful childhood memories and talk about lifelong friendships.",
+      "Use 50 expressive vocabulary words related to celebrations, friendship, and memories."
+    ],
+    "questions": [
+      {
+        "num": 136,
+        "tier": "Tier 1: Warm-up",
+        "text": "How do you usually celebrate your birthday with your friends and family?"
+      },
+      {
+        "num": 137,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is the biggest and most exciting holiday celebrated in your country?"
+      },
+      {
+        "num": 138,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is the best gift you have ever received from someone special?"
+      },
+      {
+        "num": 139,
+        "tier": "Tier 1: Warm-up",
+        "text": "Do you find it easy or difficult to make new friends when visiting a new place?"
+      },
+      {
+        "num": 140,
+        "tier": "Tier 1: Warm-up",
+        "text": "What is one happy memory from your childhood that always makes you smile?"
+      },
+      {
+        "num": 141,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Can you describe a traditional wedding or festival you attended recently?"
+      },
+      {
+        "num": 142,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What qualities do you look for in a loyal, trustworthy friend?"
+      },
+      {
+        "num": 143,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "How do you usually stay in touch with friends who live in other cities or countries?"
+      },
+      {
+        "num": 144,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "Do you prefer giving handmade gifts, store-bought items, or shared experiences?"
+      },
+      {
+        "num": 145,
+        "tier": "Tier 2: Everyday Scenarios",
+        "text": "What is something kind that a friend did for you when you were having a hard day?"
+      },
+      {
+        "num": 146,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Is it better to have a large group of casual acquaintances or just two very close friends?"
+      },
+      {
+        "num": 147,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How have social media and messaging apps changed the way we maintain friendships?"
+      },
+      {
+        "num": 148,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "Why are cultural festivals and traditional holidays important for communities?"
+      },
+      {
+        "num": 149,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "What is the best way to apologize and repair a relationship after an argument with a friend?"
+      },
+      {
+        "num": 150,
+        "tier": "Tier 3: Simple Discussions",
+        "text": "How does learning to speak English help you connect with people from across the globe?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "num": 451,
+        "word": "Friendship",
+        "pos": "n.",
+        "ipa": "/ˈfrendʃɪp/",
+        "definition": "The relationship between friends; state of mutual trust and care.",
+        "collocations": "true friendship, lifelong friendship",
+        "example": "True friendship is based on honesty, trust, and mutual respect."
+      },
+      {
+        "num": 452,
+        "word": "Celebrate",
+        "pos": "v.",
+        "ipa": "/ˈselɪbreɪt/",
+        "definition": "Acknowledge a notable day or event with a social gathering.",
+        "collocations": "celebrate birthday, celebrate success",
+        "example": "We gathered with close friends to celebrate her graduation."
+      },
+      {
+        "num": 453,
+        "word": "Celebration",
+        "pos": "n.",
+        "ipa": "/ˌselɪˈbreɪʃn/",
+        "definition": "A joyful social gathering or act marking a special event.",
+        "collocations": "birthday celebration, family celebration",
+        "example": "The wedding celebration was filled with lively music and dancing."
+      },
+      {
+        "num": 454,
+        "word": "Birthday",
+        "pos": "n.",
+        "ipa": "/ˈbɜːθdeɪ/",
+        "definition": "The anniversary of the day on which a person was born.",
+        "collocations": "happy birthday, birthday cake",
+        "example": "We surprised him with a homemade chocolate birthday cake."
+      },
+      {
+        "num": 455,
+        "word": "Present",
+        "pos": "n.",
+        "ipa": "/ˈpreznt/",
+        "definition": "A thing given to someone as a gift.",
+        "collocations": "birthday present, give a present",
+        "example": "She wrapped the birthday present in colorful blue paper."
+      },
+      {
+        "num": 456,
+        "word": "Gift",
+        "pos": "n.",
+        "ipa": "/ɡɪft/",
+        "definition": "A thing given willingly to someone without payment; present.",
+        "collocations": "thoughtful gift, handmade gift",
+        "example": "A photo album filled with shared memories is a thoughtful gift."
+      },
+      {
+        "num": 457,
+        "word": "Party",
+        "pos": "n.",
+        "ipa": "/ˈpɑːti/",
+        "definition": "A social gathering of invited guests for conversation and food.",
+        "collocations": "birthday party, host a party",
+        "example": "They hosted a surprise party for their friend's graduation."
+      },
+      {
+        "num": 458,
+        "word": "Guest",
+        "pos": "n.",
+        "ipa": "/ɡest/",
+        "definition": "A person who is invited to visit someone's home or attend an event.",
+        "collocations": "welcome guests, special guest",
+        "example": "The host warmly greeted every guest at the front door."
+      },
+      {
+        "num": 459,
+        "word": "Host",
+        "pos": "n./v.",
+        "ipa": "/həʊst/",
+        "definition": "A person who receives or entertains other people as guests.",
+        "collocations": "gracious host, host dinner",
+        "example": "She was a gracious host who ensured everyone felt comfortable."
+      },
+      {
+        "num": 460,
+        "word": "Invitation",
+        "pos": "n.",
+        "ipa": "/ˌɪnvɪˈteɪʃn/",
+        "definition": "A written or spoken request inviting someone to attend an event.",
+        "collocations": "send an invitation, wedding invitation",
+        "example": "We received a lovely printed invitation to their wedding."
+      },
+      {
+        "num": 461,
+        "word": "Invite",
+        "pos": "v.",
+        "ipa": "/ɪnˈvaɪt/",
+        "definition": "Make a formal or informal request to someone to join an event.",
+        "collocations": "invite friends, invite to dinner",
+        "example": "I want to invite our neighbors over for Sunday afternoon tea."
+      },
+      {
+        "num": 462,
+        "word": "Holiday",
+        "pos": "n.",
+        "ipa": "/ˈhɒlədeɪ/",
+        "definition": "An official day of celebration or recreation when work is suspended.",
+        "collocations": "public holiday, winter holiday",
+        "example": "New Year's Day is a public holiday celebrated worldwide."
+      },
+      {
+        "num": 463,
+        "word": "Festival",
+        "pos": "n.",
+        "ipa": "/ˈfestɪvl/",
+        "definition": "A special day or period of celebration with music, food, and arts.",
+        "collocations": "cultural festival, spring festival",
+        "example": "The lantern festival lit up the night sky with glowing colors."
+      },
+      {
+        "num": 464,
+        "word": "Tradition",
+        "pos": "n.",
+        "ipa": "/trəˈdɪʃn/",
+        "definition": "The transmission of customs or beliefs from generation to generation.",
+        "collocations": "family tradition, ancient tradition",
+        "example": "Eating pumpkin pie on Thanksgiving is a beloved American tradition."
+      },
+      {
+        "num": 465,
+        "word": "Custom",
+        "pos": "n.",
+        "ipa": "/ˈkʌstəm/",
+        "definition": "A traditional and widely accepted way of behaving in a society.",
+        "collocations": "local custom, cultural custom",
+        "example": "It is a customary tradition to bring flowers when visiting someone's home."
+      },
+      {
+        "num": 466,
+        "word": "Memory",
+        "pos": "n.",
+        "ipa": "/ˈmeməri/",
+        "definition": "Something remembered from the past; a recollection.",
+        "collocations": "childhood memory, fond memories",
+        "example": "Looking at old photo albums brought back fond childhood memories."
+      },
+      {
+        "num": 467,
+        "word": "Remember",
+        "pos": "v.",
+        "ipa": "/rɪˈmembə(r)/",
+        "definition": "Have in or be able to bring to one's mind an awareness of someone.",
+        "collocations": "remember fondly, always remember",
+        "example": "I will always remember the kindness you showed me."
+      },
+      {
+        "num": 468,
+        "word": "Forget",
+        "pos": "v.",
+        "ipa": "/fəˈɡet/",
+        "definition": "Fail to remember; be unable to recall from memory.",
+        "collocations": "never forget, easy to forget",
+        "example": "Never forget to tell your family how much you appreciate them."
+      },
+      {
+        "num": 469,
+        "word": "Trust",
+        "pos": "n./v.",
+        "ipa": "/trʌst/",
+        "definition": "Firm belief in the reliability, truth, ability, or strength of someone.",
+        "collocations": "mutual trust, trust a friend",
+        "example": "A healthy friendship is built on mutual trust and honesty."
+      },
+      {
+        "num": 470,
+        "word": "Loyal",
+        "pos": "adj.",
+        "ipa": "/ˈlɔɪəl/",
+        "definition": "Giving or showing firm and constant support or allegiance to a friend.",
+        "collocations": "loyal friend, stay loyal",
+        "example": "A loyal friend stands by your side during difficult times."
+      },
+      {
+        "num": 471,
+        "word": "Honest",
+        "pos": "adj.",
+        "ipa": "/ˈɒnɪst/",
+        "definition": "Free of deceit and untruthfulness; sincere and truthful.",
+        "collocations": "honest person, be honest",
+        "example": "Thank you for giving me your honest opinion on my essay."
+      },
+      {
+        "num": 472,
+        "word": "Kind",
+        "pos": "adj.",
+        "ipa": "/kaɪnd/",
+        "definition": "Having or showing a friendly, generous, and considerate nature.",
+        "collocations": "kind person, kind words",
+        "example": "Her kind words gave me encouragement when I felt nervous."
+      },
+      {
+        "num": 473,
+        "word": "Generous",
+        "pos": "adj.",
+        "ipa": "/ˈdʒenərəs/",
+        "definition": "Showing a readiness to give more of something than is strictly necessary.",
+        "collocations": "generous gift, very generous",
+        "example": "Our neighbors were very generous and shared their fresh garden fruit."
+      },
+      {
+        "num": 474,
+        "word": "Polite",
+        "pos": "adj.",
+        "ipa": "/pəˈlaɪt/",
+        "definition": "Having or showing behavior that is respectful and considerate.",
+        "collocations": "polite manners, speak politely",
+        "example": "It is always polite to say 'please' and 'thank you'."
+      },
+      {
+        "num": 475,
+        "word": "Helpful",
+        "pos": "adj.",
+        "ipa": "/ˈhelpfl/",
+        "definition": "Giving or ready to give help; useful and supportive.",
+        "collocations": "helpful advice, very helpful",
+        "example": "The local librarian gave us very helpful advice for our project."
+      },
+      {
+        "num": 476,
+        "word": "Support",
+        "pos": "n./v.",
+        "ipa": "/səˈpɔːt/",
+        "definition": "Give assistance, comfort, or encouragement to someone.",
+        "collocations": "emotional support, support a friend",
+        "example": "Good friends provide emotional support when life is stressful."
+      },
+      {
+        "num": 477,
+        "word": "Comfort",
+        "pos": "n./v.",
+        "ipa": "/ˈkʌmfət/",
+        "definition": "A state of physical ease and freedom from pain, or soothing grief.",
+        "collocations": "comfort a friend, find comfort",
+        "example": "She comforted her friend with a warm hug and kind words."
+      },
+      {
+        "num": 478,
+        "word": "Cheer up",
+        "pos": "v.",
+        "ipa": "/tʃɪə(r) ʌp/",
+        "definition": "Become or make someone become less unhappy or more cheerful.",
+        "collocations": "cheer up a friend, cheer up",
+        "example": "We brought her flowers and chocolate to cheer her up."
+      },
+      {
+        "num": 479,
+        "word": "Smile",
+        "pos": "n./v.",
+        "ipa": "/smaɪl/",
+        "definition": "A pleased, kind, or amused facial expression.",
+        "collocations": "bright smile, smile warmly",
+        "example": "His warm, bright smile made everyone feel welcome."
+      },
+      {
+        "num": 480,
+        "word": "Laugh",
+        "pos": "n./v.",
+        "ipa": "/lɑːf/",
+        "definition": "Make the spontaneous sounds of lively amusement or joy.",
+        "collocations": "laugh together, laugh out loud",
+        "example": "We sat around the campfire laughing at funny childhood stories."
+      },
+      {
+        "num": 481,
+        "word": "Hug",
+        "pos": "n./v.",
+        "ipa": "/hʌɡ/",
+        "definition": "Squeeze someone tightly in one's arms, typically to show affection.",
+        "collocations": "give a hug, warm hug",
+        "example": "She gave her mother a warm hug after arriving at the airport."
+      },
+      {
+        "num": 482,
+        "word": "Handshake",
+        "pos": "n.",
+        "ipa": "/ˈhændʃeɪk/",
+        "definition": "Grasping someone's hand upon meeting or agreeing.",
+        "collocations": "firm handshake, warm handshake",
+        "example": "The two colleagues greeted each other with a firm handshake."
+      },
+      {
+        "num": 483,
+        "word": "Greeting",
+        "pos": "n.",
+        "ipa": "/ˈɡriːtɪŋ/",
+        "definition": "A polite word or sign of welcome or recognition.",
+        "collocations": "warm greeting, friendly greeting",
+        "example": "They exchanged warm holiday greetings on New Year's Eve."
+      },
+      {
+        "num": 484,
+        "word": "Congratulations",
+        "pos": "n.",
+        "ipa": "/kənˌɡrætʃuˈleɪʃnz/",
+        "definition": "Words expressing praise for an achievement or good fortune.",
+        "collocations": "send congratulations, warm congratulations",
+        "example": "Congratulations on passing your English speaking examination!"
+      },
+      {
+        "num": 485,
+        "word": "Surprise",
+        "pos": "n./v.",
+        "ipa": "/səˈpraɪz/",
+        "definition": "An unexpected or astonishing event, fact, or thing.",
+        "collocations": "pleasant surprise, surprise party",
+        "example": "Finding my childhood friend at the cafe was a pleasant surprise."
+      },
+      {
+        "num": 486,
+        "word": "Anniversary",
+        "pos": "n.",
+        "ipa": "/ˌænɪˈvɜːsəri/",
+        "definition": "The date on which an event took place in a previous year.",
+        "collocations": "wedding anniversary, celebrate anniversary",
+        "example": "My parents celebrated their twenty-fifth wedding anniversary."
+      },
+      {
+        "num": 487,
+        "word": "Wedding",
+        "pos": "n.",
+        "ipa": "/ˈwedɪŋ/",
+        "definition": "A marriage ceremony, especially considered as including reception.",
+        "collocations": "attend a wedding, beautiful wedding",
+        "example": "We were invited to attend a beautiful outdoor garden wedding."
+      },
+      {
+        "num": 488,
+        "word": "Ceremony",
+        "pos": "n.",
+        "ipa": "/ˈserəməni/",
+        "definition": "A formal religious or public occasion, typically celebration.",
+        "collocations": "graduation ceremony, opening ceremony",
+        "example": "The university graduation ceremony was held in the grand auditorium."
+      },
+      {
+        "num": 489,
+        "word": "Decoration",
+        "pos": "n.",
+        "ipa": "/ˌdekəˈreɪʃn/",
+        "definition": "The activity of decorating; or festive ornaments and lights.",
+        "collocations": "holiday decorations, colorful decorations",
+        "example": "We put up colorful holiday decorations and lights around the house."
+      },
+      {
+        "num": 490,
+        "word": "Balloon",
+        "pos": "n.",
+        "ipa": "/bəˈluːn/",
+        "definition": "A small colored rubber bag inflated with air or gas for parties.",
+        "collocations": "colorful balloons, party balloons",
+        "example": "The party room was decorated with yellow and blue balloons."
+      },
+      {
+        "num": 491,
+        "word": "Candle",
+        "pos": "n.",
+        "ipa": "/ˈkændl/",
+        "definition": "A cylinder or block of wax with a central wick lit to give light.",
+        "collocations": "blow out candles, birthday candle",
+        "example": "She made a wish and blew out all the candles on her cake."
+      },
+      {
+        "num": 492,
+        "word": "Cake",
+        "pos": "n.",
+        "ipa": "/keɪk/",
+        "definition": "An item of soft sweet food made from flour, sugar, and eggs.",
+        "collocations": "slice of cake, chocolate cake",
+        "example": "Everyone enjoyed a generous slice of homemade chocolate cake."
+      },
+      {
+        "num": 493,
+        "word": "Toast",
+        "pos": "n./v.",
+        "ipa": "/təʊst/",
+        "definition": "The act of raising a glass and drinking in honor of a person.",
+        "collocations": "propose a toast, make a toast",
+        "example": "The groom's father raised a glass to propose a toast to the couple."
+      },
+      {
+        "num": 494,
+        "word": "Gathering",
+        "pos": "n.",
+        "ipa": "/ˈɡæðərɪŋ/",
+        "definition": "An assembly or meeting of people, especially family or friends.",
+        "collocations": "family gathering, social gathering",
+        "example": "The holiday family gathering brought together four generations."
+      },
+      {
+        "num": 495,
+        "word": "Appreciate",
+        "pos": "v.",
+        "ipa": "/əˈpriːʃieɪt/",
+        "definition": "Recognize the full worth of someone or something; be grateful for.",
+        "collocations": "appreciate help, deeply appreciate",
+        "example": "I deeply appreciate all the help and patience you have shown me."
+      },
+      {
+        "num": 496,
+        "word": "Gratitude",
+        "pos": "n.",
+        "ipa": "/ˈɡrætɪtjuːd/",
+        "definition": "The quality of being thankful; readiness to show appreciation.",
+        "collocations": "express gratitude, feel gratitude",
+        "example": "She wrote a handwritten card to express her heartfelt gratitude."
+      },
+      {
+        "num": 497,
+        "word": "Apologize",
+        "pos": "v.",
+        "ipa": "/əˈpɒlədʒaɪz/",
+        "definition": "Express regret for something that one has done wrong.",
+        "collocations": "apologize sincerely, apologize to a friend",
+        "example": "He apologized sincerely for arriving late to the dinner party."
+      },
+      {
+        "num": 498,
+        "word": "Forgive",
+        "pos": "v.",
+        "ipa": "/fəˈɡɪv/",
+        "definition": "Stop feeling angry or resentful toward someone for an offense.",
+        "collocations": "forgive a mistake, forgive someone",
+        "example": "True friends forgive each other quickly after a misunderstanding."
+      },
+      {
+        "num": 499,
+        "word": "Share",
+        "pos": "v.",
+        "ipa": "/ʃeə(r)/",
+        "definition": "Have a portion of something with another or others.",
+        "collocations": "share memories, share stories",
+        "example": "It is wonderful to sit together and share stories of our adventures."
+      },
+      {
+        "num": 500,
+        "word": "Belong",
+        "pos": "v.",
+        "ipa": "/bɪˈlɒŋ/",
+        "definition": "Be a member or part of a particular group or community.",
+        "collocations": "sense of belonging, feel you belong",
+        "example": "Being part of a supportive English class gives you a warm sense of belonging."
+      }
+    ],
+    "idioms": [
+      {
+        "phrase": "Through thick and thin",
+        "meaning": "Supporting someone through good times and bad times.",
+        "example": "True best friends stay by your side through thick and thin."
+      },
+      {
+        "phrase": "A friend in need is a friend indeed",
+        "meaning": "A person who helps you when you have troubles is a true friend.",
+        "example": "When I was sick, Maria cooked soup for me—a friend in need is a friend indeed."
+      },
+      {
+        "phrase": "Walk down memory lane",
+        "meaning": "To remember and talk about happy past events.",
+        "example": "Looking through our old school yearbooks was a wonderful walk down memory lane."
+      },
+      {
+        "phrase": "Paint the town red",
+        "meaning": "To go out and celebrate joyfully with friends.",
+        "example": "After passing all our exams, we went downtown to paint the town red!"
+      }
+    ],
+    "roleplay": {
+      "scenario": "Congratulating a Friend and Planning a Weekend Celebration Dinner",
+      "roleA": "Call your friend to congratulate them on passing their English speaking test. Propose going out for a special celebration dinner this Friday.",
+      "roleB": "Thank your friend with gratitude, suggest your favorite local restaurant, and offer to invite two mutual friends to join the celebration.",
+      "constraint": "Both speakers must use at least 4 vocabulary words from today's list (e.g., congratulate, celebration, friend, gratitude, invite)."
+    }
+  }
+];

@@ -36,9 +36,19 @@ Welcome to the **10-Day ESL Speaking Intensive Course**, engineered specifically
 ---
 
 ### 📖 Master Resource Files
-- **Master Question Bank**: [`MASTER_QUESTIONS_150.md`](./MASTER_QUESTIONS_150.md) (All 150 questions organized by Day, Difficulty Tier, and Analytical Angle)
-- **Master Vocabulary Lexicon**: [`MASTER_VOCABULARY_500.md`](./MASTER_VOCABULARY_500.md) (Complete A-Z & Day-by-Day vocabulary list with IPA, Definitions, Parts of Speech, and Collocations)
-- **Interactive Web App**: [`index.html`](./index.html) (Interactive browser-based digital portal with flashcards, audio pronunciation triggers, question randomizer, and speaking practice modes)
+- **Master Question Bank (B2–C2)**: [`MASTER_QUESTIONS_150.md`](./MASTER_QUESTIONS_150.md) (All 150 advanced questions organized by Day and Tier)
+- **Master Vocabulary Lexicon (B2–C2)**: [`MASTER_VOCABULARY_500.md`](./MASTER_VOCABULARY_500.md) (Complete 500-word lexicon with IPA, definitions, collocations)
+- **Interactive Master Web App**: [`index.html`](./index.html) (Warm brown centered browser portal with live search & audio TTS)
+
+---
+
+### 🌱 Foundations Track (A2–B1 Easier Level)
+Looking for an easier, practical, everyday beginner-to-intermediate speaking curriculum?
+Explore the dedicated **Foundations Curriculum** located in [`Foundations_A2_B1/`](./Foundations_A2_B1/):
+- **Foundations Overview**: [`Foundations_A2_B1/README.md`](./Foundations_A2_B1/README.md)
+- **Foundations 150 Questions**: [`Foundations_A2_B1/MASTER_QUESTIONS_150.md`](./Foundations_A2_B1/MASTER_QUESTIONS_150.md)
+- **Foundations 500 Vocabulary Words**: [`Foundations_A2_B1/MASTER_VOCABULARY_500.md`](./Foundations_A2_B1/MASTER_VOCABULARY_500.md)
+- **Foundations Interactive Portal**: [`Foundations_A2_B1/index.html`](./Foundations_A2_B1/index.html)
 
 ---
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESL Speaking Mastery Portal | 10 Days • 150 Questions • 500 Vocabulary Words</title>
-  <meta name="description" content="10-Day Comprehensive ESL Speaking Intensive Course: 10 Topics, 150 Discussion Questions, 500 Vocabulary Words, and Interactive Speech Practice Tools.">
+  <title>Foundations ESL Speaking Portal (A2–B1) | 10 Topics • 150 Questions • 500 Everyday Words</title>
+  <meta name="description" content="10-Day Beginner-to-Intermediate ESL Speaking Intensive Course: 10 Topics, 150 Discussion Questions, 500 Practical Vocabulary Words, and Interactive Speech Practice Tools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -542,7 +542,7 @@
       color: var(--text-light);
     }
 
-    /* Idioms & Roleplay Blocks */
+    /* Extras Grid */
     .extras-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -595,7 +595,7 @@
       color: var(--brown-light);
     }
 
-    /* Interactive Practice Floating Bar */
+    /* Practice Bar */
     .practice-bar {
       background: #ffffff;
       border-top: 2px solid var(--brown-border);
@@ -709,7 +709,6 @@
       box-shadow: var(--shadow-lg);
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       h1 { font-size: 2.1rem; }
       header { padding: 2rem 1rem; }
@@ -725,14 +724,14 @@
 
   <header>
     <div class="hero-inner">
-      <div class="badge-pill">☕ Premium ESL Curriculum • CEFR B2–C2</div>
-      <h1>10-Day Speaking Mastery Intensive</h1>
-      <p class="hero-desc">An elegant, rigorous discussion masterclass featuring 10 academic and cultural domains, 150 calibrated questions, and 500 target vocabulary items with audio pronunciation.</p>
+      <div class="badge-pill">🌱 Foundational Speaking Curriculum • CEFR A2–B1</div>
+      <h1>Foundations Speaking Mastery</h1>
+      <p class="hero-desc">10 practical daily life topics, 150 easy discussion questions, and 500 essential vocabulary words designed to build spontaneous everyday speaking confidence.</p>
       
       <div class="stat-row">
         <div class="stat-box">
           <div class="stat-number">10</div>
-          <div class="stat-text">Thematic<br>Days</div>
+          <div class="stat-text">Everyday<br>Topics</div>
         </div>
         <div class="stat-box">
           <div class="stat-number">150</div>
@@ -740,17 +739,17 @@
         </div>
         <div class="stat-box">
           <div class="stat-number">500</div>
-          <div class="stat-text">Target Vocab<br>Lexicon</div>
+          <div class="stat-text">Everyday Vocab<br>Lexicon</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">100%</div>
-          <div class="stat-text">Complete &amp;<br>Verified</div>
+          <div class="stat-number">A2–B1</div>
+          <div class="stat-text">Practical &amp;<br>Accessible</div>
         </div>
       </div>
       <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
-        <span style="background: rgba(255,255,255,0.15); padding: 0.4rem 0.9rem; border-radius: 9999px; font-size: 0.85rem; color: #fff; font-weight: 600;">Current Track: <strong>B2–C2 Advanced Masterclass</strong></span>
-        <a href="./Foundations_A2_B1/index.html" style="background: #fed7aa; color: #3a2212; padding: 0.4rem 1.1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: transform 0.2s;">
-          🌱 Switch to Foundations Track (A2–B1 Easier Level) &rarr;
+        <span style="background: rgba(255,255,255,0.15); padding: 0.4rem 0.9rem; border-radius: 9999px; font-size: 0.85rem; color: #fff; font-weight: 600;">Current Track: <strong>A2–B1 Foundations</strong></span>
+        <a href="../index.html" style="background: #fed7aa; color: #3a2212; padding: 0.4rem 1.1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: transform 0.2s;">
+          ☕ Switch to Advanced Masterclass (B2–C2) &rarr;
         </a>
       </div>
     </div>
@@ -782,7 +781,7 @@
 
   <div class="practice-bar">
     <div class="timer-container">
-      <span style="font-weight: 700; color: var(--brown-primary); font-size: 0.95rem;">⏱️ Speech Practice Timer:</span>
+      <span style="font-weight: 700; color: var(--brown-primary); font-size: 0.95rem;">⏱️ Speaking Practice Timer:</span>
       <div class="timer-readout" id="timerReadout">02:00</div>
       <button class="btn-timer" onclick="startTimer(60)">1 Min</button>
       <button class="btn-timer" onclick="startTimer(120)">2 Min</button>
@@ -801,7 +800,6 @@
     </div>
   </div>
 
-  <!-- Load Comprehensive Data -->
   <script src="curriculum_data.js"></script>
   <script>
     let activeDay = 1;
@@ -814,7 +812,7 @@
 
     function renderNavRibbon() {
       const ribbon = document.getElementById('navRibbon');
-      ribbon.innerHTML = CURRICULUM_DATA.map(d => `
+      ribbon.innerHTML = FOUNDATIONS_DATA.map(d => `
         <button class="nav-btn ${d.day === activeDay ? 'active' : ''}" onclick="selectDay(${d.day})">
           <span class="day-label">Day ${d.day < 10 ? '0' + d.day : d.day}</span>
           <span class="day-name">${d.title.split(',')[0]}</span>
@@ -848,7 +846,7 @@
 
     function renderActiveDay() {
       const container = document.getElementById('portalContent');
-      const dayData = CURRICULUM_DATA.find(d => d.day === activeDay);
+      const dayData = FOUNDATIONS_DATA.find(d => d.day === activeDay);
 
       if (activeView === 'randomizer') {
         renderRandomizer(container);
@@ -857,7 +855,7 @@
 
       let html = `
         <div class="day-hero">
-          <div class="day-subhead">Day ${dayData.day < 10 ? '0' + dayData.day : dayData.day} of 10 • Thematic Intensive</div>
+          <div class="day-subhead">Day ${dayData.day < 10 ? '0' + dayData.day : dayData.day} of 10 • Foundational Speaking</div>
           <h2 class="day-heading">${dayData.title}</h2>
           <p class="day-domain"><strong>Core Domain:</strong> ${dayData.domain}</p>
           
@@ -870,12 +868,12 @@
         </div>
       `;
 
-      // Question Section
+      // Questions
       if (activeView === 'full' || activeView === 'questions') {
         html += `
           <div class="section-header">
             <h3 class="section-title">💬 Speaking Question Bank</h3>
-            <span class="section-count">15 Calibrated Questions</span>
+            <span class="section-count">15 Practice Questions</span>
           </div>
           <div class="question-grid">
             ${dayData.questions.map((q, idx) => `
@@ -889,7 +887,7 @@
                 <div class="q-footer">
                   <span class="q-index">Question #${q.num}</span>
                   <button class="btn-action" onclick="speakText('${q.text.replace(/'/g, "\\'")}')">
-                    🔊 Read Question
+                    🔊 Read Aloud
                   </button>
                 </div>
               </div>
@@ -898,12 +896,12 @@
         `;
       }
 
-      // Vocabulary Section
+      // Vocabulary
       if (activeView === 'full' || activeView === 'vocab') {
         html += `
           <div class="section-header">
             <h3 class="section-title">📚 Target Vocabulary Lexicon</h3>
-            <span class="section-count">50 Academic &amp; Real-World Words</span>
+            <span class="section-count">50 Everyday Words</span>
           </div>
           <div class="vocab-grid">
             ${dayData.vocabulary.map(v => `
@@ -928,16 +926,16 @@
         `;
       }
 
-      // Idioms & Roleplay
+      // Extras
       if (activeView === 'full') {
         html += `
           <div class="section-header">
             <h3 class="section-title">🗣️ Conversational Idioms &amp; Roleplay</h3>
-            <span class="section-count">Interactive Speaking Practice</span>
+            <span class="section-count">Pair &amp; Group Practice</span>
           </div>
           <div class="extras-grid">
             <div class="extra-card">
-              <div class="extra-heading">💬 Idiomatic Expressions</div>
+              <div class="extra-heading">💬 Useful Idiomatic Phrases</div>
               ${dayData.idioms.map(i => `
                 <div class="idiom-item">
                   <div class="idiom-phrase">"${i.phrase}"</div>
@@ -949,15 +947,15 @@
 
             <div class="extra-card">
               <div class="extra-heading">🎭 Real-World Speaking Roleplay</div>
-              <p style="font-weight: 700; color: var(--brown-dark); margin-bottom: 0.5rem;">${dayData.roleplay.scenario || ''}</p>
+              <p style="font-weight: 700; color: var(--brown-dark); margin-bottom: 0.5rem;">${dayData.roleplay.scenario}</p>
               <div style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 0.75rem;">
-                <strong>Role A:</strong> ${dayData.roleplay.roleA || ''}
+                <strong>Role A:</strong> ${dayData.roleplay.roleA}
               </div>
               <div style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 0.75rem;">
-                <strong>Role B:</strong> ${dayData.roleplay.roleB || ''}
+                <strong>Role B:</strong> ${dayData.roleplay.roleB}
               </div>
               <div style="background: var(--bg-subtle); border-left: 4px solid var(--brown-primary); padding: 0.6rem 0.85rem; border-radius: 4px; font-size: 0.88rem; color: var(--brown-dark);">
-                <strong>Constraint:</strong> ${dayData.roleplay.constraint || ''}
+                <strong>Constraint:</strong> ${dayData.roleplay.constraint}
               </div>
             </div>
           </div>
@@ -973,7 +971,7 @@
           <div class="day-subhead">Spontaneous Discussion Mode</div>
           <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--brown-dark); margin-bottom: 0.75rem;">🎲 Question Randomizer</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.75rem;">
-            Draw a random question from all 150 calibrated questions across the entire 10-day curriculum to test fluency and lexical precision.
+            Draw a random question from all 150 foundational questions across the 10-day curriculum to test fluency and vocabulary recall.
           </p>
           <button class="btn-timer" style="padding: 0.85rem 2rem; font-size: 1.05rem;" onclick="drawRandomQuestion()">
             🎲 Draw Random Question
@@ -985,7 +983,7 @@
 
     function drawRandomQuestion() {
       const allQ = [];
-      CURRICULUM_DATA.forEach(d => {
+      FOUNDATIONS_DATA.forEach(d => {
         d.questions.forEach(q => {
           allQ.push({ day: d.day, title: d.title, ...q });
         });
@@ -1010,7 +1008,7 @@
     function openVocabModal(wordNum) {
       let targetWord = null;
       let dayNum = 1;
-      for (const d of CURRICULUM_DATA) {
+      for (const d of FOUNDATIONS_DATA) {
         const found = d.vocabulary.find(v => v.num === wordNum);
         if (found) {
           targetWord = found;
@@ -1035,17 +1033,17 @@
         </div>
         
         <div style="margin-bottom: 1rem;">
-          <strong style="color: var(--brown-dark); font-size: 0.95rem;">Definition:</strong>
+          <strong style="color: var(--brown-dark); font-size: 0.95rem;">Clear Definition:</strong>
           <p style="color: var(--text-main); font-size: 1rem; line-height: 1.5; margin-top: 0.2rem;">${targetWord.definition}</p>
         </div>
 
         <div style="margin-bottom: 1rem; background: var(--bg-subtle); padding: 0.75rem 1rem; border-radius: var(--radius-sm);">
-          <strong style="color: var(--brown-dark); font-size: 0.9rem;">Collocations:</strong>
+          <strong style="color: var(--brown-dark); font-size: 0.9rem;">Common Collocations:</strong>
           <p style="color: var(--brown-primary); font-size: 0.92rem; margin-top: 0.2rem; font-weight: 600;">${targetWord.collocations}</p>
         </div>
 
         <div style="margin-bottom: 1.75rem;">
-          <strong style="color: var(--brown-dark); font-size: 0.95rem;">Example in Context:</strong>
+          <strong style="color: var(--brown-dark); font-size: 0.95rem;">Example Sentence:</strong>
           <p style="color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-top: 0.2rem; line-height: 1.5;">"${targetWord.example}"</p>
         </div>
 
@@ -1065,7 +1063,6 @@
       document.getElementById('vocabModal').style.display = 'none';
     }
 
-    /* Live Search across all 500 words and 150 questions */
     function handleSearch(query) {
       if (!query || query.trim() === '') {
         renderActiveDay();
@@ -1078,7 +1075,7 @@
       let matchedQ = [];
       let matchedV = [];
 
-      CURRICULUM_DATA.forEach(d => {
+      FOUNDATIONS_DATA.forEach(d => {
         d.questions.forEach(q => {
           if (q.text.toLowerCase().includes(qLow)) {
             matchedQ.push({ day: d.day, title: d.title, ...q });
@@ -1145,7 +1142,6 @@
       `;
     }
 
-    /* Practice Timer */
     let timerInt = null;
     let timeLeft = 120;
 
@@ -1165,7 +1161,7 @@
           updateTimerUI();
         } else {
           clearInterval(timerInt);
-          speakText("Time is up. Well done on your speaking practice.");
+          speakText("Time is up. Great job on your speaking practice!");
         }
       }, 1000);
     }
@@ -1180,7 +1176,6 @@
       updateTimerUI();
     }
 
-    // Launch
     window.addEventListener('DOMContentLoaded', initPortal);
   </script>
 </body>
